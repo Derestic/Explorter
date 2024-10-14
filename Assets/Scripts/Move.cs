@@ -17,6 +17,7 @@ public class Move : MonoBehaviour
     void Start()
     {
         move = new Vector3 (0f, 0f, 0f);
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
