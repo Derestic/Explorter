@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class castObject : MonoBehaviour
@@ -28,7 +29,7 @@ public class castObject : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             select.transform.position = hit.point;
-            origen.Set(transform.position.x, 0, transform.position.z);
+            origen.Set(transform.position.x, select.transform.position.y, transform.position.z);
             select.transform.LookAt(origen);
             if(createD) {
                 traslateD.Set(0, select.transform.localScale.y/2, 0);
@@ -56,7 +57,12 @@ public class castObject : MonoBehaviour
                 select = Instantiate(defensa);
                 select.GetComponent<Collider>().enabled = false;
             }
-
+        }
+        if(createD && Input.GetMouseButtonUp((int)MouseButton.Left))
+        {
+            select.GetComponent<Collider>().enabled = true;
+            select = Instantiate(defensa);
+            select.GetComponent<Collider>().enabled = false;
         }
     }
 }
