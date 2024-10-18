@@ -11,7 +11,6 @@ public class Move : MonoBehaviour
     public float jumpForce = 10f;
     public GameObject father;
     public float sens = 1.0f;
-    float posX=0;
     Vector3 move;
     // Start is called before the first frame update
     void Start()
