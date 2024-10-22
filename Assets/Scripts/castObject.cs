@@ -16,12 +16,16 @@ public class castObject : MonoBehaviour
 
     Vector3 origen;
     Vector3 traslateD;
+
+    Vector3 rot;
+    [SerializeField]Vector3 vrot;
     // Start is called before the first frame update
     void Start()
     {
         select = pointer;
         origen = new Vector3(transform.position.x,0,transform.position.z);
         traslateD = new Vector3(0, 0, 0);
+        vrot = new Vector3(0, 50, 0);
     }
 
     // Update is called once per frame
@@ -33,6 +37,7 @@ public class castObject : MonoBehaviour
             select.transform.position = hit.point;
             origen.Set(transform.position.x, select.transform.position.y, transform.position.z);
             select.transform.LookAt(origen);
+            select.transform.Rotate(rot);
             if(createD) {
                 traslateD.Set(0, select.transform.localScale.y/2, 0);
                 select.transform.position += traslateD; 
@@ -53,6 +58,7 @@ public class castObject : MonoBehaviour
                 select.GetComponent<Collider>().enabled = true;
                 select = Instantiate(defensa[index]);
                 select.GetComponent<Collider>().enabled = false;
+                rot.Set(0,0,0);
             }
             else if (Input.GetKeyDown(KeyCode.Q))
             {
@@ -61,9 +67,9 @@ public class castObject : MonoBehaviour
                 select = Instantiate(defensa[index]);
                 select.GetComponent<Collider>().enabled = false;
             }
-            else if (Input.GetKeyUp(KeyCode.R))
+            else if (Input.GetKey(KeyCode.R))
             {
-                select.transform.Rotate(0, 0, 1);
+                rot += vrot*Time.deltaTime;
             }
         }
         else if (Input.GetKeyUp(KeyCode.E))
