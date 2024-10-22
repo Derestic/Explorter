@@ -5,15 +5,17 @@ using UnityEngine;
 
 public class castObject : MonoBehaviour
 {
-    [SerializeField]
     Ray ray;
     RaycastHit hit;
+    bool createD = false;
+
     public GameObject pointer;
-    public GameObject defensa;
+    public GameObject[] defensa;
+    int index = 0;
     GameObject select;
+
     Vector3 origen;
     Vector3 traslateD;
-    bool createD = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,33 +37,40 @@ public class castObject : MonoBehaviour
                 traslateD.Set(0, select.transform.localScale.y/2, 0);
                 select.transform.position += traslateD; 
             }
-            /*if (createD )
-            {
-                select.transform.position.y += select.transform.localScale.y;
-            }*/
-            //Debug.DrawRay(transform.position, transform.forward);
         }
-        if (Input.GetKeyUp(KeyCode.X))
+
+        if (createD)
         {
-            if (createD)
+            if (Input.GetKeyUp(KeyCode.E))
             {
                 Destroy(select);
                 createD = false;
                 select = pointer;
                 pointer.GetComponent<Renderer>().enabled = true;
             }
-            else
+            else if (Input.GetMouseButtonUp((int)MouseButton.Left))
             {
-                createD = true;
-                pointer.GetComponent<Renderer>().enabled = false;
-                select = Instantiate(defensa);
+                select.GetComponent<Collider>().enabled = true;
+                select = Instantiate(defensa[index]);
                 select.GetComponent<Collider>().enabled = false;
             }
+            else if (Input.GetKeyDown(KeyCode.Q))
+            {
+                index = (index + 1) % defensa.Length;
+                Destroy(select);
+                select = Instantiate(defensa[index]);
+                select.GetComponent<Collider>().enabled = false;
+            }
+            else if (Input.GetKeyUp(KeyCode.R))
+            {
+                select.transform.Rotate(0, 0, 1);
+            }
         }
-        if(createD && Input.GetMouseButtonUp((int)MouseButton.Left))
+        else if (Input.GetKeyUp(KeyCode.E))
         {
-            select.GetComponent<Collider>().enabled = true;
-            select = Instantiate(defensa);
+            createD = true;
+            pointer.GetComponent<Renderer>().enabled = false;
+            select = Instantiate(defensa[index]);
             select.GetComponent<Collider>().enabled = false;
         }
     }
