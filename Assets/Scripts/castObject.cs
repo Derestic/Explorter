@@ -10,7 +10,7 @@ public class castObject : MonoBehaviour
     bool createD = false;
 
 
-    [Header("ManagerLink")]
+    [Header("Manager Link")]
     Manager man;
 
     [Header("Objects Control")]
@@ -31,9 +31,10 @@ public class castObject : MonoBehaviour
     [SerializeField] KeyCode rotateSelect = KeyCode.R;
     [SerializeField] KeyCode changeSelect = KeyCode.Q;
     // Start is called before the first frame update
+
     void Start()
     {
-        man = GetComponent<Manager>();
+        man = Manager.Instance;
         select = pointer;
         origen = new Vector3(transform.position.x,0,transform.position.z);
         traslateD = new Vector3(0, 0, 0);
@@ -45,9 +46,14 @@ public class castObject : MonoBehaviour
     {
         // RayCast
         castCreation();
-
-        // use cast
-        if(man.creationState()) operateCreation();
+        if (man != null)
+        {
+            bool b = man.creationState();
+            // use cast
+            if (b)
+                operateCreation();
+        }
+            
     }
 
     void operateCreation()

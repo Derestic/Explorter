@@ -20,11 +20,12 @@ public class Move : MonoBehaviour
     [Header("Control Vida")]
     float life = 100;
     [SerializeField] float maxLife = 100;
+    bool dead = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        man = GetComponent<Manager>();
+        man = Manager.Instance;
         life = maxLife;
         move = new Vector3 (0f, 0f, 0f);
         Cursor.visible = false;
@@ -33,13 +34,16 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement();
+        if (!dead)
+        {
+            movement();
 
-        jump();
+            jump();
 
-        cameraMovement();
+            cameraMovement();
 
-        cameraZoom();
+            cameraZoom();
+        }
     }
     void movement()
     {
@@ -72,12 +76,21 @@ public class Move : MonoBehaviour
         camara.fieldOfView -= zoom * zoomSpeed;
     }
 
-    void addLife(float extra)
+    public void addLife(float extra)
     {
         life += extra;
         if(life < 0)
         {
-            man.gameOver();
+            print("Dead");
+            dead = true;
         }
+    }
+
+    public bool isDead() { return dead; }
+
+    public void resetLife()
+    {
+        life = maxLife;
+        dead = false;
     }
 }
