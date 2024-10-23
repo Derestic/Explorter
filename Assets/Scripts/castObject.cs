@@ -9,6 +9,11 @@ public class castObject : MonoBehaviour
     RaycastHit hit;
     bool createD = false;
 
+
+    [Header("ManagerLink")]
+    Manager man;
+
+    [Header("Objects Control")]
     public GameObject pointer;
     public GameObject[] defensa;
     int index = 0;
@@ -17,11 +22,18 @@ public class castObject : MonoBehaviour
     Vector3 origen;
     Vector3 traslateD;
 
+    [Header("Rotation Control")]
     Vector3 rot;
     [SerializeField]Vector3 vrot;
+
+    [Header("Creation Buttons")]
+    [SerializeField] KeyCode selectMode = KeyCode.E;
+    [SerializeField] KeyCode rotateSelect = KeyCode.R;
+    [SerializeField] KeyCode changeSelect = KeyCode.Q;
     // Start is called before the first frame update
     void Start()
     {
+        man = GetComponent<Manager>();
         select = pointer;
         origen = new Vector3(transform.position.x,0,transform.position.z);
         traslateD = new Vector3(0, 0, 0);
@@ -31,22 +43,18 @@ public class castObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ray = new Ray(transform.position, transform.forward);
-        if (Physics.Raycast(ray, out hit))
-        {
-            select.transform.position = hit.point;
-            origen.Set(transform.position.x, select.transform.position.y, transform.position.z);
-            select.transform.LookAt(origen);
-            select.transform.Rotate(rot);
-            if(createD) {
-                traslateD.Set(0, select.transform.localScale.y/2, 0);
-                select.transform.position += traslateD; 
-            }
-        }
+        // RayCast
+        castCreation();
 
+        // use cast
+        if(man.creationState()) operateCreation();
+    }
+
+    void operateCreation()
+    {
         if (createD)
         {
-            if (Input.GetKeyUp(KeyCode.E))
+            if (Input.GetKeyUp(selectMode))
             {
                 Destroy(select);
                 createD = false;
@@ -58,18 +66,18 @@ public class castObject : MonoBehaviour
                 select.GetComponent<Collider>().enabled = true;
                 select = Instantiate(defensa[index]);
                 select.GetComponent<Collider>().enabled = false;
-                rot.Set(0,0,0);
+                rot.Set(0, 0, 0);
             }
-            else if (Input.GetKeyDown(KeyCode.Q))
+            else if (Input.GetKeyDown(changeSelect))
             {
                 index = (index + 1) % defensa.Length;
                 Destroy(select);
                 select = Instantiate(defensa[index]);
                 select.GetComponent<Collider>().enabled = false;
             }
-            else if (Input.GetKey(KeyCode.R))
+            else if (Input.GetKey(rotateSelect))
             {
-                rot += vrot*Time.deltaTime;
+                rot += vrot * Time.deltaTime;
             }
         }
         else if (Input.GetKeyUp(KeyCode.E))
@@ -78,6 +86,23 @@ public class castObject : MonoBehaviour
             pointer.GetComponent<Renderer>().enabled = false;
             select = Instantiate(defensa[index]);
             select.GetComponent<Collider>().enabled = false;
+        }
+    }
+
+    void castCreation()
+    {
+        ray = new Ray(transform.position, transform.forward);
+        if (Physics.Raycast(ray, out hit))
+        {
+            select.transform.position = hit.point;
+            origen.Set(transform.position.x, select.transform.position.y, transform.position.z);
+            select.transform.LookAt(origen);
+            select.transform.Rotate(rot);
+            if (createD)
+            {
+                traslateD.Set(0, select.transform.localScale.y / 2, 0);
+                select.transform.position += traslateD;
+            }
         }
     }
 }

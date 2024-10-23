@@ -39,7 +39,7 @@ public class Manager : MonoBehaviour
         
     }
 
-    void nextState()
+    public void nextState()
     {
         if (state == RoundState.oleada)
         {
@@ -55,5 +55,14 @@ public class Manager : MonoBehaviour
             }
         }
         
+    }
+
+    public void gameOver()
+    {
+        print("Game Over");
+    }
+    public bool creationState()
+    {
+        return state == RoundState.preparation;
     }
 }

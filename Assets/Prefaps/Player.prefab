@@ -189,6 +189,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointer: {fileID: 1717517955193203306}
+  defensa: []
+  vrot: {x: 0, y: 0, z: 0}
+  selectMode: 101
+  rotateSelect: 114
+  changeSelect: 113
 --- !u!1 &8717879888665488350
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,9 +450,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5670e86ee6ab1b45a1e843d1ee6aa26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 1, y: 0, z: 1}
-  camara: {fileID: 6214654195612034231}
-  zoomSpeed: 0.1
+  speed: {x: 6, y: 0, z: 6}
+  zoomSpeed: 10
   jumpForce: 2
-  father: {fileID: 0}
-  sens: 2
+  camara: {fileID: 6214654195612034231}
+  sens: 4
+  maxLife: 100
