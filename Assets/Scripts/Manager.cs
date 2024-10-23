@@ -44,13 +44,13 @@ public class Manager : MonoBehaviour
         if (state == RoundState.oleada)
         {
             state = RoundState.preparation;
+            prep = 0;
         }
         else
         {
             prep++;
             if (prep >= maxprep)
             {
-                prep = 0;
                 state = RoundState.oleada;
             }
         }
