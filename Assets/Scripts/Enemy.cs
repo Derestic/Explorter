@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
 
     [Header("Control Enemigo")]
     [SerializeField] float speed = 150f;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +46,7 @@ public class Enemy : MonoBehaviour
         Objetivo = ObjetivoF;
         Debug.Log("Speed: " + speed );
         agent.speed = speed;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -63,13 +65,17 @@ public class Enemy : MonoBehaviour
         }
         else if(state.run == status)
         {
+            animator.SetBool("runing",true);
             agent.isStopped = false;
             if (Vector3.Distance(transform.position, Objetivo.transform.position) < maxDistanceOjective)
             {
                 status++;
                 agent.isStopped = true;
                 Debug.Log("Atacando");
-            }else if (Vector3.Distance(transform.position, Objetivo.transform.position) > maxVision && !Objetivo.Equals(ObjetivoF))
+                animator.SetBool("runing", false);
+                animator.SetBool("atacking", true);
+            }
+            else if (Vector3.Distance(transform.position, Objetivo.transform.position) > maxVision && !Objetivo.Equals(ObjetivoF))
             {
                 status = state.idle;
             }
@@ -80,6 +86,7 @@ public class Enemy : MonoBehaviour
         }
         else if (state.attack == status && Vector3.Distance(transform.position, Objetivo.transform.position) > maxDistanceOjective)
         {
+            animator.SetBool("atacking", false);
             status--;
         }
         vision();
