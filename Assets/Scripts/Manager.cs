@@ -11,9 +11,13 @@ public class Manager : MonoBehaviour
     [SerializeField] RoundState state = RoundState.preparation;
     int prep = 0;
     [SerializeField] int maxprep = 3;
+    public GameObject nucleo;
 
     [Header("Control juador")]
     public GameObject player;
+
+    [Header("Spawn Control")]
+    public GameObject[] spawns = new GameObject[3];
 
     public static Manager Instance
     {
@@ -37,6 +41,7 @@ public class Manager : MonoBehaviour
     void Start()
     {
         print("Estoy creado, con estado " + state.ToString());
+        nextState();
     }
 
     // Update is called once per frame
@@ -51,6 +56,7 @@ public class Manager : MonoBehaviour
         {
             state = RoundState.preparation;
             prep = 0;
+            for (int i = 0; i < spawns.Length;i++) { spawns[i].GetComponent<spawn>().spawning = true; }
         }
         else
         {
@@ -65,6 +71,11 @@ public class Manager : MonoBehaviour
         {
             player.GetComponent<Move>().resetLife();
         }
+    }
+
+    void ActivateSpawn()
+    {
+        
     }
 
     public void gameOver()

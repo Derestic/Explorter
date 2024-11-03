@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &109552221 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4115054924707697999, guid: b9fd02ba42e4fa2428705e046abcdb78, type: 3}
+  m_PrefabInstance: {fileID: 917189145}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &284173449 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8808536917993584773, guid: a9acb56075f48404c9c9a9d8a5b97c53, type: 3}
@@ -440,7 +445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7726222628778193183, guid: b9fd02ba42e4fa2428705e046abcdb78, type: 3}
       propertyPath: m_Name
-      value: PuertaDungeon (2)
+      value: PuertaDungeon3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -582,7 +587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7726222628778193183, guid: b9fd02ba42e4fa2428705e046abcdb78, type: 3}
       propertyPath: m_Name
-      value: PuertaDungeon (1)
+      value: PuertaDungeon2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -621,6 +626,10 @@ MonoBehaviour:
   state: 0
   maxprep: 3
   player: {fileID: 284173449}
+  spawns:
+  - {fileID: 2112866247}
+  - {fileID: 1289070864}
+  - {fileID: 109552221}
 --- !u!4 &1264063851
 Transform:
   m_ObjectHideFlags: 0
@@ -636,6 +645,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1289070864 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4115054924707697999, guid: b9fd02ba42e4fa2428705e046abcdb78, type: 3}
+  m_PrefabInstance: {fileID: 1183860417}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1381609470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -743,6 +757,11 @@ MeshCollider:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6628251677469266946, guid: 041625e8f6952b54bb73661e5d31aaef, type: 3}
   m_PrefabInstance: {fileID: 1888939821994666123}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2112866247 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4115054924707697999, guid: b9fd02ba42e4fa2428705e046abcdb78, type: 3}
+  m_PrefabInstance: {fileID: 6566905741993795992}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1496003006886486427
 PrefabInstance:
@@ -908,7 +927,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7726222628778193183, guid: b9fd02ba42e4fa2428705e046abcdb78, type: 3}
       propertyPath: m_Name
-      value: PuertaDungeon
+      value: PuertaDungeon1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

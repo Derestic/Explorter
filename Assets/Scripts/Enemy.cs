@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.AI.Navigation;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UIElements;
@@ -19,18 +20,31 @@ public class Enemy : MonoBehaviour
     [SerializeField] state status;
     public GameObject ObjetivoF;
     GameObject Objetivo;
-    public NavMeshSurface navS;
+    //public NavMeshSurface navS;
     NavMeshAgent agent;
     [SerializeField] float maxDistanceOjective = 10;
+
+    [Header("Control Enemigo")]
+    [SerializeField] float speed = 150f;
+
     // Start is called before the first frame update
     void Start()
     {
+        setAll();
+    }
+
+    public void setAll()
+    {
+        ObjetivoF = Manager.Instance.nucleo;
+
         agent = GetComponent<NavMeshAgent>();
         status = state.idle;
         hit = new RaycastHit();
-        visto = new List<GameObject> ();
+        visto = new List<GameObject>();
         r = new Ray();
         Objetivo = ObjetivoF;
+        Debug.Log("Speed: " + speed );
+        agent.speed = speed;
     }
 
     // Update is called once per frame
@@ -39,7 +53,8 @@ public class Enemy : MonoBehaviour
         if (state.idle == status)
         {
             if(!agent.isStopped) agent.isStopped = true;
-            if (Vector3.Distance(transform.position, Objetivo.transform.position) < maxVision) status++;
+            Objetivo = ObjetivoF;
+            status++;
         }
         else if (state.setObjective == status)
         {
@@ -54,7 +69,7 @@ public class Enemy : MonoBehaviour
                 status++;
                 agent.isStopped = true;
                 Debug.Log("Atacando");
-            }else if (Vector3.Distance(transform.position, Objetivo.transform.position) > maxVision)
+            }else if (Vector3.Distance(transform.position, Objetivo.transform.position) > maxVision && !Objetivo.Equals(ObjetivoF))
             {
                 status = state.idle;
             }
@@ -69,6 +84,8 @@ public class Enemy : MonoBehaviour
         }
         vision();
     }
+
+
     [Header("Vision")]
     [SerializeField] float angulo;
     [SerializeField] float maxVision;
@@ -120,5 +137,6 @@ public class Enemy : MonoBehaviour
             rotitoGizmo.Set(Mathf.Sin(ini), 0, Mathf.Cos(ini));
         }
 
+        
     }
 }
