@@ -14,15 +14,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7498142190150400792, guid: a4ec793513574cd49719c4055b630e2b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 42.5
+      value: 5.138109
       objectReference: {fileID: 0}
     - target: {fileID: 7498142190150400792, guid: a4ec793513574cd49719c4055b630e2b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0000038146973
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7498142190150400792, guid: a4ec793513574cd49719c4055b630e2b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.2
+      value: 17.1633
       objectReference: {fileID: 0}
     - target: {fileID: 7498142190150400792, guid: a4ec793513574cd49719c4055b630e2b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -84,13 +84,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8dc2eae97db5844a99a79b45ac64955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxLife: 100
   status: 0
   ObjetivoF: {fileID: 0}
-  maxDistanceOjective: 3.5
+  maxDistanceOjective: 3
   speed: 3
-  angulo: 1.75
+  damage: 10
+  angulo: 80
   maxVision: 10
   numRays: 20
+  posAttack: {x: 0, y: 0.5, z: 0.75}
+  scaleAttack: {x: 1, y: 1, z: 1}
 --- !u!195 &6012317096137002733
 NavMeshAgent:
   m_ObjectHideFlags: 0
