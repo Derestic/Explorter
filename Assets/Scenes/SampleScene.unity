@@ -550,7 +550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea3ea39d059ebb43b20589f2fb6c1d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 1
+  state: 0
   maxprep: 3
   nucleo: {fileID: 1408444954}
   player: {fileID: 284173449}
@@ -725,12 +725,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6155616889531569804, guid: c39949651e32d604c93eddd6262b12f7, type: 3}
-      propertyPath: angulo
-      value: 80
+      propertyPath: posAttack.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6155616889531569804, guid: c39949651e32d604c93eddd6262b12f7, type: 3}
-      propertyPath: maxVision
-      value: 10
+      propertyPath: scaleAttack.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155616889531569804, guid: c39949651e32d604c93eddd6262b12f7, type: 3}
+      propertyPath: scaleAttack.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155616889531569804, guid: c39949651e32d604c93eddd6262b12f7, type: 3}
+      propertyPath: atacklayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
