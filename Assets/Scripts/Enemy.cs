@@ -61,6 +61,7 @@ public class Enemy : npc
     // Update is called once per frame
     void Update()
     {
+        if(dead) Destroy(gameObject);
         if (state.idle == status)
         {
             animator.SetBool("atacking", false);

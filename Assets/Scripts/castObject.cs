@@ -72,7 +72,6 @@ public class castObject : MonoBehaviour
                 select.GetComponent<Collider>().enabled = true;
                 select = Instantiate(defensa[index]);
                 select.GetComponent<Collider>().enabled = false;
-                rot.Set(0, 0, 0);
             }
             else if (Input.GetKeyDown(changeSelect))
             {
