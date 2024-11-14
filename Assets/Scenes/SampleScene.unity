@@ -663,6 +663,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6155616889531569804, guid: c39949651e32d604c93eddd6262b12f7, type: 3}
+      propertyPath: rangeAttack
+      value: 
+      objectReference: {fileID: 2113737577}
+    - target: {fileID: 6155616889531569804, guid: c39949651e32d604c93eddd6262b12f7, type: 3}
       propertyPath: scaleAttack.x
       value: 1.5
       objectReference: {fileID: 0}
@@ -674,10 +678,17 @@ PrefabInstance:
       propertyPath: atacklayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 7261487032503124234, guid: c39949651e32d604c93eddd6262b12f7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.597
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2764491962656734253, guid: c39949651e32d604c93eddd6262b12f7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2113737582}
   m_SourcePrefab: {fileID: 100100000, guid: c39949651e32d604c93eddd6262b12f7, type: 3}
 --- !u!1001 &1450855354
 PrefabInstance:
@@ -739,6 +750,26 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2128854397}
   m_SourcePrefab: {fileID: 100100000, guid: 28051debbbd972c4b9f2eedf1fd9cd90, type: 3}
+--- !u!1 &2113737577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2764491962656734253, guid: c39949651e32d604c93eddd6262b12f7, type: 3}
+  m_PrefabInstance: {fileID: 1449978881}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2113737582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113737577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e9bbc675c819494e93e3b6a4e2382f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  atacklayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &2128854395 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8938549697447154041, guid: 28051debbbd972c4b9f2eedf1fd9cd90, type: 3}

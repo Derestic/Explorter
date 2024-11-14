@@ -9,6 +9,7 @@ public class npc : MonoBehaviour
     protected float life = 100;
     [SerializeField] protected float maxLife = 100;
     protected bool dead = false;
+    [SerializeField] protected float damage = 10;
 
     [Header("ManagerLink")]
     protected Manager man;
@@ -44,5 +45,9 @@ public class npc : MonoBehaviour
     {
         life = maxLife;
         dead = false;
+    }
+    public float getDamage()
+    {
+        return damage;
     }
 }
