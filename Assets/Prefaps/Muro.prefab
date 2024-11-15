@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3675184802617221842}
   - component: {fileID: 6146316415451477186}
   - component: {fileID: 2927065312669769431}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MuroSimple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5212894336058173776}
   - component: {fileID: 4421542849310360920}
   - component: {fileID: 4760561940425053846}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Muro
   m_TagString: Obstacle
   m_Icon: {fileID: 0}

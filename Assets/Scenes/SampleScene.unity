@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 526520402}
   - component: {fileID: 526520401}
   - component: {fileID: 526520400}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -772,6 +772,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 68874086099183583, guid: 2639553afc2dae94ca9c5342af39cff4, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3728283475450758168, guid: 2639553afc2dae94ca9c5342af39cff4, type: 3}
       propertyPath: m_Name
       value: NucleoTotal
@@ -988,6 +992,10 @@ PrefabInstance:
     - target: {fileID: 8462078251713734347, guid: 50657a08d244d1b4f973cef90a699fd1, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462188434818075048, guid: 50657a08d244d1b4f973cef90a699fd1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8513351353476804595, guid: 50657a08d244d1b4f973cef90a699fd1, type: 3}
       propertyPath: m_Layer

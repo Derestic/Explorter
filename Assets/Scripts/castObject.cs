@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class castObject : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class castObject : MonoBehaviour
     public GameObject[] defensa;
     int index = 0;
     GameObject select;
+    [SerializeField] float maxDistancePointer = 30f;
+    [SerializeField] LayerMask layerPointer;
 
     Vector3 origen;
     Vector3 traslateD;
@@ -70,8 +73,10 @@ public class castObject : MonoBehaviour
             else if (Input.GetMouseButtonUp((int)MouseButton.Left))
             {
                 select.GetComponent<Collider>().enabled = true;
+                select.GetComponent<NavMeshObstacle>().enabled = true;
                 select = Instantiate(defensa[index]);
                 select.GetComponent<Collider>().enabled = false;
+                select.GetComponent<NavMeshObstacle>().enabled = false;
             }
             else if (Input.GetKeyDown(changeSelect))
             {
@@ -79,6 +84,7 @@ public class castObject : MonoBehaviour
                 Destroy(select);
                 select = Instantiate(defensa[index]);
                 select.GetComponent<Collider>().enabled = false;
+                select.GetComponent<NavMeshObstacle>().enabled = false;
             }
             else if (Input.GetKey(rotateSelect))
             {
@@ -91,23 +97,30 @@ public class castObject : MonoBehaviour
             pointer.GetComponent<Renderer>().enabled = false;
             select = Instantiate(defensa[index]);
             select.GetComponent<Collider>().enabled = false;
+            select.GetComponent<NavMeshObstacle>().enabled = false;
         }
     }
 
     void castCreation()
     {
         ray = new Ray(transform.position, transform.forward);
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit,maxDistancePointer, layerPointer))
         {
             select.transform.position = hit.point;
-            origen.Set(transform.position.x, select.transform.position.y, transform.position.z);
-            select.transform.LookAt(origen);
-            select.transform.Rotate(rot);
-            if (createD)
-            {
-                traslateD.Set(0, select.transform.localScale.y / 2, 0);
-                select.transform.position += traslateD;
-            }
+        }
+        else
+        {
+            select.transform.position = transform.position;
+            select.transform.position += transform.forward*maxDistancePointer;
+            select.transform.position.Set(select.transform.position.x,0, select.transform.position.z);
+        }
+        origen.Set(transform.position.x, select.transform.position.y, transform.position.z);
+        select.transform.LookAt(origen);
+        select.transform.Rotate(rot);
+        if (createD)
+        {
+            traslateD.Set(0, select.transform.localScale.y / 2, 0);
+            select.transform.position += traslateD;
         }
     }
 }
