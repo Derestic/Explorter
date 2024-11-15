@@ -737,12 +737,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6012317096137002733, guid: c39949651e32d604c93eddd6262b12f7, type: 3}
       propertyPath: m_StoppingDistance
-      value: 0.3
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155616889531569804, guid: c39949651e32d604c93eddd6262b12f7, type: 3}
+      propertyPath: angulo
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155616889531569804, guid: c39949651e32d604c93eddd6262b12f7, type: 3}
+      propertyPath: numRays
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6155616889531569804, guid: c39949651e32d604c93eddd6262b12f7, type: 3}
       propertyPath: ObjetivoF
       value: 
       objectReference: {fileID: 6193689893284096019}
+    - target: {fileID: 6155616889531569804, guid: c39949651e32d604c93eddd6262b12f7, type: 3}
+      propertyPath: gapObjetivo
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 6155616889531569804, guid: c39949651e32d604c93eddd6262b12f7, type: 3}
       propertyPath: posAttack.z
       value: 1
