@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2874946534433124934}
   - component: {fileID: 3172618339153653313}
   - component: {fileID: 8083201834456032060}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Puntero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6214654195612034231}
   - component: {fileID: 6114995876503775850}
   - component: {fileID: 8969820973808245378}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,8 +189,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointer: {fileID: 1717517955193203306}
-  defensa: []
-  vrot: {x: 0, y: 0, z: 0}
+  defensa:
+  - {fileID: 5726272521529189227, guid: c887461061653934e9f210b6f46bd2cd, type: 3}
+  - {fileID: 6546165577639332176, guid: 91743d07b752d884faf6106996e4001a, type: 3}
+  maxDistancePointer: 30
+  layerPointer:
+    serializedVersion: 2
+    m_Bits: 72
+  vrot: {x: 0, y: 50, z: 0}
   selectMode: 101
   rotateSelect: 114
   changeSelect: 113
@@ -206,7 +212,7 @@ GameObject:
   - component: {fileID: 3662296505379420571}
   - component: {fileID: 5314477232337135698}
   - component: {fileID: 1916387378589418819}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ojos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +301,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -313,9 +319,9 @@ GameObject:
   - component: {fileID: 7678328716225358037}
   - component: {fileID: 8327722818863482537}
   - component: {fileID: 859307401941570479}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -450,9 +456,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5670e86ee6ab1b45a1e843d1ee6aa26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxLife: 100
+  damage: 10
   speed: {x: 6, y: 0, z: 6}
   zoomSpeed: 10
-  jumpForce: 2
+  jumpForce: 4
   camara: {fileID: 6214654195612034231}
   sens: 4
-  maxLife: 100
