@@ -34,7 +34,7 @@ public class spawn : MonoBehaviour
                 countGap = 0;
                 inst = Instantiate(enemie);
                 inst.transform.position = transform.position;
-                inst.GetComponent<Enemy>().setAll();
+                //inst.GetComponent<Enemy>().setAll();
             }
             if (countSpawn >= numSpawns) { spawning = false; countSpawn = 0; }
         }

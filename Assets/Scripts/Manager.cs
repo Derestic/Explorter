@@ -11,7 +11,7 @@ public class Manager : MonoBehaviour
     [SerializeField] RoundState state = RoundState.preparation;
     int prep = 0;
     [SerializeField] int maxprep = 3;
-    public GameObject nucleo;
+    [SerializeField] GameObject nucleo;
 
     [Header("Control juador")]
     public GameObject player;
@@ -73,11 +73,6 @@ public class Manager : MonoBehaviour
         }
     }
 
-    void ActivateSpawn()
-    {
-        
-    }
-
     public void gameOver()
     {
         print("Game Over");
@@ -85,5 +80,10 @@ public class Manager : MonoBehaviour
     public bool creationState()
     {
         return state == RoundState.preparation;
+    }
+
+    public GameObject getNucleo()
+    {
+        return nucleo;
     }
 }
