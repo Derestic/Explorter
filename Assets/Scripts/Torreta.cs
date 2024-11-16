@@ -11,6 +11,7 @@ public class Torreta : npc
     [Header("Ataque")]
     public GameObject objetivo = null;
     public GameObject bullet;
+    GameObject obj = null;
     public GameObject spawn;
     [SerializeField] float timer = 2;
     float time;
@@ -67,7 +68,9 @@ public class Torreta : npc
         if(time >= timer)
         {
             Debug.Log("Disparo");
-            GameObject obj = Instantiate(bullet);
+            if(obj == null) obj = Instantiate(bullet);
+            obj.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            obj.SetActive(true);
             obj.transform.position = spawn.transform.position;
             obj.transform.LookAt(objetivo.transform.position);
             obj.GetComponent<Rigidbody>().AddForce(obj.transform.forward*bulletspeed);

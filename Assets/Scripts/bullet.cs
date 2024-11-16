@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-    [SerializeField] float timer=3;
-    float time;
     [SerializeField] float damage = 20;
     [SerializeField] LayerMask atacklayer;
     // Start is called before the first frame update
@@ -17,11 +15,6 @@ public class bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
-        if (time >= timer)
-        {
-            Destroy(gameObject);
-        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,6 +22,8 @@ public class bullet : MonoBehaviour
         if ((atacklayer.value & (1 << other.gameObject.layer)) != 0)
         {
             other.GetComponent<npc>().addLife(-damage);
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+            gameObject.SetActive(false);
         }
     }
 }
