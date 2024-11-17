@@ -24,6 +24,7 @@ public class Enemy : npc
       GameObject Objetivo;
       NavMeshAgent agent;
       [SerializeField] float gapObjetivo = 0.1f;
+      public Collider slimeColidder;
 
     [Header("Control Enemigo")]
       [SerializeField] float speed = 150f;
@@ -36,7 +37,7 @@ public class Enemy : npc
       [SerializeField] float angulo;
       [SerializeField] float maxVision;
       [SerializeField] int numRays = 2;
-    [SerializeField] float upperPosition = 0.5f;
+      [SerializeField] float upperPosition = 0.5f;
       float gap; 
       GameObject mejorColide = null;
       Ray r;
@@ -117,7 +118,7 @@ public class Enemy : npc
 
     void animationSync()
     {
-        if (dead) { animator.SetBool("dead", true);}
+        if (dead) { animator.SetBool("dead", true); slimeColidder.enabled = false; }
         else if (state.idle == status) { animator.SetBool("atacking", false); animator.SetBool("runing", false); }
         else if (state.attack == status) { animator.SetBool("atacking", true); animator.SetBool("runing", false); }
         else if (state.run == status) { animator.SetBool("atacking", false); animator.SetBool("runing", true); }

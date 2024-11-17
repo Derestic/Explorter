@@ -450,6 +450,7 @@ MonoBehaviour:
   damage: 20
   status: 0
   gapObjetivo: 0.4
+  slimeColidder: {fileID: 674524748545808344}
   speed: 3
   atacklayer:
     serializedVersion: 2
@@ -458,6 +459,7 @@ MonoBehaviour:
   angulo: 140
   maxVision: 10
   numRays: 25
+  upperPosition: 0.5
 --- !u!195 &2054384236642160813
 NavMeshAgent:
   m_ObjectHideFlags: 0
