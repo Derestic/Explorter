@@ -23,6 +23,8 @@ public class Move : npc
     // Start is called before the first frame update
     void Start()
     {
+        man = Manager.Instance;
+        life = maxLife;
         move = new Vector3 (0f, 0f, 0f);
         Cursor.visible = false;
         anim = GetComponent<Animator>();

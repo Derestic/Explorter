@@ -246,8 +246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8dc2eae97db5844a99a79b45ac64955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLife: 100
-  damage: 10
+  maxLife: 2
+  damage: 1
   status: 0
   gapObjetivo: 0.4
   slimeColidder: {fileID: 4074606403164822028}

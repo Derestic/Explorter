@@ -49,20 +49,9 @@ public class Enemy : npc
     // Start is called before the first frame update
     void Start()
     {
-        setAll();
-        StartCoroutine(Vision());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(animator != null) animationSync();
-        battleLogic();
-    }
-
-    public void setAll()
-    {
-        ObjetivoF = Manager.Instance.getNucleo();
+        man = Manager.Instance;
+        life = maxLife;
+        ObjetivoF = man.getNucleo();
 
         gap = (angulo * Mathf.Deg2Rad) / numRays;
         agent = GetComponent<NavMeshAgent>();
@@ -72,6 +61,14 @@ public class Enemy : npc
         Objetivo = ObjetivoF;
         agent.speed = speed;
         animator = GetComponent<Animator>();
+        StartCoroutine(Vision());
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(animator != null) animationSync();
+        battleLogic();
     }
 
     private IEnumerator Vision()
@@ -118,7 +115,7 @@ public class Enemy : npc
 
     void animationSync()
     {
-        if (dead) { animator.SetBool("dead", true); slimeColidder.enabled = false; }
+        if (dead) { animator.SetBool("dead", true);  }
         else if (state.idle == status) { animator.SetBool("atacking", false); animator.SetBool("runing", false); }
         else if (state.attack == status) { animator.SetBool("atacking", true); animator.SetBool("runing", false); }
         else if (state.run == status) { animator.SetBool("atacking", false); animator.SetBool("runing", true); }
@@ -162,6 +159,7 @@ public class Enemy : npc
     public void activeAttack(){AttackColidder.enabled = true;}
     public void desactiveAttack() {AttackColidder.enabled = false;}
     public void deadDestroy() { Destroy(gameObject);}
+    public void deadInit() { slimeColidder.enabled = false; man.remouveEnemy(); }
 
     private void OnTriggerEnter(Collider other)
     {

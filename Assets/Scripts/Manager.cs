@@ -8,16 +8,17 @@ public class Manager : MonoBehaviour
     enum RoundState { preparation, oleada };
 
     [Header("Control Oleadas")]
-    [SerializeField] RoundState state = RoundState.preparation;
-    int prep = 0;
-    [SerializeField] int maxprep = 3;
-    [SerializeField] GameObject nucleo;
+      [SerializeField] RoundState state = RoundState.preparation;
+      int prep = 0;
+      [SerializeField] int maxprep = 3;
+      [SerializeField] GameObject nucleo;
+      int countEnemies = 0;
 
     [Header("Control juador")]
-    public GameObject player;
+      public GameObject player;
 
     [Header("Spawn Control")]
-    public GameObject[] spawns = new GameObject[3];
+      public GameObject[] spawns = new GameObject[3];
 
     public static Manager Instance
     {
@@ -54,7 +55,6 @@ public class Manager : MonoBehaviour
     {
         if (state == RoundState.oleada)
         {
-            state = RoundState.preparation;
             prep = 0;
             for (int i = 0; i < spawns.Length;i++) { spawns[i].GetComponent<spawn>().spawning = true; }
         }
@@ -85,5 +85,19 @@ public class Manager : MonoBehaviour
     public GameObject getNucleo()
     {
         return nucleo;
+    }
+
+    public void addEnemy()
+    {
+        countEnemies++;
+    }
+    public void remouveEnemy()
+    {
+        countEnemies--;
+        Debug.Log("Hay: " + countEnemies + "Enemigos");
+        if(countEnemies <= 0)
+        {
+            state = RoundState.preparation;
+        }
     }
 }

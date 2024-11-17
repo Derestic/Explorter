@@ -6,10 +6,10 @@ public class npc : MonoBehaviour
 {
 
     [Header("Control Vida")]
-    protected float life = 100;
-    [SerializeField] protected float maxLife = 100;
+    protected float life;
+    [SerializeField] protected float maxLife = 1;
     protected bool dead = false;
-    [SerializeField] protected float damage = 10;
+    [SerializeField] protected float damage = 1;
 
     [Header("ManagerLink")]
     protected Manager man;
