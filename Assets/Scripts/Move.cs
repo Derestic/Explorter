@@ -15,11 +15,17 @@ public class Move : npc
     public Camera camara;
     [SerializeField]float sens = 1.0f;
 
+    [Header("Control ataque")]
+    public KeyCode ataque;
+    Animator anim;
+    public GameObject weapon;
+
     // Start is called before the first frame update
     void Start()
     {
         move = new Vector3 (0f, 0f, 0f);
         Cursor.visible = false;
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -28,6 +34,8 @@ public class Move : npc
         if (!dead)
         {
             movement();
+
+            attack();
 
             jump();
 
@@ -44,6 +52,22 @@ public class Move : npc
         // move.y = 0f;
         transform.localPosition = transform.localPosition + move;
     }
+
+    void attack()
+    {
+        if (Input.GetKeyDown(ataque))
+        {
+            anim.SetBool("ataque",true);
+        }
+    }
+
+    public void getAnimIdle()
+    {
+        anim.SetBool("ataque", false);
+    }
+
+    public void activeCollider() { weapon.GetComponent<Collider>().enabled = true; }
+    public void desactiveCollider() { weapon.GetComponent<Collider>().enabled = false; }
 
     void jump()
     {

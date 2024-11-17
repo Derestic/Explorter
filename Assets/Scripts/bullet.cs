@@ -22,8 +22,6 @@ public class bullet : MonoBehaviour
         if ((atacklayer.value & (1 << other.gameObject.layer)) != 0)
         {
             other.GetComponent<npc>().addLife(-damage);
-            GetComponent<Rigidbody>().velocity = Vector3.zero;
-            gameObject.SetActive(false);
         }
     }
 }
