@@ -36,6 +36,7 @@ public class Enemy : npc
       [SerializeField] float angulo;
       [SerializeField] float maxVision;
       [SerializeField] int numRays = 2;
+    [SerializeField] float upperPosition = 0.5f;
       float gap; 
       GameObject mejorColide = null;
       Ray r;
@@ -81,13 +82,13 @@ public class Enemy : npc
         {
             Vector3 direction = Quaternion.Euler(0, ini * Mathf.Rad2Deg, 0) * transform.forward;
 
-            r.origin = transform.position; 
-            r.direction = transform.position + direction * maxVision;
+            r.origin = transform.position + transform.up * upperPosition; 
+            r.direction = direction;
             ini += gap;
 
             if(Physics.Raycast(r, out hit, maxVision, atacklayer))
             {
-                if (hit.distance < d) mejorColide = hit.transform.gameObject;
+                if (hit.distance < d) { mejorColide = hit.transform.gameObject; d = hit.distance; Debug.Log("Objective changed"); }
             }
         }
 
@@ -107,7 +108,8 @@ public class Enemy : npc
             // Calcula el vector en la dirección actual usando una rotación sobre transform.forward
             Vector3 direction = Quaternion.Euler(0, ini * Mathf.Rad2Deg, 0) * transform.forward;
 
-            Gizmos.DrawLine(transform.position, transform.position + direction * maxVision);
+            Gizmos.DrawLine(transform.position + transform.up* upperPosition, 
+                (transform.position + direction * maxVision) + transform.up* upperPosition);
 
             ini += gap; // Aumenta el ángulo en cada paso
         }
