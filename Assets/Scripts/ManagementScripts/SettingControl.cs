@@ -8,13 +8,12 @@ using TMPro;
 public class SettingControl : MonoBehaviour
 {
 
-    public int j = 0;
-    public bool contador = false;
+    int j = 0;
+    bool contador = false;
     public int timeConfirm = 0;
 
     private List<int> widthList = new List<int>();
     private List<int> heightList = new List<int>();
-    private List<int> refreshList = new List<int>();
 
     public TextMeshProUGUI timer;
     public TextMeshProUGUI resObj;
@@ -36,7 +35,6 @@ public class SettingControl : MonoBehaviour
         if (SettingsSaving.isFirstRun){
             Resolution[] resolutions = Screen.resolutions;
 
-            // Print the resolutions
             foreach (var res in resolutions)
             {
                 SettingsSaving.widthList.Add(res.width);
@@ -124,10 +122,6 @@ public class SettingControl : MonoBehaviour
     }
 
     public void zSetFullScreen(Toggle t){
-        if (t.isOn){
-            SettingsSaving.fullscreen = true;
-        }else{
-            SettingsSaving.fullscreen = false;
-        }
+        SettingsSaving.fullscreen = t.isOn;
     }
 }
