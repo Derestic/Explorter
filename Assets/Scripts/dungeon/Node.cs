@@ -16,6 +16,7 @@ public class Node
         this.dungeonLink = d;
         this.id = id;
         this.mapPosition = position;
+        dungeonLink.addRoomCount();
     }
     public int getId() { return this.id; }
     public int[] getMapPosition() { return this.mapPosition; }
