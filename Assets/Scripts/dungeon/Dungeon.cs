@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class Dungeon : MonoBehaviour
 {
+    enum type { bosque, cave, def};
+
     public int mapSize = 5; /// Width Height Length
     public int mapSizeY = 2; /// Width Height Length
     public float mult = 5;
     public GameObject g;
+    [SerializeField]
+    type dunType;
 
     private int mapSize3;
 
@@ -35,11 +39,18 @@ public class Dungeon : MonoBehaviour
             GameObject aux = Instantiate(g, new Vector3(pos[0] * mult, pos[1]*mult, pos[2]*mult), Quaternion.identity);
             string walls = nodeList[i].getNodeStruct();
             //Debug.Log(walls);
-            if (walls[3] == '1') aux.GetComponent<RoomScript>().turnOffWall(1);
-            if (walls[2] == '1') aux.GetComponent<RoomScript>().turnOffWall(2);
-            if (walls[1] == '1') aux.GetComponent<RoomScript>().turnOffWall(3);
-            if (walls[0] == '1') aux.GetComponent<RoomScript>().turnOffWall(4);
-            Debug.Log(i+":"+walls);
+            if(dunType == type.bosque) {
+                if (getFromGrid(pos[0], pos[1], pos[2] - 1) > 0) aux.GetComponent<RoomScript>().turnOffWall(2);
+                if (getFromGrid(pos[0], pos[1], pos[2] + 1) > 0) aux.GetComponent<RoomScript>().turnOffWall(1);
+                if (getFromGrid(pos[0] - 1, pos[1], pos[2]) > 0) aux.GetComponent<RoomScript>().turnOffWall(4);
+                if (getFromGrid(pos[0] + 1, pos[1], pos[2]) > 0) aux.GetComponent<RoomScript>().turnOffWall(3);
+            } else {
+                if (walls[3] == '1') aux.GetComponent<RoomScript>().turnOffWall(1);
+                if (walls[2] == '1') aux.GetComponent<RoomScript>().turnOffWall(2);
+                if (walls[1] == '1') aux.GetComponent<RoomScript>().turnOffWall(3);
+                if (walls[0] == '1') aux.GetComponent<RoomScript>().turnOffWall(4);
+            }
+            //Debug.Log(i+":"+walls);
         }
     }
 
