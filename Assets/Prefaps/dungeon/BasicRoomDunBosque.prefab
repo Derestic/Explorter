@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3117956414309324870}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: wall1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2704254747994548827}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bushes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   m_Component:
   - component: {fileID: 975188539241539675}
   - component: {fileID: 5077915652377661510}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BasicRoomDunBosque
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2702812674118461262}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bushes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4581055989048175805}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bushes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4718911687874005313}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: wall3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +285,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6673716718247838574}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: wall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 526971979197673936}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bushes (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -373,7 +373,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5944700149219838457}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: wall1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,7 +410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3619091013568890578}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: wall1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,7 +447,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8043145342096664488}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: wall4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,7 +497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7140355835545165743}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: wall1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -534,7 +534,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8151982468185710948}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: wall1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,6 +618,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectGenerator Variant Bosque (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4752825067452507435, guid: 408849cad0d965146b65769b3d57fef8, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -639,6 +643,10 @@ PrefabInstance:
     - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_Name
       value: Bush_04 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6790334936510984170, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_LocalScale.x
@@ -776,6 +784,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush_04 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6790334936510984170, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -849,6 +861,10 @@ PrefabInstance:
     - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_Name
       value: Bush_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 866363654716959925, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_LocalScale.x
@@ -924,6 +940,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush_03 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 866363654716959925, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -997,6 +1017,10 @@ PrefabInstance:
     - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_Name
       value: Bush_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6790334936510984170, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_LocalScale.x
@@ -1072,6 +1096,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_03
       objectReference: {fileID: 0}
+    - target: {fileID: 214067536603787050, guid: fd9e862afb15fd14ca05309c6790543f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 698996816985093520, guid: fd9e862afb15fd14ca05309c6790543f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.230513
@@ -1133,6 +1161,10 @@ PrefabInstance:
     - target: {fileID: 7056460441880482784, guid: 5848e10a7efba6146960e4473986cf9f, type: 3}
       propertyPath: m_Name
       value: Rock_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056460441880482784, guid: 5848e10a7efba6146960e4473986cf9f, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7684906565275584858, guid: 5848e10a7efba6146960e4473986cf9f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1247,6 +1279,10 @@ PrefabInstance:
     - target: {fileID: 1071932651188180341, guid: f5a25ce826b191a488244faefa290f38, type: 3}
       propertyPath: m_Name
       value: Rock_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1071932651188180341, guid: f5a25ce826b191a488244faefa290f38, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1384,6 +1420,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_06 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7956810024182371906, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1405,6 +1445,10 @@ PrefabInstance:
     - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_Name
       value: Bush_04 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6790334936510984170, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_LocalScale.x
@@ -1479,6 +1523,10 @@ PrefabInstance:
     - target: {fileID: 8604014862111390200, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
       propertyPath: m_Name
       value: Rock_05 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604014862111390200, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8947607110731227970, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1603,6 +1651,10 @@ PrefabInstance:
     - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_Name
       value: Bush_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 866363654716959925, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_LocalScale.x
@@ -1730,6 +1782,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_06 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7956810024182371906, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1828,31 +1884,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0047471356
+      value: -1.65
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.849998
+      value: 7.89
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8535535
+      value: 0.92387956
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.35355338
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.35355338
+      value: 0.38268343
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.1464466
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -1865,6 +1921,10 @@ PrefabInstance:
     - target: {fileID: 7956810024182371906, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_Name
       value: Rock_06 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956810024182371906, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1887,6 +1947,10 @@ PrefabInstance:
     - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_Name
       value: Bush_04 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6790334936510984170, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_LocalScale.x
@@ -2086,6 +2150,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground_001
       objectReference: {fileID: 0}
+    - target: {fileID: 7383293571600083320, guid: 0d5714f258e911a40ab41de52f54990b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7871565157063046082, guid: 0d5714f258e911a40ab41de52f54990b, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -2278,6 +2346,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_06 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7956810024182371906, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2299,6 +2371,10 @@ PrefabInstance:
     - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_Name
       value: Bush_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6790334936510984170, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_LocalScale.x
@@ -2418,6 +2494,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectGenerator Variant Bosque (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4752825067452507435, guid: 408849cad0d965146b65769b3d57fef8, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2492,6 +2572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_06 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7956810024182371906, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2513,6 +2597,10 @@ PrefabInstance:
     - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_Name
       value: Bush_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6790334936510984170, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_LocalScale.x
@@ -2587,6 +2675,10 @@ PrefabInstance:
     - target: {fileID: 8604014862111390200, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
       propertyPath: m_Name
       value: Rock_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604014862111390200, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8947607110731227970, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2693,6 +2785,10 @@ PrefabInstance:
     - target: {fileID: 4752825067452507435, guid: 408849cad0d965146b65769b3d57fef8, type: 3}
       propertyPath: m_Name
       value: ObjectGenerator Variant Bosque (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4752825067452507435, guid: 408849cad0d965146b65769b3d57fef8, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2840,6 +2936,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7056460441880482784, guid: 5848e10a7efba6146960e4473986cf9f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7684906565275584858, guid: 5848e10a7efba6146960e4473986cf9f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.6
@@ -2901,6 +3001,10 @@ PrefabInstance:
     - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_Name
       value: Bush_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 866363654716959925, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_LocalScale.x
@@ -3028,6 +3132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_06 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7956810024182371906, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3102,6 +3210,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_06
       objectReference: {fileID: 0}
+    - target: {fileID: 7956810024182371906, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3123,6 +3235,10 @@ PrefabInstance:
     - target: {fileID: 214067536603787050, guid: fd9e862afb15fd14ca05309c6790543f, type: 3}
       propertyPath: m_Name
       value: Rock_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 214067536603787050, guid: fd9e862afb15fd14ca05309c6790543f, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 698996816985093520, guid: fd9e862afb15fd14ca05309c6790543f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3262,31 +3378,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0047471356
+      value: -0.82
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.849998
+      value: 7.57
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8535535
+      value: 0.92387956
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.35355338
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.35355338
+      value: 0.38268343
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.1464466
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -3299,6 +3415,10 @@ PrefabInstance:
     - target: {fileID: 7956810024182371906, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_Name
       value: Rock_06 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956810024182371906, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3365,6 +3485,10 @@ PrefabInstance:
     - target: {fileID: 4752825067452507435, guid: 408849cad0d965146b65769b3d57fef8, type: 3}
       propertyPath: m_Name
       value: ObjectGenerator Variant Bosque
+      objectReference: {fileID: 0}
+    - target: {fileID: 4752825067452507435, guid: 408849cad0d965146b65769b3d57fef8, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3564,6 +3688,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_06 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7956810024182371906, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3647,6 +3775,10 @@ PrefabInstance:
     - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_Name
       value: Bush_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 866363654716959925, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_LocalScale.x
@@ -3846,6 +3978,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_03 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 214067536603787050, guid: fd9e862afb15fd14ca05309c6790543f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 698996816985093520, guid: fd9e862afb15fd14ca05309c6790543f, type: 3}
       propertyPath: m_LocalScale.x
       value: 8
@@ -3972,6 +4108,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1071932651188180341, guid: f5a25ce826b191a488244faefa290f38, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3993,6 +4133,10 @@ PrefabInstance:
     - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_Name
       value: Bush_03 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 866363654716959925, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_LocalScale.x
@@ -4192,6 +4336,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7056460441880482784, guid: 5848e10a7efba6146960e4473986cf9f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7684906565275584858, guid: 5848e10a7efba6146960e4473986cf9f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.6
@@ -4253,6 +4401,10 @@ PrefabInstance:
     - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_Name
       value: Bush_04 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6790334936510984170, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_LocalScale.x
@@ -4380,6 +4532,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_06
       objectReference: {fileID: 0}
+    - target: {fileID: 7956810024182371906, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4446,6 +4602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectGenerator Variant Bosque (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4752825067452507435, guid: 408849cad0d965146b65769b3d57fef8, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4467,6 +4627,10 @@ PrefabInstance:
     - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_Name
       value: Bush_03 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 866363654716959925, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_LocalScale.x
@@ -4594,6 +4758,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_02
       objectReference: {fileID: 0}
+    - target: {fileID: 1071932651188180341, guid: f5a25ce826b191a488244faefa290f38, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4615,6 +4783,10 @@ PrefabInstance:
     - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_Name
       value: Bush_04 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6790334936510984170, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_LocalScale.x
@@ -4690,6 +4862,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush_04 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6790334936510984170, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -4763,6 +4939,10 @@ PrefabInstance:
     - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_Name
       value: Bush_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 866363654716959925, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_LocalScale.x
@@ -4838,6 +5018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_05 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8604014862111390200, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8947607110731227970, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.836119
@@ -4899,6 +5083,10 @@ PrefabInstance:
     - target: {fileID: 8604014862111390200, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
       propertyPath: m_Name
       value: Rock_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604014862111390200, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8947607110731227970, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5023,6 +5211,10 @@ PrefabInstance:
     - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_Name
       value: Bush_03 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 866363654716959925, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_LocalScale.x
@@ -5159,6 +5351,10 @@ PrefabInstance:
     - target: {fileID: 8604014862111390200, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
       propertyPath: m_Name
       value: Rock_05 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604014862111390200, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8947607110731227970, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5336,6 +5532,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_06
       objectReference: {fileID: 0}
+    - target: {fileID: 7956810024182371906, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5472,6 +5672,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_02
       objectReference: {fileID: 0}
+    - target: {fileID: 1071932651188180341, guid: f5a25ce826b191a488244faefa290f38, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5545,6 +5749,10 @@ PrefabInstance:
     - target: {fileID: 7956810024182371906, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_Name
       value: Rock_06 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956810024182371906, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5629,6 +5837,10 @@ PrefabInstance:
     - target: {fileID: 8604014862111390200, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
       propertyPath: m_Name
       value: Rock_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604014862111390200, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8947607110731227970, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6374,6 +6586,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7056460441880482784, guid: 5848e10a7efba6146960e4473986cf9f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7684906565275584858, guid: 5848e10a7efba6146960e4473986cf9f, type: 3}
       propertyPath: m_LocalScale.x
       value: 4
@@ -6447,6 +6663,10 @@ PrefabInstance:
     - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_Name
       value: Bush_04 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6790334936510984170, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_LocalScale.x
@@ -6698,6 +6918,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_02
       objectReference: {fileID: 0}
+    - target: {fileID: 1071932651188180341, guid: f5a25ce826b191a488244faefa290f38, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6719,6 +6943,10 @@ PrefabInstance:
     - target: {fileID: 214067536603787050, guid: fd9e862afb15fd14ca05309c6790543f, type: 3}
       propertyPath: m_Name
       value: Rock_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 214067536603787050, guid: fd9e862afb15fd14ca05309c6790543f, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 698996816985093520, guid: fd9e862afb15fd14ca05309c6790543f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6781,6 +7009,10 @@ PrefabInstance:
     - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_Name
       value: Bush_04 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6790334936510984170, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_LocalScale.x
@@ -6908,6 +7140,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_06 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7956810024182371906, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6929,6 +7165,10 @@ PrefabInstance:
     - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_Name
       value: Bush_04 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6790334936510984170, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_LocalScale.x
@@ -7056,6 +7296,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_06 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7956810024182371906, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7076,7 +7320,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 747002613442455744, guid: 408849cad0d965146b65769b3d57fef8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.38
+      value: 6.09
       objectReference: {fileID: 0}
     - target: {fileID: 747002613442455744, guid: 408849cad0d965146b65769b3d57fef8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7121,6 +7365,10 @@ PrefabInstance:
     - target: {fileID: 4752825067452507435, guid: 408849cad0d965146b65769b3d57fef8, type: 3}
       propertyPath: m_Name
       value: ObjectGenerator Variant Bosque (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4752825067452507435, guid: 408849cad0d965146b65769b3d57fef8, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7188,6 +7436,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectGenerator Variant Bosque (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4752825067452507435, guid: 408849cad0d965146b65769b3d57fef8, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7209,6 +7461,10 @@ PrefabInstance:
     - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_Name
       value: Bush_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6790334936510984170, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_LocalScale.x
@@ -7298,31 +7554,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0047471356
+      value: -0.89
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.849998
+      value: 8.76
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8535535
+      value: 0.92387956
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.35355338
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.35355338
+      value: 0.38268343
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.1464466
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -7335,6 +7591,10 @@ PrefabInstance:
     - target: {fileID: 7956810024182371906, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_Name
       value: Rock_06 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956810024182371906, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7357,6 +7617,10 @@ PrefabInstance:
     - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_Name
       value: Bush_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 866363654716959925, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_LocalScale.x
@@ -7494,6 +7758,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush_04 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6790334936510984170, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -7567,6 +7835,10 @@ PrefabInstance:
     - target: {fileID: 8604014862111390200, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
       propertyPath: m_Name
       value: Rock_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604014862111390200, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8947607110731227970, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7692,6 +7964,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush_04 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6790334936510984170, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -7780,7 +8056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0047471356
+      value: -0.58
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7788,23 +8064,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8535535
+      value: 0.92387956
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.35355338
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.35355338
+      value: 0.38268343
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.1464466
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7288957403290668280, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -7817,6 +8093,10 @@ PrefabInstance:
     - target: {fileID: 7956810024182371906, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
       propertyPath: m_Name
       value: Rock_06 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956810024182371906, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7839,6 +8119,10 @@ PrefabInstance:
     - target: {fileID: 214067536603787050, guid: fd9e862afb15fd14ca05309c6790543f, type: 3}
       propertyPath: m_Name
       value: Rock_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 214067536603787050, guid: fd9e862afb15fd14ca05309c6790543f, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 698996816985093520, guid: fd9e862afb15fd14ca05309c6790543f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8088,6 +8372,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush_04 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6790334936510984170, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -8161,6 +8449,10 @@ PrefabInstance:
     - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_Name
       value: Bush_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 866363654716959925, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_LocalScale.x
@@ -8608,6 +8900,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7056460441880482784, guid: 5848e10a7efba6146960e4473986cf9f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7684906565275584858, guid: 5848e10a7efba6146960e4473986cf9f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.6
@@ -8794,6 +9090,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush_04 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6158616456106423632, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6790334936510984170, guid: 22f96f2b0b3da504db2c9c78a32f68ca, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -8929,6 +9229,10 @@ PrefabInstance:
     - target: {fileID: 8604014862111390200, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
       propertyPath: m_Name
       value: Rock_05 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604014862111390200, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8947607110731227970, guid: 705ea568440259c4c8f0e26ac261c69b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9168,6 +9472,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_06
       objectReference: {fileID: 0}
+    - target: {fileID: 7956810024182371906, guid: a74c5ad867bfe32419294ce151f88192, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9251,6 +9559,10 @@ PrefabInstance:
     - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_Name
       value: Bush_03 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 526395090672219663, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 866363654716959925, guid: becab8771115bdd4b8cbc0ab5b2f4e8e, type: 3}
       propertyPath: m_LocalScale.x
