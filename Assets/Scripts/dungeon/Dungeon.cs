@@ -10,6 +10,7 @@ public class Dungeon : MonoBehaviour
     public int mapSizeY = 2; /// Width Height Length
     public float mult = 5;
     public GameObject g;
+    public int salasMinimas = 5;
     [SerializeField]
     type dunType;
 
@@ -19,19 +20,22 @@ public class Dungeon : MonoBehaviour
     private Node[] nodeList;
     private int nodeNum = 0;
     private Node startNode;
+    private GameObject playerRef;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        mapSize3 = mapSize * mapSize * mapSizeY;
-        grid = new int[mapSize3];
-        nodeList = new Node[mapSize3];
+        do {
+            mapSize3 = mapSize * mapSize * mapSizeY;
+            grid = new int[mapSize3];
+            nodeList = new Node[mapSize3];
+            playerRef = GameObject.Find("Player");
 
-        startNode = generateNewNode(Random.Range(0,mapSize), Random.Range(0, mapSizeY), Random.Range(0, mapSize));
-        startNode.expand();
-        
+            startNode = generateNewNode(Random.Range(0, mapSize), Random.Range(0, mapSizeY), Random.Range(0, mapSize));
+            startNode.expand();
+        } while (nodeList.Length < salasMinimas);
         testing();
 
         for (int i = 0; i < nodeNum; i++) {
@@ -52,6 +56,9 @@ public class Dungeon : MonoBehaviour
             }
             //Debug.Log(i+":"+walls);
         }
+
+        int[] setPosPlayer = startNode.getMapPosition();
+        playerRef.transform.position = new Vector3(setPosPlayer[0] * mult, setPosPlayer[1] * mult + 1, setPosPlayer[2] * mult);
     }
 
     /** --> a[y,z,x]
