@@ -15,7 +15,7 @@ public class Manager : MonoBehaviour
       int countEnemies = 0;
 
     [Header("Control juador")]
-      public GameObject player;
+      public GameObject player = null;
 
     [Header("Spawn Control")]
       public GameObject[] spawns = new GameObject[3];
@@ -67,7 +67,7 @@ public class Manager : MonoBehaviour
             }
         }
         // Resucitar jugador
-        if (player.GetComponent<Move>().isDead())
+        if (player != null && player.GetComponent<Move>().isDead())
         {
             player.GetComponent<Move>().resetLife();
         }
