@@ -9,6 +9,8 @@ public class Move : npc
     [SerializeField] Vector3 speed;
     [SerializeField] float zoomSpeed = 0.1f;
     [SerializeField] float jumpForce = 10f;
+    [SerializeField] float deltaJump = 0.01f;
+    bool jumpControl = true;
     Vector3 move;
 
     [Header("Control Camara")]
@@ -54,7 +56,10 @@ public class Move : npc
         move += Input.GetAxisRaw("Vertical") * speed.z * transform.forward;
         gameObject.GetComponent<Rigidbody>().velocity = move;
         //gameObject.GetComponent<Rigidbody>().(Input.GetAxis("Vertical") * speed.x, 0.0f,Input.GetAxis("Horizontal") * speed.z);
-
+        if (!jumpControl && move.y <= -deltaJump && transform.position.y < 2)
+        {
+            jumpControl = true;
+        }
     }
 
     void movement()
@@ -84,9 +89,10 @@ public class Move : npc
 
     void jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (jumpControl && Input.GetKeyDown(KeyCode.Space))
         {
             gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, jumpForce , 0),ForceMode.Impulse);
+            jumpControl = false;
         }
     }
 
