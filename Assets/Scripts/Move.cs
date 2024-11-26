@@ -35,7 +35,7 @@ public class Move : npc
     {
         if (!dead)
         {
-            movement();
+            //movement();
 
             attack();
 
@@ -46,6 +46,17 @@ public class Move : npc
             cameraZoom();
         }
     }
+
+    private void FixedUpdate()
+    {
+        move.Set(0f, gameObject.GetComponent<Rigidbody>().velocity.y, 0f);
+        move += Input.GetAxisRaw("Horizontal") * speed.x * transform.right;
+        move += Input.GetAxisRaw("Vertical") * speed.z * transform.forward;
+        gameObject.GetComponent<Rigidbody>().velocity = move;
+        //gameObject.GetComponent<Rigidbody>().(Input.GetAxis("Vertical") * speed.x, 0.0f,Input.GetAxis("Horizontal") * speed.z);
+
+    }
+
     void movement()
     {
         move.Set(0f, 0f, 0f);
@@ -75,7 +86,7 @@ public class Move : npc
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, jumpForce * 100, 0));
+            gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, jumpForce , 0),ForceMode.Impulse);
         }
     }
 
