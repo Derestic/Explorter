@@ -56,7 +56,7 @@ public class Move : npc
         move += Input.GetAxisRaw("Vertical") * speed.z * transform.forward;
         gameObject.GetComponent<Rigidbody>().velocity = move;
         //gameObject.GetComponent<Rigidbody>().(Input.GetAxis("Vertical") * speed.x, 0.0f,Input.GetAxis("Horizontal") * speed.z);
-        if (!jumpControl && move.y <= -deltaJump && transform.position.y < 2)
+        if (!jumpControl && move.y <= -deltaJump && transform.position.y < 1.2f)
         {
             jumpControl = true;
         }

@@ -115,7 +115,7 @@ public class Enemy : npc
 
     void animationSync()
     {
-        if (dead) { animator.SetBool("dead", true);  }
+        if (dead) { animator.SetBool("dead", true); agent.isStopped = true;  }
         else if (state.idle == status) { animator.SetBool("atacking", false); animator.SetBool("runing", false); }
         else if (state.attack == status) { animator.SetBool("atacking", true); animator.SetBool("runing", false); }
         else if (state.run == status) { animator.SetBool("atacking", false); animator.SetBool("runing", true); }
