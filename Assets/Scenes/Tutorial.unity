@@ -3671,25 +3671,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 859307401941570479, guid: a9acb56075f48404c9c9a9d8a5b97c53, type: 3}
-      propertyPath: damage
-      value: 1
+    - target: {fileID: 5356784570488932743, guid: a9acb56075f48404c9c9a9d8a5b97c53, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 859307401941570479, guid: a9acb56075f48404c9c9a9d8a5b97c53, type: 3}
-      propertyPath: maxLife
-      value: 10
+    - target: {fileID: 8083201834456032060, guid: a9acb56075f48404c9c9a9d8a5b97c53, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 859307401941570479, guid: a9acb56075f48404c9c9a9d8a5b97c53, type: 3}
-      propertyPath: jumpForce
-      value: 10
+    - target: {fileID: 8083201834456032060, guid: a9acb56075f48404c9c9a9d8a5b97c53, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8808536917993584773, guid: a9acb56075f48404c9c9a9d8a5b97c53, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 9110915630207958044, guid: a9acb56075f48404c9c9a9d8a5b97c53, type: 3}
-      propertyPath: damage
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

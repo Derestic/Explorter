@@ -30,7 +30,6 @@ public class castObject : MonoBehaviour
     [SerializeField]Vector3 vrot;
 
     [Header("Creation Buttons")]
-    [SerializeField] KeyCode selectMode = KeyCode.E;
     [SerializeField] KeyCode rotateSelect = KeyCode.R;
     [SerializeField] KeyCode changeSelect = KeyCode.Q;
     // Start is called before the first frame update
@@ -51,9 +50,6 @@ public class castObject : MonoBehaviour
         castCreation();
         if (man != null)
         {
-            bool b = man.creationState();
-            // use cast
-            if (b)
                 operateCreation();
         }
             
@@ -63,14 +59,7 @@ public class castObject : MonoBehaviour
     {
         if (createD)
         {
-            if (Input.GetKeyUp(selectMode))
-            {
-                Destroy(select);
-                createD = false;
-                select = pointer;
-                pointer.GetComponent<Renderer>().enabled = true;
-            }
-            else if (Input.GetMouseButtonUp((int)MouseButton.Left))
+            if (Input.GetMouseButtonUp((int)MouseButton.Left))
             {
                 select.GetComponent<Collider>().enabled = true;
                 select.GetComponent<NavMeshObstacle>().enabled = true;
@@ -91,16 +80,25 @@ public class castObject : MonoBehaviour
                 rot += vrot * Time.deltaTime;
             }
         }
-        else if (Input.GetKeyUp(KeyCode.E))
+    }
+
+    public void changeMode()
+    {
+        if (createD)
         {
+            Destroy(select);
+            createD = false;
+            select = pointer;
+            pointer.SetActive(true);
+        }
+        else{
             createD = true;
-            pointer.GetComponent<Renderer>().enabled = false;
+            pointer.SetActive(false);
             select = Instantiate(defensa[index]);
             select.GetComponent<Collider>().enabled = false;
             select.GetComponent<NavMeshObstacle>().enabled = false;
         }
     }
-
     void castCreation()
     {
         ray = new Ray(transform.position, transform.forward);
