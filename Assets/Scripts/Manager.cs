@@ -20,6 +20,10 @@ public class Manager : MonoBehaviour
     [Header("Spawn Control")]
       public GameObject[] spawns = new GameObject[3];
 
+    [Header("Control Inventario")]
+      Inventario inventory = Inventario.Instance();
+
+
     public static Manager Instance
     {
         get
@@ -100,4 +104,7 @@ public class Manager : MonoBehaviour
             state = RoundState.preparation;
         }
     }
+
+    public Inventario GetInventario() { return inventory; }
+
 }
