@@ -59,6 +59,8 @@ public class Manager : ManagerGen
         print("Estoy creado, con estado " + state.ToString());
         nextState();
         updateCanvasInventory();
+        if(state == RoundState.oleada)
+            player.GetComponent<Move>().desactivateModes();
     }
 
     // Update is called once per frame
@@ -84,6 +86,7 @@ public class Manager : ManagerGen
             if (prep >= maxprep)
             {
                 state = RoundState.oleada;
+                player.GetComponent<Move>().desactivateModes();
             }
         }
         // Resucitar jugador
@@ -117,6 +120,7 @@ public class Manager : ManagerGen
         Debug.Log("Hay: " + countEnemies + "Enemigos");
         if(countEnemies <= 0)
         {
+            player.GetComponent<Move>().activateModes();
             state = RoundState.preparation;
         }
     }
