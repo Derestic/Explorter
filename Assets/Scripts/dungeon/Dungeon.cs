@@ -13,6 +13,7 @@ public class Dungeon : MonoBehaviour
     public int salasMinimas = 5;
     public GameObject doorPrefab;
     public GameObject spawnerPrefab;
+    public GameObject containerObjectRef;
     [SerializeField]
     type dunType;
 
@@ -43,9 +44,14 @@ public class Dungeon : MonoBehaviour
         Debug.Log(roomCount);
         testing();
 
+        int[] setPosPlayer = startNode.getMapPosition();
+        playerRef.transform.position = new Vector3(setPosPlayer[0] * mult, setPosPlayer[1] * mult + 1, setPosPlayer[2] * mult);
+
         for (int i = 0; i < nodeNum; i++) {
             int[] pos = nodeList[i].getMapPosition();
             GameObject aux = Instantiate(roomPrefab, new Vector3(pos[0] * mult, pos[1]*mult, pos[2]*mult), Quaternion.identity);
+            aux.transform.parent = containerObjectRef.transform;
+
             string walls = nodeList[i].getNodeStruct();
             if(dunType == type.bosque) {
                 if (getFromGrid(pos[0], pos[1], pos[2] - 1) > 0) aux.GetComponent<RoomScript>().turnOffWall(2);
@@ -58,15 +64,17 @@ public class Dungeon : MonoBehaviour
                 if (walls[1] == '1') aux.GetComponent<RoomScript>().turnOffWall(3);
                 if (walls[0] == '1') aux.GetComponent<RoomScript>().turnOffWall(4);
             }
-            if (i != 0 && Random.Range(0, 10) == 0) {
-                Instantiate(spawnerPrefab, new Vector3(pos[0] * mult, pos[1] * mult, pos[2] * mult), Quaternion.identity);
+            if (i != 0 && Random.Range(0, 10) == 0)
+            {
+                GameObject spawner = Instantiate(spawnerPrefab, new Vector3(pos[0] * mult, pos[1] * mult, pos[2] * mult), Quaternion.identity);
+                spawner.transform.parent = aux.transform;
+            }
+            if(i == 0){
+                GameObject door = Instantiate(doorPrefab, new Vector3(setPosPlayer[0] * mult, setPosPlayer[1] * mult + 1, setPosPlayer[2] * mult), Quaternion.identity);
+                door.transform.parent = aux.transform;
             }
         }
 
-        int[] setPosPlayer = startNode.getMapPosition();
-        playerRef.transform.position = new Vector3(setPosPlayer[0] * mult, setPosPlayer[1] * mult + 1, setPosPlayer[2] * mult);
-
-        Instantiate(doorPrefab, new Vector3(setPosPlayer[0] * mult, setPosPlayer[1] * mult + 1, setPosPlayer[2] * mult), Quaternion.identity);
     }
 
     /** --> a[y,z,x]
