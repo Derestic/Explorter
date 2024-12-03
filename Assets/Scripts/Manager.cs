@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
@@ -21,8 +24,14 @@ public class Manager : MonoBehaviour
       public GameObject[] spawns = new GameObject[3];
 
     [Header("Control Inventario")]
-      Inventario inventory = Inventario.Instance();
+      Inventario inventory;
 
+    [Header("Control Canvas")]
+      [SerializeField] GameObject inventario;
+      [SerializeField] TMP_Text[] invText;
+
+    [Header("Control mazmorras")]
+      [SerializeField] int[] indexMazmorra;
 
     public static Manager Instance
     {
@@ -45,14 +54,25 @@ public class Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        inventory = Inventario.Instance();
+        invText = new TMP_Text[inventario.transform.childCount];
+        for (int i = 0; i < inventario.transform.childCount; i++)
+        {
+            invText[i] = inventario.transform.GetChild(i).GetComponent<TMP_Text>();
+        }
         print("Estoy creado, con estado " + state.ToString());
         nextState();
+        updateCanvasInventory();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            inventory.addRecurso("Madera", 2);
+            updateCanvasInventory();
+        }
     }
 
     public void nextState()
@@ -106,5 +126,19 @@ public class Manager : MonoBehaviour
     }
 
     public Inventario GetInventario() { return inventory; }
+
+    public void updateCanvasInventory()
+    {
+        string[] k = inventory.getKeyRecursos();
+        for (int i = 0; i < invText.Length; i++)
+        {
+            invText[i].text = k[i] + ": " + inventory.getRecurso(k[i]);
+        }
+    }
+
+    public void goDungeon(int numDungeon)
+    {
+        SceneManager.LoadScene(indexMazmorra[numDungeon]);
+    }
 
 }
