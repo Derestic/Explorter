@@ -12,6 +12,7 @@ public class Dungeon : MonoBehaviour
     public GameObject roomPrefab;
     public int salasMinimas = 5;
     public GameObject doorPrefab;
+    public GameObject spawnerPrefab;
     [SerializeField]
     type dunType;
 
@@ -46,7 +47,6 @@ public class Dungeon : MonoBehaviour
             int[] pos = nodeList[i].getMapPosition();
             GameObject aux = Instantiate(roomPrefab, new Vector3(pos[0] * mult, pos[1]*mult, pos[2]*mult), Quaternion.identity);
             string walls = nodeList[i].getNodeStruct();
-            //Debug.Log(walls);
             if(dunType == type.bosque) {
                 if (getFromGrid(pos[0], pos[1], pos[2] - 1) > 0) aux.GetComponent<RoomScript>().turnOffWall(2);
                 if (getFromGrid(pos[0], pos[1], pos[2] + 1) > 0) aux.GetComponent<RoomScript>().turnOffWall(1);
@@ -58,7 +58,9 @@ public class Dungeon : MonoBehaviour
                 if (walls[1] == '1') aux.GetComponent<RoomScript>().turnOffWall(3);
                 if (walls[0] == '1') aux.GetComponent<RoomScript>().turnOffWall(4);
             }
-            //Debug.Log(i+":"+walls);
+            if (i != 0 && Random.Range(0, 10) == 0) {
+                Instantiate(spawnerPrefab, new Vector3(pos[0] * mult, pos[1] * mult, pos[2] * mult), Quaternion.identity);
+            }
         }
 
         int[] setPosPlayer = startNode.getMapPosition();
