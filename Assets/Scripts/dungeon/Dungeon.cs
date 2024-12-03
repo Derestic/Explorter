@@ -9,8 +9,9 @@ public class Dungeon : MonoBehaviour
     public int mapSize = 5; /// Width Height Length
     public int mapSizeY = 2; /// Width Height Length
     public float mult = 5;
-    public GameObject g;
+    public GameObject roomPrefab;
     public int salasMinimas = 5;
+    public GameObject doorPrefab;
     [SerializeField]
     type dunType;
 
@@ -43,7 +44,7 @@ public class Dungeon : MonoBehaviour
 
         for (int i = 0; i < nodeNum; i++) {
             int[] pos = nodeList[i].getMapPosition();
-            GameObject aux = Instantiate(g, new Vector3(pos[0] * mult, pos[1]*mult, pos[2]*mult), Quaternion.identity);
+            GameObject aux = Instantiate(roomPrefab, new Vector3(pos[0] * mult, pos[1]*mult, pos[2]*mult), Quaternion.identity);
             string walls = nodeList[i].getNodeStruct();
             //Debug.Log(walls);
             if(dunType == type.bosque) {
@@ -62,6 +63,8 @@ public class Dungeon : MonoBehaviour
 
         int[] setPosPlayer = startNode.getMapPosition();
         playerRef.transform.position = new Vector3(setPosPlayer[0] * mult, setPosPlayer[1] * mult + 1, setPosPlayer[2] * mult);
+
+        Instantiate(doorPrefab, new Vector3(setPosPlayer[0] * mult, setPosPlayer[1] * mult + 1, setPosPlayer[2] * mult), Quaternion.identity);
     }
 
     /** --> a[y,z,x]
