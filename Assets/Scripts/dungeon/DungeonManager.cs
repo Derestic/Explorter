@@ -11,9 +11,6 @@ public class DungeonManager : ManagerGen
     [Header("Control jugador")]
     public GameObject player = null;
 
-    [Header("Control Inventario")]
-    Inventario inventory;
-
     [Header("Control Canvas")]
     [SerializeField] GameObject inventario;
     [SerializeField] TMP_Text[] invText;

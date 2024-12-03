@@ -23,8 +23,6 @@ public class Manager : ManagerGen
     [Header("Spawn Control")]
       public GameObject[] spawns = new GameObject[3];
 
-    [Header("Control Inventario")]
-      Inventario inventory;
 
     [Header("Control Canvas")]
       [SerializeField] GameObject inventario;
@@ -122,8 +120,6 @@ public class Manager : ManagerGen
             state = RoundState.preparation;
         }
     }
-
-    public Inventario GetInventario() { return inventory; }
 
     public void updateCanvasInventory()
     {
