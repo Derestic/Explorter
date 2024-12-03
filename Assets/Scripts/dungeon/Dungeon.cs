@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.AI.Navigation;
 using UnityEngine;
 
 public class Dungeon : MonoBehaviour
@@ -25,6 +26,7 @@ public class Dungeon : MonoBehaviour
     private int nodeNum = 0;
     private Node startNode;
     private GameObject playerRef;
+
 
 
     // Start is called before the first frame update
@@ -74,7 +76,7 @@ public class Dungeon : MonoBehaviour
                 door.transform.parent = aux.transform;
             }
         }
-
+        containerObjectRef.GetComponent<NavMeshSurface>().BuildNavMesh();
     }
 
     /** --> a[y,z,x]
