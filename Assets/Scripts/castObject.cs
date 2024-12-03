@@ -12,7 +12,7 @@ public class castObject : MonoBehaviour
 
 
     [Header("Manager Link")]
-    Manager man;
+    ManagerGen man;
 
     [Header("Objects Control")]
     public GameObject pointer;

@@ -11,6 +11,9 @@ using static UnityEditor.PlayerSettings;
 
 public class Enemy : npc
 {
+
+    [Header("ManagerLink")]
+    [SerializeField] public ManagerGen man;
     enum state
     {
         idle,
@@ -49,9 +52,8 @@ public class Enemy : npc
     // Start is called before the first frame update
     void Start()
     {
-        man = Manager.Instance;
         life = maxLife;
-        ObjetivoF = man.getNucleo();
+        if(man.GetType().Equals(typeof(Manager))) ObjetivoF = ((Manager)man).getNucleo();
 
         gap = (angulo * Mathf.Deg2Rad) / numRays;
         agent = GetComponent<NavMeshAgent>();
@@ -127,8 +129,10 @@ public class Enemy : npc
         {
             if (!agent.isStopped) agent.isStopped = true;
             Objetivo = ObjetivoF;
-            agent.SetDestination(Objetivo.transform.position);
-            status++;
+            if (Objetivo != null) { 
+                agent.SetDestination(Objetivo.transform.position);
+                status++;
+            }
         }
         else if (state.run == status)
         {
@@ -159,7 +163,8 @@ public class Enemy : npc
     public void activeAttack(){AttackColidder.enabled = true;}
     public void desactiveAttack() {AttackColidder.enabled = false;}
     public void deadDestroy() { Destroy(gameObject);}
-    public void deadInit() { slimeColidder.enabled = false; man.remouveEnemy(); }
+    public void deadInit() { slimeColidder.enabled = false; 
+        if (man.GetType().Equals(typeof(Manager))) ((Manager)man).remouveEnemy(); }
 
     private void OnTriggerEnter(Collider other)
     {

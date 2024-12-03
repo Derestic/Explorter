@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class Torreta : npc
 {
+
+    [Header("ManagerLink")]
+    [SerializeField] protected ManagerGen man;
+
     [Header("Partes Cuerpo")]
     public GameObject head;
 

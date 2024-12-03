@@ -11,13 +11,10 @@ public class npc : MonoBehaviour
     protected bool dead = false;
     [SerializeField] protected float damage = 1;
 
-    [Header("ManagerLink")]
-    protected Manager man;
 
     // Start is called before the first frame update
     void Start()
     {
-        man = Manager.Instance;
         life = maxLife;
     }
 

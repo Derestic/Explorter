@@ -6,6 +6,10 @@ using UnityEngine;
 
 public class Move : npc
 {
+
+    [Header("ManagerLink")]
+    [SerializeField] protected ManagerGen man;
+
     enum Modos { Contruccion, Ataque, Recoleccion };
     [Header("Control Movimiento")]
     [SerializeField] Vector3 speed;
@@ -34,7 +38,6 @@ public class Move : npc
     // Start is called before the first frame update
     void Start()
     {
-        man = Manager.Instance;
         life = maxLife;
         move = new Vector3 (0f, 0f, 0f);
         Cursor.visible = false;

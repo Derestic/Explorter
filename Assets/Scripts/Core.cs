@@ -9,7 +9,6 @@ public class Core : npc
     // Start is called before the first frame update
     void Start()
     {
-        man = Manager.Instance;
         life = maxLife;
     }
 

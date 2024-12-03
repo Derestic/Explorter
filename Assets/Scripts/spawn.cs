@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -32,6 +33,7 @@ public class spawn : MonoBehaviour
                 countSpawn++;
                 countGap = 0;
                 inst = Instantiate(enemie);
+                inst.GetComponent<Enemy>().man = Manager.Instance;
                 inst.transform.position = transform.position;
                 Manager.Instance.addEnemy();
             }

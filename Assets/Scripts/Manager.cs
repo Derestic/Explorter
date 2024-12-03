@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Manager : MonoBehaviour
+public class Manager : ManagerGen
 {
     private static Manager _instance;
     enum RoundState { preparation, oleada };
@@ -30,8 +30,6 @@ public class Manager : MonoBehaviour
       [SerializeField] GameObject inventario;
       [SerializeField] TMP_Text[] invText;
 
-    [Header("Control mazmorras")]
-      [SerializeField] int[] indexMazmorra;
 
     public static Manager Instance
     {
@@ -136,9 +134,5 @@ public class Manager : MonoBehaviour
         }
     }
 
-    public void goDungeon(int numDungeon)
-    {
-        SceneManager.LoadScene(indexMazmorra[numDungeon]);
-    }
 
 }
