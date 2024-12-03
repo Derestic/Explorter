@@ -23,8 +23,8 @@ public class Enemy : npc
 
     [Header("Control de estados")]
       [SerializeField] state status;
-      GameObject ObjetivoF;
-      GameObject Objetivo;
+      [SerializeField]GameObject ObjetivoF;
+      [SerializeField] GameObject Objetivo;
       NavMeshAgent agent;
       [SerializeField] float gapObjetivo = 0.1f;
       public Collider slimeColidder;
@@ -53,7 +53,9 @@ public class Enemy : npc
     void Start()
     {
         life = maxLife;
-        if(man.GetType().Equals(typeof(Manager))) ObjetivoF = ((Manager)man).getNucleo();
+        if (man.GetType().Equals(typeof(Manager))) { 
+            ObjetivoF = ((Manager)man).getNucleo(); 
+        }
 
         gap = (angulo * Mathf.Deg2Rad) / numRays;
         agent = GetComponent<NavMeshAgent>();
@@ -91,9 +93,15 @@ public class Enemy : npc
                 if (hit.distance < d) { mejorColide = hit.transform.gameObject; d = hit.distance; Debug.Log("Objective changed"); }
             }
         }
-
-        agent.SetDestination(mejorColide.transform.position);
-        if (!Objetivo.Equals(mejorColide))Objetivo = mejorColide;
+        if(mejorColide != null)
+        {
+            agent.SetDestination(mejorColide.transform.position);
+            if (Objetivo == null || !Objetivo.Equals(mejorColide))
+            {
+                Objetivo = mejorColide;
+                if (status == state.idle) status = state.run;
+            }
+        }
 
         yield return new WaitForSeconds(0.25f);
         StartCoroutine(Vision());
@@ -129,7 +137,8 @@ public class Enemy : npc
         {
             if (!agent.isStopped) agent.isStopped = true;
             Objetivo = ObjetivoF;
-            if (Objetivo != null) { 
+            if (Objetivo != null) {
+                Debug.Log("Objetivo " + Objetivo.name);
                 agent.SetDestination(Objetivo.transform.position);
                 status++;
             }
