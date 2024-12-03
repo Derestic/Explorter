@@ -16,6 +16,7 @@ public class Inventario
                 recursos.Add(nombreRecursos[i], 0);
             }
         }
+        instance = this;
     }
     public static Inventario Instance()
     {
