@@ -34,6 +34,7 @@ public class Move : npc
     [SerializeField] GameObject[] arma = new GameObject[3];
     [SerializeField] castObject constructor;
     bool recoletor;
+    bool activeChangeMode = true;
 
     // Start is called before the first frame update
     void Start()
@@ -58,7 +59,7 @@ public class Move : npc
 
             //cameraZoom();
 
-            if (Input.GetKeyDown(changeMode))
+            if (Input.GetKeyDown(changeMode) && activeChangeMode)
             {
                 modes();
             }
@@ -162,5 +163,14 @@ public class Move : npc
     {
         float zoom = Input.GetAxis("Mouse ScrollWheel");
         camara.fieldOfView -= zoom * zoomSpeed;
+    }
+
+    public void activateModes()
+    {
+        activeChangeMode = true;
+    }
+    public void desactivateModes()
+    {
+        activeChangeMode = false;
     }
 }
