@@ -11,7 +11,7 @@ public class GenerateRandomObject : MonoBehaviour
         if (Random.Range(0, 2) == 0) {
             Vector3 v = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             GameObject go = Instantiate(objectList[Random.Range(0, objectList.Length)], v, Quaternion.identity);
-            go.transform.parent = transform;
+            if(go.tag != "ArbolTag") go.transform.parent = transform;
         }
     }
 }
