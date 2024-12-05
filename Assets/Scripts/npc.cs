@@ -6,7 +6,7 @@ public class npc : MonoBehaviour
 {
 
     [Header("Control Vida")]
-    protected float life;
+    [SerializeField] protected float life;
     [SerializeField] protected float maxLife = 1;
     protected bool dead = false;
     [SerializeField] protected float damage = 1;
@@ -28,12 +28,16 @@ public class npc : MonoBehaviour
     public void addLife(float extra)
     {
         life += extra;
-        Debug.Log("Daño de: " + extra);
+        Debug.Log("Daï¿½o de: " + extra);
         if (life < 0)
         {
             Debug.Log("Dead");
             dead = true;
         }
+    }
+    public float getLife()
+    {
+        return life;
     }
 
     public bool isDead() { return dead; }
