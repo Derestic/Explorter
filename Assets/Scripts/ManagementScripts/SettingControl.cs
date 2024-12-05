@@ -10,8 +10,8 @@ public class SettingControl : MonoBehaviour
 
     int j = 0;
     bool contador = false;
-    public int timeConfirm = 0;
-
+    private int timeConfirm = 0;
+    private List<string> resolutionString = new List<string>();
     private List<int> widthList = new List<int>();
     private List<int> heightList = new List<int>();
 
@@ -19,6 +19,7 @@ public class SettingControl : MonoBehaviour
     public TextMeshProUGUI resObj;
 
 
+    public TMP_Dropdown ResolutionDropdown;
     public GameObject confirmOBJ;
     public GameObject optionsOBJ;
 
@@ -40,8 +41,14 @@ public class SettingControl : MonoBehaviour
                 SettingsSaving.widthList.Add(res.width);
                 SettingsSaving.heightList.Add(res.height);
                 SettingsSaving.refreshList.Add(res.refreshRate);
+                resolutionString.Add(res.width + "x" + res.height);
             }
-
+            ResolutionDropdown.ClearOptions();
+            ResolutionDropdown.AddOptions(resolutionString);
+            foreach (var res in resolutionString)
+            {
+                Debug.Log(res);
+            }
             SettingsSaving.i = SettingsSaving.widthList.Count - 1;
 
             SettingsSaving.width = SettingsSaving.widthList[SettingsSaving.i];
@@ -52,20 +59,13 @@ public class SettingControl : MonoBehaviour
         }
     }
 
-    public void zSiguienteRes(){
-        SettingsSaving.i++;
-        if(SettingsSaving.i > SettingsSaving.widthList.Count - 1){
-            SettingsSaving.i = 0;
-        }
-        resObj.text = SettingsSaving.widthList[SettingsSaving.i] + "x" + SettingsSaving.heightList[SettingsSaving.i];  
-    }
-
-    public void zAnteriorRes(){
-        SettingsSaving.i--;
-        if(SettingsSaving.i < 0){
-            SettingsSaving.i = SettingsSaving.widthList.Count - 1;
-        }
-        resObj.text = SettingsSaving.widthList[SettingsSaving.i] + "x" + SettingsSaving.heightList[SettingsSaving.i];  
+    public void zPreSetRes(){
+        int n = ResolutionDropdown.value; 
+        Debug.Log(n);
+        Debug.Log(resolutionString[n]);
+        Debug.Log(resolutionString.FindIndex(x => x == resolutionString[n]));
+        SettingsSaving.i = n;
+        resObj.text = resolutionString[n];  
     }
 
     public void zApplyRes(int timeCon){
@@ -119,6 +119,12 @@ public class SettingControl : MonoBehaviour
         }else{
             t.isOn = false;
         }
+    }
+    public void zSetSfxSlider(Slider s){
+        s.value = SettingsSaving.sfxV;
+    }
+    public void zSetMusicSlider(Slider s){
+        s.value = SettingsSaving.musicV;
     }
 
     public void zSetFullScreen(Toggle t){

@@ -12,8 +12,8 @@ public class SettingsSaving : MonoBehaviour
     public static List<int> heightList = new List<int>();
     public static List<int> refreshList = new List<int>();
 
-    public static float musicV;
-    public static float sfxV;
+    public static float musicV = 1;
+    public static float sfxV = 1;
 
     public static int i = 0;
 
