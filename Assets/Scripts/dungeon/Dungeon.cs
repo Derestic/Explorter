@@ -26,7 +26,7 @@ public class Dungeon : MonoBehaviour
     private int nodeNum = 0;
     private Node startNode;
     private GameObject playerRef;
-
+    private int resets = 0;
 
 
     // Start is called before the first frame update
@@ -35,14 +35,17 @@ public class Dungeon : MonoBehaviour
         mapSize3 = mapSize * mapSize * mapSizeY;
         do
         {
-            roomCount = 0;
             grid = new int[mapSize3];
             nodeList = new Node[mapSize3];
             playerRef = GameObject.Find("Player");
 
+            resets++;
+            roomCount = 0;
+            nodeNum = 0;
             startNode = generateNewNode(Random.Range(0, mapSize), Random.Range(0, mapSizeY), Random.Range(0, mapSize));
             startNode.expand();
         } while (roomCount <= salasMinimas);
+        Debug.Log(resets);
         Debug.Log(roomCount);
         testing();
 
