@@ -30,7 +30,7 @@ public class Dungeon : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         mapSize3 = mapSize * mapSize * mapSizeY;
         do
