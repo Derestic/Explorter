@@ -55,6 +55,10 @@ public class DungeonManager : ManagerGen
             updateCanvasInventory();
         }
     }
+    public void recolectarRecurso(string recurso, int cantidad) {
+        inventory.addRecurso(recurso, cantidad);
+        updateCanvasInventory();
+    }
 
     public void gameOver()
     {

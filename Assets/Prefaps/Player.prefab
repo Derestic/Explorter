@@ -117,7 +117,6 @@ GameObject:
   - component: {fileID: 2284458546763494278}
   - component: {fileID: 8093537258422768296}
   - component: {fileID: 5339277925056685009}
-  - component: {fileID: 4334549658436473392}
   m_Layer: 0
   m_Name: Pickaxe_2_Red_Part_3
   m_TagString: Untagged
@@ -190,28 +189,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4334549658436473392
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1591195078900752047}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 359314833818252615, guid: adebd970a916cfb489a8e457ef41ac5c, type: 3}
 --- !u!1 &1717517955193203306
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,7 +516,6 @@ GameObject:
   - component: {fileID: 617864750940022888}
   - component: {fileID: 5495014060041872911}
   - component: {fileID: 8230949259810984726}
-  - component: {fileID: 5633435970249123825}
   m_Layer: 0
   m_Name: Pickaxe_2_Red_Part_1
   m_TagString: Untagged
@@ -612,28 +588,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5633435970249123825
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3568190203973251018}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -435167467539772490, guid: adebd970a916cfb489a8e457ef41ac5c, type: 3}
 --- !u!1 &4778549274896634694
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,7 +599,6 @@ GameObject:
   - component: {fileID: 7242584040622770396}
   - component: {fileID: 6680429503341954567}
   - component: {fileID: 4113364276644852500}
-  - component: {fileID: 3094762018662498855}
   m_Layer: 0
   m_Name: Pickaxe_2_Red_Part_4
   m_TagString: Untagged
@@ -718,28 +671,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3094762018662498855
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4778549274896634694}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -292570220182965947, guid: adebd970a916cfb489a8e457ef41ac5c, type: 3}
 --- !u!1 &6848846574002710211
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,7 +788,6 @@ GameObject:
   - component: {fileID: 7286966185518181988}
   - component: {fileID: 8469269019061375414}
   - component: {fileID: 1668144632896853180}
-  - component: {fileID: 9065870565686899615}
   m_Layer: 0
   m_Name: Pickaxe_2_Red_Part_2
   m_TagString: Untagged
@@ -930,28 +860,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &9065870565686899615
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6919499944997232593}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5193962363909517747, guid: adebd970a916cfb489a8e457ef41ac5c, type: 3}
 --- !u!1 &8277192050964862876
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,7 +871,6 @@ GameObject:
   - component: {fileID: 7141613542225978103}
   - component: {fileID: 4839656033083755980}
   - component: {fileID: 97760346900073190}
-  - component: {fileID: 150498010680695145}
   m_Layer: 0
   m_Name: Axe_1_Red_Part_2
   m_TagString: Untagged
@@ -1036,28 +943,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &150498010680695145
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8277192050964862876}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2357880584301346465, guid: 33e8cff3249fa7a4683a5a078c9f76dd, type: 3}
 --- !u!1 &8717879888665488350
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,6 +1203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLife: 10
   damage: 1
+  man: {fileID: 0}
   speed: {x: 6, y: 0, z: 6}
   zoomSpeed: 10
   jumpForce: 10

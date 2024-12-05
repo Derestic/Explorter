@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 196769644260630050}
   - component: {fileID: 2693125892647742184}
   - component: {fileID: -8140076667249232052}
+  - component: {fileID: 1789849802556977309}
   m_Layer: 0
   m_Name: SpringTree_03
   m_TagString: ArbolTag
@@ -106,3 +107,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5918967283713842833, guid: 59ca38a9289546a4b8e7c65732f99418, type: 3}
+--- !u!114 &1789849802556977309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4494341512636877629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda34833a35a25843931c87ef2470fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recursoObtenible: 0
+  recolectSpeed: 1
