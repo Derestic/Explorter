@@ -29,7 +29,7 @@ public class npc : MonoBehaviour
     {
         life += extra;
         Debug.Log("Da�o de: " + extra);
-        if (life < 0)
+        if (life <= 0)
         {
             Debug.Log("Dead");
             dead = true;

@@ -29,6 +29,9 @@ public class Manager : ManagerGen
       [SerializeField] TMP_Text[] invText;
 
 
+    [Header("Control muerte")]
+    [SerializeField] GameObject camaraM;
+
     public static Manager Instance
     {
         get
@@ -120,8 +123,10 @@ public class Manager : ManagerGen
         Debug.Log("Hay: " + countEnemies + "Enemigos");
         if(countEnemies <= 0)
         {
+            ChangeCamara();
             player.GetComponent<Move>().activateModes();
             state = RoundState.preparation;
+            player.GetComponent<Move>().resetLife();
         }
     }
 
@@ -134,5 +139,18 @@ public class Manager : ManagerGen
         }
     }
 
+    public void ChangeCamara()
+    {
+        if (player.active)
+        {
+            player.SetActive(false);
+            camaraM.SetActive(true);
+        }
+        else
+        {
+            player.SetActive(true);
+            camaraM.SetActive(false);
+        }
+    }
 
 }

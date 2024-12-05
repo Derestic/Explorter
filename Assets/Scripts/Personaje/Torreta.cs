@@ -7,7 +7,7 @@ public class Torreta : npc
 {
 
     [Header("ManagerLink")]
-    [SerializeField] protected ManagerGen man;
+    [SerializeField] public Manager man;
 
     [Header("Partes Cuerpo")]
     public GameObject head;
@@ -23,7 +23,7 @@ public class Torreta : npc
     // Start is called before the first frame update
     void Start()
     {
-        
+        man = Manager.Instance;
     }
 
     // Update is called once per frame

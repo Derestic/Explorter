@@ -179,7 +179,9 @@ public class Enemy : npc
     {
         if (((1 << other.gameObject.layer) & atacklayer.value) != 0)
         {
-            other.gameObject.GetComponent<npc>().addLife(-damage);
+            if (other.gameObject.GetComponent<npc>().GetType().Equals(typeof(Move)))
+                ((Move)other.gameObject.GetComponent<npc>()).addLife(-damage);
+            else other.gameObject.GetComponent<npc>().addLife(-damage);
         }
     }
 }

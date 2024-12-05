@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
@@ -36,6 +36,7 @@ public class Move : npc
     bool recoletor;
     bool activeChangeMode = true;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,14 +69,18 @@ public class Move : npc
 
     private void FixedUpdate()
     {
-        move.Set(0f, gameObject.GetComponent<Rigidbody>().velocity.y, 0f);
-        move += Input.GetAxisRaw("Horizontal") * speed.x * transform.right;
-        move += Input.GetAxisRaw("Vertical") * speed.z * transform.forward;
-        gameObject.GetComponent<Rigidbody>().velocity = move;
-        //gameObject.GetComponent<Rigidbody>().(Input.GetAxis("Vertical") * speed.x, 0.0f,Input.GetAxis("Horizontal") * speed.z);
-        if (!jumpControl && move.y <= -deltaJump && transform.position.y < 1.2f)
+        if (!dead)
         {
-            jumpControl = true;
+
+            move.Set(0f, gameObject.GetComponent<Rigidbody>().velocity.y, 0f);
+            move += Input.GetAxisRaw("Horizontal") * speed.x * transform.right;
+            move += Input.GetAxisRaw("Vertical") * speed.z * transform.forward;
+            gameObject.GetComponent<Rigidbody>().velocity = move;
+            //gameObject.GetComponent<Rigidbody>().(Input.GetAxis("Vertical") * speed.x, 0.0f,Input.GetAxis("Horizontal") * speed.z);
+            if (!jumpControl && move.y <= -deltaJump && transform.position.y < 1.2f)
+            {
+                jumpControl = true;
+            }
         }
     }
 
@@ -172,5 +177,17 @@ public class Move : npc
     public void desactivateModes()
     {
         activeChangeMode = false;
+    }
+    public new void addLife(float extra)
+    {
+        life += extra;
+        Debug.Log("Damage de: " + extra);
+        if (life <= 0)
+        {
+            Debug.Log("new Dead");
+            dead = true;
+            if (man.GetType().Equals(typeof(Manager))) ((Manager)man).ChangeCamara();
+            else man.goDungeon(0);
+        }
     }
 }
