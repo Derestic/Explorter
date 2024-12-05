@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2693125892647742184}
   - component: {fileID: -8140076667249232052}
   - component: {fileID: 1789849802556977309}
+  - component: {fileID: 5195053122854334119}
   m_Layer: 0
   m_Name: SpringTree_03
   m_TagString: ArbolTag
@@ -120,4 +121,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recursoObtenible: 0
-  recolectSpeed: 1
+--- !u!208 &5195053122854334119
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4494341512636877629}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.555, y: 4.859, z: 0.58}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.004, y: 4.859, z: -0.002}
+  m_TimeToStationary: 0.5
