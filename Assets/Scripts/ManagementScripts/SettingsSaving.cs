@@ -6,20 +6,27 @@ public class SettingsSaving : MonoBehaviour
 {
     public static SettingsSaving instance;
 
-    public static bool isFirstRun = true;
-
+    //List of resolutions
     public static List<int> widthList = new List<int>();
     public static List<int> heightList = new List<int>();
-    public static List<int> refreshList = new List<int>();
+    public static List<string> WxH = new List<string>();
 
+    //Objective resolution - fullScreen
+    public static int i = 0;
+    public static bool fullscreen = false;
+
+    //Actual resolution - fullscreen
+    public static int resolutionIndex = 0;
+    public static bool isFullscreen = false;
+    
+    //Volumes
     public static float musicV = 1;
     public static float sfxV = 1;
 
-    public static int i = 0;
+    //Controles 
+    //string -> KeyCode
 
-    public static int width;
-    public static int height;
-    public static bool fullscreen = true;
+
 
     private void Awake() {
         if(instance == null){
@@ -28,11 +35,20 @@ public class SettingsSaving : MonoBehaviour
             Destroy(transform.parent.gameObject);
             Destroy(this);
         }
-        DontDestroyOnLoad(this);
-    }
 
-    private void Update() {
-        isFirstRun = false;
+        //Data Recopilation
+        Resolution[] resolutions = Screen.resolutions;
+        foreach (var res in resolutions){
+            widthList.Add(res.width);
+            heightList.Add(res.height);
+            WxH.Add(res.width + "x" + res.height);
+        }
+        
+        //Default config
+        i = WxH.Count - 1;
+        resolutionIndex = i;
+
+        DontDestroyOnLoad(this);
     }
 }
 
