@@ -13,13 +13,13 @@ public class HPBar : MonoBehaviour
     void Start()
     {
         HPslider = GetComponent<Slider>();
-        HPslider.value = HPscript.getLife();
+        HPslider.value = npcScript.getLife();
     }
 
     // Update is called once per frame
     void Update()
     {
-        HPslider.value = HPscript.getLife();
+        HPslider.value = npcScript.getLife();
         
     }
 }
