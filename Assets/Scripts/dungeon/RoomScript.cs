@@ -11,12 +11,8 @@ public class RoomScript : MonoBehaviour
         turnWalls();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     void turnWalls() {
+        /*
         if(wall1) this.gameObject.transform.GetChild(1).gameObject.SetActive(true);
         else this.gameObject.transform.GetChild(1).gameObject.SetActive(false);
         if(wall2) this.gameObject.transform.GetChild(2).gameObject.SetActive(true);
@@ -25,6 +21,11 @@ public class RoomScript : MonoBehaviour
         else this.gameObject.transform.GetChild(3).gameObject.SetActive(false);
         if(wall4) this.gameObject.transform.GetChild(4).gameObject.SetActive(true);
         else this.gameObject.transform.GetChild(4).gameObject.SetActive(false);
+        */
+        if (!wall1) Destroy(this.gameObject.transform.GetChild(1).gameObject);
+        if (!wall2) Destroy(this.gameObject.transform.GetChild(2).gameObject);
+        if (!wall3) Destroy(this.gameObject.transform.GetChild(3).gameObject);
+        if (!wall4) Destroy(this.gameObject.transform.GetChild(4).gameObject);
     }
     public void turnOffWall(int i) {
         if (i == 1) wall1 = false; 

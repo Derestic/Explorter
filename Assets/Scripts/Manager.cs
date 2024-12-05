@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class Manager : MonoBehaviour
+public class Manager : ManagerGen
 {
     private static Manager _instance;
     enum RoundState { preparation, oleada };
@@ -15,10 +18,16 @@ public class Manager : MonoBehaviour
       int countEnemies = 0;
 
     [Header("Control juador")]
-      public GameObject player;
+      public GameObject player = null;
 
     [Header("Spawn Control")]
       public GameObject[] spawns = new GameObject[3];
+
+
+    [Header("Control Canvas")]
+      [SerializeField] GameObject inventario;
+      [SerializeField] TMP_Text[] invText;
+
 
     public static Manager Instance
     {
@@ -41,14 +50,27 @@ public class Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        inventory = Inventario.Instance();
+        invText = new TMP_Text[inventario.transform.childCount];
+        for (int i = 0; i < inventario.transform.childCount; i++)
+        {
+            invText[i] = inventario.transform.GetChild(i).GetComponent<TMP_Text>();
+        }
         print("Estoy creado, con estado " + state.ToString());
         nextState();
+        updateCanvasInventory();
+        if(state == RoundState.oleada)
+            player.GetComponent<Move>().desactivateModes();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            inventory.addRecurso("Madera", 2);
+            updateCanvasInventory();
+        }
     }
 
     public void nextState()
@@ -64,10 +86,11 @@ public class Manager : MonoBehaviour
             if (prep >= maxprep)
             {
                 state = RoundState.oleada;
+                player.GetComponent<Move>().desactivateModes();
             }
         }
         // Resucitar jugador
-        if (player.GetComponent<Move>().isDead())
+        if (player != null && player.GetComponent<Move>().isDead())
         {
             player.GetComponent<Move>().resetLife();
         }
@@ -97,7 +120,19 @@ public class Manager : MonoBehaviour
         Debug.Log("Hay: " + countEnemies + "Enemigos");
         if(countEnemies <= 0)
         {
+            player.GetComponent<Move>().activateModes();
             state = RoundState.preparation;
         }
     }
+
+    public void updateCanvasInventory()
+    {
+        string[] k = inventory.getKeyRecursos();
+        for (int i = 0; i < invText.Length; i++)
+        {
+            invText[i].text = k[i] + ": " + inventory.getRecurso(k[i]);
+        }
+    }
+
+
 }

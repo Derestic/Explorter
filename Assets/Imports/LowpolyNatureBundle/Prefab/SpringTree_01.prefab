@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 1315656731099264956}
   - component: {fileID: 2733119029220407321}
   - component: {fileID: 146659523138555091}
+  - component: {fileID: 1777619895088866713}
+  - component: {fileID: -8579105312369381749}
   m_Layer: 3
   m_Name: SpringTree_01
-  m_TagString: Untagged
+  m_TagString: ArbolTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,3 +85,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1777619895088866713
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804244151549930758}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -694493205875825379, guid: c6e86d7f366dfe642b5ed3dc6793c30c, type: 3}
+--- !u!114 &-8579105312369381749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804244151549930758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda34833a35a25843931c87ef2470fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recursoObtenible: 0
+  recolectSpeed: 1

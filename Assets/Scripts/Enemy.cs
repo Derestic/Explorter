@@ -11,6 +11,9 @@ using static UnityEditor.PlayerSettings;
 
 public class Enemy : npc
 {
+
+    [Header("ManagerLink")]
+    [SerializeField] public ManagerGen man;
     enum state
     {
         idle,
@@ -20,8 +23,8 @@ public class Enemy : npc
 
     [Header("Control de estados")]
       [SerializeField] state status;
-      GameObject ObjetivoF;
-      GameObject Objetivo;
+      [SerializeField]GameObject ObjetivoF;
+      [SerializeField] GameObject Objetivo;
       NavMeshAgent agent;
       [SerializeField] float gapObjetivo = 0.1f;
       public Collider slimeColidder;
@@ -49,9 +52,10 @@ public class Enemy : npc
     // Start is called before the first frame update
     void Start()
     {
-        man = Manager.Instance;
         life = maxLife;
-        ObjetivoF = man.getNucleo();
+        if (man.GetType().Equals(typeof(Manager))) { 
+            ObjetivoF = ((Manager)man).getNucleo(); 
+        }
 
         gap = (angulo * Mathf.Deg2Rad) / numRays;
         agent = GetComponent<NavMeshAgent>();
@@ -89,9 +93,15 @@ public class Enemy : npc
                 if (hit.distance < d) { mejorColide = hit.transform.gameObject; d = hit.distance; Debug.Log("Objective changed"); }
             }
         }
-
-        agent.SetDestination(mejorColide.transform.position);
-        if (!Objetivo.Equals(mejorColide))Objetivo = mejorColide;
+        if(mejorColide != null)
+        {
+            agent.SetDestination(mejorColide.transform.position);
+            if (Objetivo == null || !Objetivo.Equals(mejorColide))
+            {
+                Objetivo = mejorColide;
+                if (status == state.idle) status = state.run;
+            }
+        }
 
         yield return new WaitForSeconds(0.25f);
         StartCoroutine(Vision());
@@ -115,7 +125,7 @@ public class Enemy : npc
 
     void animationSync()
     {
-        if (dead) { animator.SetBool("dead", true);  }
+        if (dead) { animator.SetBool("dead", true); agent.isStopped = true;  }
         else if (state.idle == status) { animator.SetBool("atacking", false); animator.SetBool("runing", false); }
         else if (state.attack == status) { animator.SetBool("atacking", true); animator.SetBool("runing", false); }
         else if (state.run == status) { animator.SetBool("atacking", false); animator.SetBool("runing", true); }
@@ -127,8 +137,11 @@ public class Enemy : npc
         {
             if (!agent.isStopped) agent.isStopped = true;
             Objetivo = ObjetivoF;
-            agent.SetDestination(Objetivo.transform.position);
-            status++;
+            if (Objetivo != null) {
+                Debug.Log("Objetivo " + Objetivo.name);
+                agent.SetDestination(Objetivo.transform.position);
+                status++;
+            }
         }
         else if (state.run == status)
         {
@@ -159,7 +172,8 @@ public class Enemy : npc
     public void activeAttack(){AttackColidder.enabled = true;}
     public void desactiveAttack() {AttackColidder.enabled = false;}
     public void deadDestroy() { Destroy(gameObject);}
-    public void deadInit() { slimeColidder.enabled = false; man.remouveEnemy(); }
+    public void deadInit() { slimeColidder.enabled = false; 
+        if (man.GetType().Equals(typeof(Manager))) ((Manager)man).remouveEnemy(); }
 
     private void OnTriggerEnter(Collider other)
     {

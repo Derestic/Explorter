@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.AI.Navigation;
 using UnityEngine;
 
 public class Dungeon : MonoBehaviour
@@ -9,8 +10,11 @@ public class Dungeon : MonoBehaviour
     public int mapSize = 5; /// Width Height Length
     public int mapSizeY = 2; /// Width Height Length
     public float mult = 5;
-    public GameObject g;
+    public GameObject roomPrefab;
     public int salasMinimas = 5;
+    public GameObject doorPrefab;
+    public GameObject spawnerPrefab;
+    public GameObject containerObjectRef;
     [SerializeField]
     type dunType;
 
@@ -22,6 +26,7 @@ public class Dungeon : MonoBehaviour
     private int nodeNum = 0;
     private Node startNode;
     private GameObject playerRef;
+
 
 
     // Start is called before the first frame update
@@ -41,11 +46,15 @@ public class Dungeon : MonoBehaviour
         Debug.Log(roomCount);
         testing();
 
+        int[] setPosPlayer = startNode.getMapPosition();
+        playerRef.transform.position = new Vector3(setPosPlayer[0] * mult, setPosPlayer[1] * mult + 1, setPosPlayer[2] * mult);
+
         for (int i = 0; i < nodeNum; i++) {
             int[] pos = nodeList[i].getMapPosition();
-            GameObject aux = Instantiate(g, new Vector3(pos[0] * mult, pos[1]*mult, pos[2]*mult), Quaternion.identity);
+            GameObject aux = Instantiate(roomPrefab, new Vector3(pos[0] * mult, pos[1]*mult, pos[2]*mult), Quaternion.identity);
+            aux.transform.parent = containerObjectRef.transform;
+
             string walls = nodeList[i].getNodeStruct();
-            //Debug.Log(walls);
             if(dunType == type.bosque) {
                 if (getFromGrid(pos[0], pos[1], pos[2] - 1) > 0) aux.GetComponent<RoomScript>().turnOffWall(2);
                 if (getFromGrid(pos[0], pos[1], pos[2] + 1) > 0) aux.GetComponent<RoomScript>().turnOffWall(1);
@@ -57,11 +66,17 @@ public class Dungeon : MonoBehaviour
                 if (walls[1] == '1') aux.GetComponent<RoomScript>().turnOffWall(3);
                 if (walls[0] == '1') aux.GetComponent<RoomScript>().turnOffWall(4);
             }
-            //Debug.Log(i+":"+walls);
+            if (i != 0 && Random.Range(0, 10) == 0)
+            {
+                GameObject spawner = Instantiate(spawnerPrefab, new Vector3(pos[0] * mult, pos[1] * mult, pos[2] * mult), Quaternion.identity);
+                spawner.transform.parent = aux.transform;
+            }
+            if(i == 0){
+                GameObject door = Instantiate(doorPrefab, new Vector3(setPosPlayer[0] * mult, setPosPlayer[1] * mult + 1, setPosPlayer[2] * mult), Quaternion.identity);
+                door.transform.parent = aux.transform;
+            }
         }
-
-        int[] setPosPlayer = startNode.getMapPosition();
-        playerRef.transform.position = new Vector3(setPosPlayer[0] * mult, setPosPlayer[1] * mult + 1, setPosPlayer[2] * mult);
+        containerObjectRef.GetComponent<NavMeshSurface>().BuildNavMesh();
     }
 
     /** --> a[y,z,x]
