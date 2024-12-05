@@ -11,15 +11,24 @@ public class SplashNav : MonoBehaviour
     void Start()
     {
         splash = this.gameObject;
+        StartCoroutine("AutoOpen");
+    }
+
+    IEnumerator AutoOpen(){
+        yield return new WaitForSeconds(10f);
+        OpenMenu();
+    }
+    void OpenMenu(){
+        MenuControl.zSwapPanels(splash);
+        MenuControl.zSwapPanels(menu);
     }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space)){
-            MenuControl.zSwapPanels(splash);
-            MenuControl.zSwapPanels(menu);
-            Debug.Log("Enter Pulsado");
+            OpenMenu();
+            Debug.Log("Space Pulsado");
         }
     }
 }
