@@ -32,23 +32,21 @@ public class SettingControl : MonoBehaviour
     }
 
     private void Start() {
-        ResolutionDropdown.ClearOptions();
-        ResolutionDropdown.AddOptions(SettingsSaving.WxH);
-        ResolutionDropdown.value = SettingsSaving.i;
-
-        resObj.text = SettingsSaving.WxH[SettingsSaving.i];
         Screen.SetResolution(SettingsSaving.widthList[SettingsSaving.resolutionIndex], SettingsSaving.heightList[SettingsSaving.resolutionIndex], SettingsSaving.isFullscreen);
     }
 
-    public void zPreSetRes(){
-        SettingsSaving.i = ResolutionDropdown.value; 
-        resObj.text = SettingsSaving.WxH[SettingsSaving.i];
+    public void zSetFullScreen(Toggle t){
+        SettingsSaving.fullscreen = t.isOn;
+    }
+    public void zPreSetRes(TMP_Dropdown d){
+        SettingsSaving.i = d.value; 
         //Debug.Log(SettingsSaving.i);
         //Debug.Log(SettingsSaving.WxH[SettingsSaving.i]);
         //Debug.Log(SettingsSaving.WxH.FindIndex(x => x == SettingsSaving.WxH[SettingsSaving.i]));
     }
 
     public void zApplyRes(){
+        resObj.text = SettingsSaving.WxH[SettingsSaving.i];
         Screen.SetResolution(SettingsSaving.widthList[SettingsSaving.i], SettingsSaving.heightList[SettingsSaving.i], SettingsSaving.fullscreen);
         timer.text ="" + timeConfirm;   
         MenuControl.zSwapPanels(confirmOBJ);
@@ -82,20 +80,19 @@ public class SettingControl : MonoBehaviour
     }
 
     public void zSetToggle(Toggle t){
-        if (SettingsSaving.isFullscreen){
-            t.isOn = true;
-        }else{
-            t.isOn = false;
-        }
+        t.isOn = SettingsSaving.isFullscreen;
+        SettingsSaving.fullscreen = SettingsSaving.isFullscreen;
+    }
+    public void zSetResolutionsDropdown(TMP_Dropdown d){
+        d.ClearOptions();
+        d.AddOptions(SettingsSaving.WxH);
+        SettingsSaving.i = SettingsSaving.resolutionIndex;
+        d.value = SettingsSaving.resolutionIndex;
     }
     public void zSetSfxSlider(Slider s){
         s.value = SettingsSaving.sfxV;
     }
     public void zSetMusicSlider(Slider s){
         s.value = SettingsSaving.musicV;
-    }
-
-    public void zSetFullScreen(Toggle t){
-        SettingsSaving.fullscreen = t.isOn;
     }
 }
