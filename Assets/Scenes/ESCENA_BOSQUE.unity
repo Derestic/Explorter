@@ -1144,6 +1144,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 342440514260009313, guid: b2194d59767bd43419c77486886512a7, type: 3}
     - target: {fileID: 8964859575593507662, guid: 03eee531cf6c08c4295eecb9d788330d, type: 3}
+      propertyPath: salasMinimas
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8964859575593507662, guid: 03eee531cf6c08c4295eecb9d788330d, type: 3}
       propertyPath: spawnerPrefab
       value: 
       objectReference: {fileID: 7465402823000306843, guid: 4211bb17ffc6fbc4f829368bbaf4c427, type: 3}
