@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 4646496131836033833}
   - component: {fileID: 4537872337848630696}
   - component: {fileID: 1870953800587922150}
+  - component: {fileID: 8307850363183059868}
   m_Layer: 6
   m_Name: Torreta
   m_TagString: Obstacle
@@ -118,8 +119,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0b9408283e15940b7c7067c52f2eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  life: 0
   maxLife: 100
   damage: 10
+  man: {fileID: 0}
   head: {fileID: 4071097686480686827}
   objetivo: {fileID: 0}
   bullet: {fileID: 869603963738100889, guid: b7b2da88bd1d71648ba91ed8f3334e60, type: 3}
@@ -130,6 +133,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   maxVision: 10.63
+--- !u!114 &8307850363183059868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6546165577639332176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e12a9c169549e4ca234a94a9c85f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recursos: 020000000000000000000000
 --- !u!1 &8310423942078563234
 GameObject:
   m_ObjectHideFlags: 0

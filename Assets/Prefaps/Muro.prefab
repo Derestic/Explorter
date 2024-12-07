@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 5212894336058173776}
   - component: {fileID: 4421542849310360920}
   - component: {fileID: 4760561940425053846}
+  - component: {fileID: 7877888298228417667}
   m_Layer: 3
   m_Name: Muro
   m_TagString: Obstacle
@@ -155,6 +156,19 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &7877888298228417667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5726272521529189227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e12a9c169549e4ca234a94a9c85f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recursos: 060000000000000000000000
 --- !u!1001 &1142931825733890446
 PrefabInstance:
   m_ObjectHideFlags: 0
