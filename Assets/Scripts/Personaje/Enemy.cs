@@ -177,8 +177,12 @@ public class Enemy : npc
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("And binario" + ((1 << other.gameObject.layer) & atacklayer.value)+
+            "\nbinario" + (1 << other.gameObject.layer) + 
+            "\nLayer binario" + (atacklayer.value));
         if (((1 << other.gameObject.layer) & atacklayer.value) != 0)
         {
+            Debug.Log("Enemigo atacado");
             if (other.gameObject.GetComponent<npc>().GetType().Equals(typeof(Move)))
                 ((Move)other.gameObject.GetComponent<npc>()).addLife(-damage);
             else other.gameObject.GetComponent<npc>().addLife(-damage);

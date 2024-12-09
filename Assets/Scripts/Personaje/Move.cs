@@ -52,7 +52,7 @@ public class Move : npc
     {
         if (!dead)
         {
-            attack();
+            if(!anim.GetBool("ataque")) attack();
 
             jump();
 
@@ -65,6 +65,7 @@ public class Move : npc
                 modes();
             }
         }
+        //if (anim.GetBool("ataque")) { anim.SetBool("ataque", false); }
     }
 
     private void FixedUpdate()
@@ -119,6 +120,11 @@ public class Move : npc
                 break;
         }
         weapon.SetActive(true);
+        Debug.Log("Mode: " + mode +
+            "\n Combate: " + anim.GetBool("Combate") +
+            "\n Construct: " + anim.GetBool("Construct") +
+            "\n Recolectar: " + anim.GetBool("Recolectar")+ 
+            "\n Atacando: " + anim.GetBool("ataque"));
         //anim = GetComponent<Animator>();
     }
 
@@ -142,6 +148,7 @@ public class Move : npc
     public void getAnimIdle()
     {
         anim.SetBool("ataque", false);
+        Debug.Log("Ya se puede peguar");
     }
 
     public void activeCollider() { weapon.GetComponent<Collider>().enabled = true; }
