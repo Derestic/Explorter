@@ -132,6 +132,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7618954341373728145, guid: 8c8fd9a47eb183f4ebf7fa8751bdc418, type: 3}
   m_PrefabInstance: {fileID: 1622287314}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &510368215 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3094268856204196147, guid: 8c8fd9a47eb183f4ebf7fa8751bdc418, type: 3}
+  m_PrefabInstance: {fileID: 1622287314}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &510368217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510368215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 375469366467c6043bc536d19ece2009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numDungeon: 0
+  manager: {fileID: 1574060838}
 --- !u!1 &566623333
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,7 +933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 499ff6a7b8bd4744c84e57be4a5e547f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexMazmorra: 
+  indexMazmorra: 01000000
   player: {fileID: 90560041}
   inventario: {fileID: 613642480}
   invText: []
@@ -970,10 +989,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8559881476792129577, guid: 8c8fd9a47eb183f4ebf7fa8751bdc418, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3094268856204196147, guid: 8c8fd9a47eb183f4ebf7fa8751bdc418, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 510368217}
   m_SourcePrefab: {fileID: 100100000, guid: 8c8fd9a47eb183f4ebf7fa8751bdc418, type: 3}
 --- !u!1 &1691305948 stripped
 GameObject:

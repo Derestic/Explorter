@@ -12,7 +12,7 @@ public class Manager : ManagerGen
 
     [Header("Control Oleadas")]
       [SerializeField] RoundState state = RoundState.preparation;
-      int prep = 0;
+      [SerializeField] int prep = 0;
       [SerializeField] int maxprep = 3;
       [SerializeField] GameObject nucleo;
       int countEnemies = 0;
@@ -46,6 +46,7 @@ public class Manager : ManagerGen
     void Awake()
     {
         _instance = this;
+
     }
 
 
@@ -53,6 +54,7 @@ public class Manager : ManagerGen
     // Start is called before the first frame update
     void Start()
     {
+        prep = WaveControl.Instance().prep;
         inventory = Inventario.Instance();
         invText = new TMP_Text[inventario.transform.childCount];
         for (int i = 0; i < inventario.transform.childCount; i++)
@@ -78,19 +80,21 @@ public class Manager : ManagerGen
 
     public void nextState()
     {
+        if (prep >= maxprep)
+        {
+            state = RoundState.oleada;
+            player.GetComponent<Move>().desactivateModes();
+        }
         if (state == RoundState.oleada)
         {
             prep = 0;
+            WaveControl.Instance().prep = 0;
             for (int i = 0; i < spawns.Length;i++) { spawns[i].GetComponent<spawn>().spawning = true; }
         }
         else
         {
             prep++;
-            if (prep >= maxprep)
-            {
-                state = RoundState.oleada;
-                player.GetComponent<Move>().desactivateModes();
-            }
+            WaveControl.Instance().prep++;
         }
     }
 

@@ -15,7 +15,8 @@ public class Puerta : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Colisiono");
-        if (other.gameObject.tag.Equals("Player") && ((Manager)manager).creationState())
+        if (other.gameObject.tag.Equals("Player") && ((
+            manager.GetType().Equals(typeof(Manager))&&((Manager)manager).creationState())|| manager.GetType().Equals(typeof(DungeonManager))))
         {
             Debug.Log("Colisiono2");
             manager.goDungeon(numDungeon);
