@@ -3675,6 +3675,14 @@ PrefabInstance:
       propertyPath: man
       value: 
       objectReference: {fileID: 1902248486}
+    - target: {fileID: 859307401941570479, guid: a9acb56075f48404c9c9a9d8a5b97c53, type: 3}
+      propertyPath: maxLife
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 859307401941570479, guid: a9acb56075f48404c9c9a9d8a5b97c53, type: 3}
+      propertyPath: jumpForce
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2409452805567961294, guid: a9acb56075f48404c9c9a9d8a5b97c53, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3683,8 +3691,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2747005968108300650, guid: a9acb56075f48404c9c9a9d8a5b97c53, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d84cca1ff163de439de1bd05218dafd, type: 2}
     - target: {fileID: 5356784570488932743, guid: a9acb56075f48404c9c9a9d8a5b97c53, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7678328716225358037, guid: a9acb56075f48404c9c9a9d8a5b97c53, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7678328716225358037, guid: a9acb56075f48404c9c9a9d8a5b97c53, type: 3}
+      propertyPath: m_ProvidesContacts
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8083201834456032060, guid: a9acb56075f48404c9c9a9d8a5b97c53, type: 3}
@@ -10951,7 +10971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indexMazmorra: 02000000
-  state: 1
+  state: 0
   maxprep: 3
   nucleo: {fileID: 14248471}
   player: {fileID: 1074965679}

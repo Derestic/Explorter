@@ -72,8 +72,8 @@ public class Manager : ManagerGen
         if (Input.GetKeyDown(KeyCode.M))
         {
             inventory.addRecurso("Madera", 2);
-            updateCanvasInventory();
         }
+        updateCanvasInventory();
     }
 
     public void nextState()
@@ -91,11 +91,6 @@ public class Manager : ManagerGen
                 state = RoundState.oleada;
                 player.GetComponent<Move>().desactivateModes();
             }
-        }
-        // Resucitar jugador
-        if (player != null && player.GetComponent<Move>().isDead())
-        {
-            player.GetComponent<Move>().resetLife();
         }
     }
 
@@ -123,10 +118,15 @@ public class Manager : ManagerGen
         Debug.Log("Hay: " + countEnemies + "Enemigos");
         if(countEnemies <= 0)
         {
-            ChangeCamara();
             player.GetComponent<Move>().activateModes();
             state = RoundState.preparation;
             player.GetComponent<Move>().resetLife();
+            // Resucitar jugador
+            if (player != null && player.GetComponent<Move>().isDead())
+            {
+                ChangeCamara();
+                player.GetComponent<Move>().resetLife();
+            }
         }
     }
 

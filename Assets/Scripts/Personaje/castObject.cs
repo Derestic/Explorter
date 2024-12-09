@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class castObject : MonoBehaviour
 {
@@ -21,6 +23,7 @@ public class castObject : MonoBehaviour
     GameObject select;
     [SerializeField] float maxDistancePointer = 30f;
     [SerializeField] LayerMask layerPointer;
+    private bool crafteable;
 
     Vector3 origen;
     Vector3 traslateD;
@@ -59,13 +62,16 @@ public class castObject : MonoBehaviour
     {
         if (createD)
         {
-            if (Input.GetMouseButtonUp((int)MouseButton.Left))
+            if (Input.GetMouseButtonUp((int)MouseButton.Left) && crafteable)
             {
+                select.GetComponent<craft>().consumeRecursos(Inventario.Instance());
                 select.GetComponent<Collider>().enabled = true;
                 select.GetComponent<NavMeshObstacle>().enabled = true;
                 select = Instantiate(defensa[index]);
                 select.GetComponent<Collider>().enabled = false;
                 select.GetComponent<NavMeshObstacle>().enabled = false;
+                crafteable = select.GetComponent<craft>().compareResources(Inventario.Instance());
+                colorPanelRecursos(crafteable);
             }
             else if (Input.GetKeyDown(changeSelect))
             {
@@ -74,6 +80,9 @@ public class castObject : MonoBehaviour
                 select = Instantiate(defensa[index]);
                 select.GetComponent<Collider>().enabled = false;
                 select.GetComponent<NavMeshObstacle>().enabled = false;
+                crafteable = select.GetComponent<craft>().compareResources(Inventario.Instance());
+                colorPanelRecursos(crafteable);
+                updateTableRecursos(select.GetComponent<craft>().getRecursos(), defensa[index].name);
             }
             else if (Input.GetKey(rotateSelect))
             {
@@ -90,6 +99,7 @@ public class castObject : MonoBehaviour
             createD = false;
             select = pointer;
             pointer.SetActive(true);
+            activatePanlRecursos(false);
         }
         else{
             createD = true;
@@ -97,6 +107,10 @@ public class castObject : MonoBehaviour
             select = Instantiate(defensa[index]);
             select.GetComponent<Collider>().enabled = false;
             select.GetComponent<NavMeshObstacle>().enabled = false;
+            crafteable = select.GetComponent<craft>().compareResources(Inventario.Instance());
+            colorPanelRecursos(crafteable);
+            activatePanlRecursos(true);
+            updateTableRecursos(select.GetComponent<craft>().getRecursos(), select.name);
         }
     }
     void castCreation()
@@ -120,5 +134,31 @@ public class castObject : MonoBehaviour
             traslateD.Set(0, select.transform.localScale.y / 2, 0);
             select.transform.position += traslateD;
         }
+    }
+
+    [Header("Control Recursos Objetos")]
+    [SerializeField] GameObject panelRecurso;
+    [SerializeField] TMP_Text nombreRecurso;
+    [SerializeField] TMP_Text[] recursos;
+    [SerializeField] Color red;
+    [SerializeField] Color green;
+
+    void updateTableRecursos(int[] rec, string name)
+    {
+        nombreRecurso.text = name;
+        for (int i = 0; i < recursos.Length; i++)
+        {
+            recursos[i].text = rec[i].ToString();
+        }
+    }
+    void activatePanlRecursos(bool b)
+    {
+        if(b)panelRecurso.SetActive(true);
+        else panelRecurso.SetActive(false);
+    }
+    void colorPanelRecursos(bool b)
+    {
+        if(b)panelRecurso.GetComponent<Image>().color = green;
+        else panelRecurso.GetComponent<Image>().color = red;
     }
 }
