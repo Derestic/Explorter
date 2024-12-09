@@ -172,8 +172,11 @@ public class Enemy : npc
     public void activeAttack(){AttackColidder.enabled = true;}
     public void desactiveAttack() {AttackColidder.enabled = false;}
     public void deadDestroy() { Destroy(gameObject);}
-    public void deadInit() { slimeColidder.enabled = false; 
-        if (man.GetType().Equals(typeof(Manager))) ((Manager)man).remouveEnemy(); }
+    public void deadInit() { 
+        slimeColidder.enabled = false; 
+        agent.isStopped = true;
+        if (man.GetType().Equals(typeof(Manager))) ((Manager)man).remouveEnemy(); 
+    }
 
     private void OnTriggerEnter(Collider other)
     {

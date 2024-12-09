@@ -88,6 +88,7 @@ public class Move : npc
     void modes()
     {
         weapon.SetActive(false);
+        getAnimIdle();
         switch (mode)
         {
             case Modos.Ataque:
@@ -168,7 +169,10 @@ public class Move : npc
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
         transform.Rotate(0, mouseX * sens, 0);
-        camara.transform.Rotate(-mouseY * sens, 0, 0);
+        Debug.Log("Rotation x: " + Mathf.Abs(camara.transform.rotation.x));
+        if(Mathf.Abs(camara.transform.rotation.x - Mathf.Sign(mouseY)*0.1f) <0.6f) 
+            camara.transform.Rotate(-mouseY * sens, 0, 0);
+
     }
 
     void cameraZoom()

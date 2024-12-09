@@ -65,7 +65,6 @@ public class DungeonManager : ManagerGen
         print("Game Over");
     }
 
-    public Inventario GetInventario() { return inventory; }
 
     public void updateCanvasInventory()
     {
