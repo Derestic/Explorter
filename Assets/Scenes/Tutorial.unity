@@ -7653,7 +7653,7 @@ GameObject:
   - component: {fileID: 1307236858}
   - component: {fileID: 1307236857}
   m_Layer: 5
-  m_Name: Rec1
+  m_Name: Recurso1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7935,7 +7935,7 @@ GameObject:
   - component: {fileID: 1333897736}
   - component: {fileID: 1333897735}
   m_Layer: 5
-  m_Name: Rec3
+  m_Name: Recurso3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10283,7 +10283,7 @@ GameObject:
   - component: {fileID: 1676002983}
   - component: {fileID: 1676002982}
   m_Layer: 5
-  m_Name: Rec2
+  m_Name: Recurso2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
