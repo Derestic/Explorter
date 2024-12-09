@@ -446,15 +446,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8dc2eae97db5844a99a79b45ac64955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  life: 0
   maxLife: 3
   damage: 2
+  man: {fileID: 0}
   status: 0
+  ObjetivoF: {fileID: 0}
+  Objetivo: {fileID: 0}
   gapObjetivo: 0.4
   slimeColidder: {fileID: 674524748545808344}
   speed: 3
   atacklayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 320
   AttackColidder: {fileID: 8462188434818075048}
   angulo: 140
   maxVision: 10

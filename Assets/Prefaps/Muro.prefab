@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3675184802617221842}
   - component: {fileID: 6146316415451477186}
   - component: {fileID: 2927065312669769431}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: MuroSimple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4421542849310360920}
   - component: {fileID: 4760561940425053846}
   - component: {fileID: 7877888298228417667}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Muro
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -232,6 +232,10 @@ PrefabInstance:
     - target: {fileID: 4346581454274389815, guid: d291d860c607d214580d4535300dc95c, type: 3}
       propertyPath: m_Name
       value: TrunkFence_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346581454274389815, guid: d291d860c607d214580d4535300dc95c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
