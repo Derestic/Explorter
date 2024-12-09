@@ -72,16 +72,12 @@ public class Move : npc
     {
         if (!dead)
         {
-
             move.Set(0f, gameObject.GetComponent<Rigidbody>().velocity.y, 0f);
             move += Input.GetAxisRaw("Horizontal") * speed.x * transform.right;
             move += Input.GetAxisRaw("Vertical") * speed.z * transform.forward;
             gameObject.GetComponent<Rigidbody>().velocity = move;
             //gameObject.GetComponent<Rigidbody>().(Input.GetAxis("Vertical") * speed.x, 0.0f,Input.GetAxis("Horizontal") * speed.z);
-            if (!jumpControl && move.y <= -deltaJump && transform.position.y < 1.2f)
-            {
-                jumpControl = true;
-            }
+            
         }
     }
 
@@ -92,32 +88,25 @@ public class Move : npc
         switch (mode)
         {
             case Modos.Ataque:
-                anim.SetBool("Combate", false);
                 if (recoletor) { 
                     mode = Modos.Recoleccion;
                     weapon = arma[2]; 
-                    anim.SetBool("Recolectar", true);
                 }
                 else
                 {
                     constructor.changeMode();
                     mode = Modos.Contruccion;
                     weapon = arma[1];
-                    anim.SetBool("Construct", true);
                 }
                 break;
             case Modos.Contruccion:
                 constructor.changeMode();
                 mode = Modos.Ataque;
                 weapon = arma[0];
-                anim.SetBool("Construct", false);
-                anim.SetBool("Combate", true);
                 break;
             case Modos.Recoleccion:
                 mode = Modos.Ataque;
                 weapon = arma[0];
-                anim.SetBool("Recolectar", false);
-                anim.SetBool("Combate", true);
                 break;
         }
         weapon.SetActive(true);
@@ -149,7 +138,6 @@ public class Move : npc
     public void getAnimIdle()
     {
         anim.SetBool("ataque", false);
-        Debug.Log("Ya se puede peguar");
     }
 
     public void activeCollider() { weapon.GetComponent<Collider>().enabled = true; }
@@ -157,10 +145,9 @@ public class Move : npc
 
     void jump()
     {
-        if (jumpControl && Input.GetKeyDown(KeyCode.Space))
+        if (Physics.BoxCast(transform.position, transform.localScale / 2, -transform.up, out RaycastHit hit, Quaternion.identity, transform.localScale.y / 2) && Input.GetKeyDown(KeyCode.Space))
         {
             gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, jumpForce , 0),ForceMode.Impulse);
-            jumpControl = false;
         }
     }
 
@@ -200,5 +187,12 @@ public class Move : npc
             if (man.GetType().Equals(typeof(Manager))) ((Manager)man).ChangeCamara();
             else man.goDungeon(0);
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.cyan;
+
+        Gizmos.DrawWireCube(transform.position-transform.up*(transform.localScale.y / 2), transform.localScale / 2);
     }
 }
