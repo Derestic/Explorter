@@ -12,7 +12,7 @@ public class Dungeon : MonoBehaviour
     public float mult = 5;
     public GameObject roomPrefab;
     public int salasMinimas = 5;
-    public GameObject doorPrefab;
+    public GameObject doorRef;
     public GameObject spawnerPrefab;
     public GameObject containerObjectRef;
     [SerializeField]
@@ -75,8 +75,8 @@ public class Dungeon : MonoBehaviour
                 spawner.transform.parent = aux.transform;
             }
             if(i == 0){
-                GameObject door = Instantiate(doorPrefab, new Vector3(setPosPlayer[0] * mult, setPosPlayer[1] * mult + 1, setPosPlayer[2] * mult), Quaternion.identity);
-                door.transform.parent = aux.transform;
+                doorRef.transform.position = new Vector3(setPosPlayer[0] * mult, setPosPlayer[1] * mult + 1, setPosPlayer[2] * mult);
+                doorRef.transform.parent = aux.transform;
             }
         }
         containerObjectRef.GetComponent<NavMeshSurface>().BuildNavMesh();
