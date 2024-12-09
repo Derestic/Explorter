@@ -53,7 +53,7 @@ public class Enemy : npc
     void Start()
     {
         life = maxLife;
-        if (man.GetType().Equals(typeof(Manager))) { 
+        if (man != null && man.GetType().Equals(typeof(Manager))) { 
             ObjetivoF = ((Manager)man).getNucleo(); 
         }
 
@@ -175,7 +175,7 @@ public class Enemy : npc
     public void deadInit() { 
         slimeColidder.enabled = false; 
         agent.isStopped = true;
-        if (man.GetType().Equals(typeof(Manager))) ((Manager)man).remouveEnemy(); 
+        if (man != null && man.GetType().Equals(typeof(Manager))) ((Manager)man).remouveEnemy(); 
     }
 
     private void OnTriggerEnter(Collider other)
