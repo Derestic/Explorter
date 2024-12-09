@@ -37,7 +37,11 @@ public class spawn : MonoBehaviour
                 inst.transform.position = transform.position;
                 Manager.Instance.addEnemy();
             }
-            if (countSpawn >= numSpawns) { spawning = false; countSpawn = 0; }
+            if (countSpawn >= numSpawns) { 
+                spawning = false; 
+                countSpawn = 0;
+                numSpawns+=3;
+            }
         }
     }
 
