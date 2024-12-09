@@ -11775,7 +11775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indexMazmorra: 02000000
-  state: 1
+  state: 0
   maxprep: 3
   nucleo: {fileID: 14248471}
   player: {fileID: 1074965679}
