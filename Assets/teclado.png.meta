@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,13 +37,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -121,18 +121,1360 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: teclado_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 331
+        width: 88
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b68a474c0da88de4dbd15a8bac5d3097
+      internalID: -1639565444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 331
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a9e821cba4b2f46b3c93fd9d0985d7
+      internalID: 568101323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_2
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 331
+        width: 56
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181d731a85032cf48829c20fd2268a87
+      internalID: 866679336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_3
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 331
+        width: 56
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d790951d3ad2ad448509524e11d540b
+      internalID: -270556214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_4
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 331
+        width: 56
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de52bbcc475bfc7478e3d8b2baebddeb
+      internalID: -1210073619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_5
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 331
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2bd0cc89c8952142a1ecbec4bfbb2a1
+      internalID: -992630732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_6
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 331
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8e7e9bfe8834554e818edebbada81d2
+      internalID: 1225282497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_7
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 331
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75e623c638e7324db458026e38c7899
+      internalID: -1223275242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_8
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 331
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a329d504bad5ff44a627610033d892e
+      internalID: 227476112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_9
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 331
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc56cf57888597449ae4d59dc8014cb
+      internalID: 612632872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_10
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 331
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921b070578cffb747a01a28dcfd55ce6
+      internalID: -1151886443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_11
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 331
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4deac6692fc79743b1e72e3e7554840
+      internalID: 328318878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_12
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 331
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25281ad80f95834dbe05192e35bdd25
+      internalID: -1956048979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_13
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 331
+        width: 140
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56a8ca8cd8282344b9cde5193e73ef56
+      internalID: 1858554136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_14
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 258
+        width: 119
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af0a2036a5e9bd4bb76699b1deec2c5
+      internalID: 1592777291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_15
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 258
+        width: 56
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fed821672bac9e4da513503654a2f68
+      internalID: 1337723906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_16
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 258
+        width: 56
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d548bccc4684af41837117e4bbae338
+      internalID: 1153695192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_17
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 258
+        width: 56
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e434ef448cc3445bb59f551fb2a649
+      internalID: -597393747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_18
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 258
+        width: 56
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e9762d505353d4da14070ef9f6c45b
+      internalID: -586438689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_19
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 258
+        width: 56
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b2bded3092ec684aa249371510f9e59
+      internalID: 410261539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_20
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 258
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 735dcefb3d94adb43a17b70471e2fd18
+      internalID: 545305288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_21
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 258
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cfe9a3b02dba8d488d89165429e24f6
+      internalID: 369019205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_22
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 258
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131651ca516fdd14889fa496f4dbae46
+      internalID: 12978703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_23
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 258
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22232293791d7ad4cbbf53da5b1fb681
+      internalID: -513647164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_24
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 258
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5b633230a83664e9e87a87a53d14f3
+      internalID: -1240900698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_25
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 258
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce2476a5a043f943a4192bdffd1845c
+      internalID: -668769297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_26
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 258
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d430f6ee28f094f9bce27f1f85a52b
+      internalID: 153172260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_27
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 258
+        width: 109
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dadea7e0001b9b4f8b3df299a3d05f9
+      internalID: 1879511127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_28
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 186
+        width: 150
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 642e1916a8557b04392334430bf024ef
+      internalID: -1197970869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_29
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 186
+        width: 56
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f1a73e00e740ef4a8920641fcc9d634
+      internalID: 1430244772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_30
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 186
+        width: 56
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6b162f074a064f439ba9db27fe63a86
+      internalID: 2058381352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_31
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 186
+        width: 56
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99db3794813437b4e8cab85f42ac2d8b
+      internalID: -1462534417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_32
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 186
+        width: 56
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0131e2b771f5c5408b080c38c6d29f6
+      internalID: -537540538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_33
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 186
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3edcff6598246f741bf0d2358ff43f85
+      internalID: -1441191261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_34
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 186
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be6016b055d5b54586f722d6de107bc
+      internalID: 551125700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_35
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 186
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a68c56dafc47941906799dfb36036b
+      internalID: -1565379288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_36
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 186
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 189e0da12baabb845ba677be604f4cc3
+      internalID: -634330936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_37
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 186
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf693388c9a1ee4eb8ec2f9d26c710d
+      internalID: -1474564086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_38
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 186
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069d72a03aad7084688352e94e11cd2c
+      internalID: -1968568951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_39
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 186
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57fe21a4462b2ca4583744f9c80bafd6
+      internalID: 568061064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_40
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 186
+        width: 140
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 139fafedcabac304285a0347b30e84c0
+      internalID: -1368132312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_41
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 114
+        width: 181
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed2858d2ab6e1d5438ca73c00cc3cafb
+      internalID: 1565545539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_42
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 114
+        width: 56
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cbdefcb55074d840b70042f2f8bbe0b
+      internalID: 2032957329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_43
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 114
+        width: 56
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb852fd16e6888a4d96652259b017f5d
+      internalID: -1207776319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_44
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 114
+        width: 56
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36106954d2682e14787028883db3d578
+      internalID: 2014569138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_45
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 114
+        width: 56
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 515ee7ac5a59d4348b897c69af4ede95
+      internalID: -1960402026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_46
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 114
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aee6a07ed2c96514e85ccaec4146f779
+      internalID: 1276954301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_47
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 114
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f9766b7c03b4d443aeab3fb4ccd0d72
+      internalID: -1489890942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_48
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 114
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc6915204cb8c164e8fda05399eea2b2
+      internalID: -1082329848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_49
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 114
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a0a88649468bf4fbed4de23705cade
+      internalID: 94212847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_50
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 114
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73555294f622156479df83e253b7b4e7
+      internalID: 1738047186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_51
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 114
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a20d441e5899856429b11247b38aaf84
+      internalID: 1056225262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_52
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 114
+        width: 171
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 480a8940496ec684e8c6bb5bf313e39b
+      internalID: 1994664809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_53
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 41
+        width: 109
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3631d00b5ba024bbc0b87173d4a44a
+      internalID: 1932534914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_54
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 41
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd1c13bd49e637649a910706f75648ef
+      internalID: -357387659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_55
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 41
+        width: 87
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c996bd9eba8a4942b49551a38a15196
+      internalID: -473933790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_56
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 41
+        width: 346
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec784c82cf2150d4993112e8b9f436fe
+      internalID: 1871673028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_57
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 41
+        width: 88
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bafed74c6fd7a5d469990e42d6210fd3
+      internalID: -1269722342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_58
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 41
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f7ab43f4ee90df44adab9d9785bd0e2
+      internalID: 2316883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_59
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 41
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b5acde32cb78754a89b32c6dfcb2bbd
+      internalID: -657031895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teclado_60
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 41
+        width: 109
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc1284bdd45a294684b796d95afd67b
+      internalID: -1234379822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f9b959f9824ad2148b15ebd86dcb23f1
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      teclado_0: -1639565444
+      teclado_1: 568101323
+      teclado_10: -1151886443
+      teclado_11: 328318878
+      teclado_12: -1956048979
+      teclado_13: 1858554136
+      teclado_14: 1592777291
+      teclado_15: 1337723906
+      teclado_16: 1153695192
+      teclado_17: -597393747
+      teclado_18: -586438689
+      teclado_19: 410261539
+      teclado_2: 866679336
+      teclado_20: 545305288
+      teclado_21: 369019205
+      teclado_22: 12978703
+      teclado_23: -513647164
+      teclado_24: -1240900698
+      teclado_25: -668769297
+      teclado_26: 153172260
+      teclado_27: 1879511127
+      teclado_28: -1197970869
+      teclado_29: 1430244772
+      teclado_3: -270556214
+      teclado_30: 2058381352
+      teclado_31: -1462534417
+      teclado_32: -537540538
+      teclado_33: -1441191261
+      teclado_34: 551125700
+      teclado_35: -1565379288
+      teclado_36: -634330936
+      teclado_37: -1474564086
+      teclado_38: -1968568951
+      teclado_39: 568061064
+      teclado_4: -1210073619
+      teclado_40: -1368132312
+      teclado_41: 1565545539
+      teclado_42: 2032957329
+      teclado_43: -1207776319
+      teclado_44: 2014569138
+      teclado_45: -1960402026
+      teclado_46: 1276954301
+      teclado_47: -1489890942
+      teclado_48: -1082329848
+      teclado_49: 94212847
+      teclado_5: -992630732
+      teclado_50: 1738047186
+      teclado_51: 1056225262
+      teclado_52: 1994664809
+      teclado_53: 1932534914
+      teclado_54: -357387659
+      teclado_55: -473933790
+      teclado_56: 1871673028
+      teclado_57: -1269722342
+      teclado_58: 2316883
+      teclado_59: -657031895
+      teclado_6: 1225282497
+      teclado_60: -1234379822
+      teclado_7: -1223275242
+      teclado_8: 227476112
+      teclado_9: 612632872
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
