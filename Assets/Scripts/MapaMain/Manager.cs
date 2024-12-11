@@ -36,6 +36,9 @@ public class Manager : ManagerGen
     [Header("Control muerte")]
     [SerializeField] GameObject camaraM;
 
+    [Header("Flechita")]
+    [SerializeField] GameObject flechita;
+
     public static Manager Instance
     {
         get
@@ -100,6 +103,7 @@ public class Manager : ManagerGen
         }
         if (state == RoundState.oleada)
         {
+            flechita.SetActive(false);
             prep = 0;
             WaveControl.Instance().prep = 0;
             for (int i = 0; i < spawns.Length;i++) { spawns[i].GetComponent<spawn>().spawning = true; }
@@ -144,6 +148,7 @@ public class Manager : ManagerGen
                 ChangeCamara();
                 player.GetComponent<Move>().resetLife();
             }
+            flechita.SetActive(true);
         }
     }
 

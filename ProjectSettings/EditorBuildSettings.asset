@@ -6,12 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/ScenasFinales/MainMenu.unity
     guid: ddbb5f1a222be044c9214b8e4ce71901
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tutorial.unity
     guid: 8bef466b5711be141ada56eda418627a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/testSceneDani.unity
     guid: b77c31544e025424e87cd728d11e1dc7
+  - enabled: 1
+    path: Assets/Scenes/ScenasFinales/Forest.unity
+    guid: 875eeb6fec1d61f47bb8898980b4547d
+  - enabled: 1
+    path: Assets/Scenes/ScenasFinales/MapaNucleo.unity
+    guid: 872f915f5f7eadc4895945add5d74342
+  - enabled: 1
+    path: Assets/Scenes/ScenasFinales/Tutorial1.unity
+    guid: 3fab585b83cfbaf41879a42ccc6c0f65
   m_configObjects: {}

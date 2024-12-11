@@ -38,10 +38,12 @@ public class DungeonManager : ManagerGen
     void Start()
     {
         inventory = Inventario.Instance();
-        invText = new TMP_Text[inventario.transform.childCount];
-        for (int i = 0; i < inventario.transform.childCount; i++)
+        invText = new TMP_Text[inventario.transform.childCount/2];
+        int j = 0;
+        for (int i = 1; i < inventario.transform.childCount; i+=2)
         {
-            invText[i] = inventario.transform.GetChild(i).GetComponent<TMP_Text>();
+            invText[j] = inventario.transform.GetChild(i).GetComponent<TMP_Text>();
+            j++;
         }
         updateCanvasInventory();
     }
@@ -71,7 +73,7 @@ public class DungeonManager : ManagerGen
         string[] k = inventory.getKeyRecursos();
         for (int i = 0; i < invText.Length; i++)
         {
-            invText[i].text = k[i] + ": " + inventory.getRecurso(k[i]);
+            invText[i].text =": " + inventory.getRecurso(k[i]);
         }
     }
 
