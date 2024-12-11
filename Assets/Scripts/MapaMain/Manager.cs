@@ -103,7 +103,7 @@ public class Manager : ManagerGen
         }
         if (state == RoundState.oleada)
         {
-            flechita.SetActive(false);
+            if(flechita!=null)flechita.SetActive(false);
             prep = 0;
             WaveControl.Instance().prep = 0;
             for (int i = 0; i < spawns.Length;i++) { spawns[i].GetComponent<spawn>().spawning = true; }
@@ -148,7 +148,7 @@ public class Manager : ManagerGen
                 ChangeCamara();
                 player.GetComponent<Move>().resetLife();
             }
-            flechita.SetActive(true);
+            if (flechita != null) flechita.SetActive(true);
         }
     }
 
