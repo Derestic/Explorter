@@ -29,6 +29,8 @@ public class Manager : ManagerGen
     [Header("Control Canvas")]
       [SerializeField] GameObject inventario;
       [SerializeField] TMP_Text[] invText;
+      [SerializeField] Image[] invImage;
+      [SerializeField] Sprite[] invSprites;
 
 
     [Header("Control muerte")]
@@ -58,10 +60,19 @@ public class Manager : ManagerGen
     {
         prep = WaveControl.Instance().prep;
         inventory = Inventario.Instance();
-        invText = new TMP_Text[inventario.transform.childCount];
+        invText = new TMP_Text[3];
+        invImage = new Image[3];
+        int txt = 0, img = 0;
         for (int i = 0; i < inventario.transform.childCount; i++)
         {
-            invText[i] = inventario.transform.GetChild(i).GetComponent<TMP_Text>();
+            Transform aux = inventario.transform.GetChild(i);
+            if(aux.name.Contains("Recurso")){
+                invText[txt] = aux.GetComponent<TMP_Text>();
+                txt++;
+            }else{
+                invImage[img] = aux.GetComponent<Image>();
+                img++;
+            }
         }
         print("Estoy creado, con estado " + state.ToString());
         nextState();
@@ -141,7 +152,11 @@ public class Manager : ManagerGen
         string[] k = inventory.getKeyRecursos();
         for (int i = 0; i < invText.Length; i++)
         {
-            invText[i].text = k[i] + ": " + inventory.getRecurso(k[i]);
+            invText[i].text = ": " + inventory.getRecurso(k[i]);
+        }
+        for (int i = 0; i < invImage.Length; i++)
+        {
+            invImage[i].sprite = invSprites[i];
         }
     }
 
