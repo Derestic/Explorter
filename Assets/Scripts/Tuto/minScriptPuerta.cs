@@ -10,11 +10,11 @@ public class minScriptPuerta : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag.Equals("player"))
+        if (other.gameObject.tag.Equals("Player"))
         {
             other.transform.position = spawn.transform.position;
             panelMisionP.SetActive(false);

@@ -15,7 +15,6 @@ public class Move : npc
     [SerializeField] Vector3 speed;
     [SerializeField] float zoomSpeed = 0.1f;
     [SerializeField] float jumpForce = 10f;
-    [SerializeField] float deltaJump = 0.01f;
     bool jumpControl = true;
     Vector3 move;
 
@@ -46,7 +45,10 @@ public class Move : npc
         anim = GetComponent<Animator>();
         if (constructor == null) recoletor = true; else recoletor = false;
     }
-
+    public void SetRecolector(bool b)
+    {
+        recoletor = b;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -155,8 +157,8 @@ public class Move : npc
     {
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
-        transform.Rotate(0, mouseX * sens, 0);
-        Debug.Log("Rotation x: " + Mathf.Abs(camara.transform.rotation.x));
+        //transform.Rotate(0, mouseX * sens, 0);
+        //Debug.Log("Rotation x: " + Mathf.Abs(camara.transform.rotation.x));
         if(Mathf.Abs(camara.transform.rotation.x - Mathf.Sign(mouseY)*0.1f) <0.6f) 
             camara.transform.Rotate(-mouseY * sens, 0, 0);
 

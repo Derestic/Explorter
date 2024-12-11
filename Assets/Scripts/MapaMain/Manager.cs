@@ -10,6 +10,8 @@ public class Manager : ManagerGen
     private static Manager _instance;
     enum RoundState { preparation, oleada };
 
+    [SerializeField] bool cheat = false;
+
     [Header("Control Oleadas")]
       [SerializeField] RoundState state = RoundState.preparation;
       [SerializeField] int prep = 0;
@@ -71,7 +73,7 @@ public class Manager : ManagerGen
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
+        if (cheat && Input.GetKeyDown(KeyCode.M))
         {
             inventory.addRecurso("Madera", 2);
         }
@@ -156,5 +158,5 @@ public class Manager : ManagerGen
             camaraM.SetActive(false);
         }
     }
-
+    public void blockCheat() { cheat = false; }
 }

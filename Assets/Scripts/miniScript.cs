@@ -19,10 +19,11 @@ public class miniScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.GetComponent<npc>().isDead())
-        {
-            portal.SetActive(true);
-            panelMision.GetComponent<Image>().color = complete;
-        }
+
+    }
+    private void OnDestroy()
+    {
+        if(portal!=null)portal.SetActive(true);
+        panelMision.GetComponent<Image>().color = complete;
     }
 }
