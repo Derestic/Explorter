@@ -29,10 +29,9 @@ public class miniScriptCraft : MonoBehaviour
     void Update()
     {
         Debug.Log("Tecla: " + key.ToString());
-        if (Input.GetKeyDown(key))
+        if (key!=KeyCode.None && Input.GetKeyDown(key))
         {
-            gameObject.GetComponent<Image>().color = complete;
-            StartCoroutine(wait());
+            updateMision();
         }
     }
 
@@ -41,5 +40,11 @@ public class miniScriptCraft : MonoBehaviour
         yield return new WaitForSeconds(1f);
         gameObject.SetActive(false);
         panelMisionA.SetActive(true);
+    }
+
+    public void updateMision()
+    {
+        gameObject.GetComponent<Image>().color = complete;
+        StartCoroutine(wait());
     }
 }

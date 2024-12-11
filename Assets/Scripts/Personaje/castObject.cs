@@ -36,7 +36,7 @@ public class castObject : MonoBehaviour
     [SerializeField] KeyCode rotateSelect = KeyCode.R;
     [SerializeField] KeyCode changeSelect = KeyCode.Q;
     // Start is called before the first frame update
-
+    [SerializeField] miniScriptCraft mision;
     void Start()
     {
         man = Manager.Instance;
@@ -72,6 +72,7 @@ public class castObject : MonoBehaviour
                 select.GetComponent<NavMeshObstacle>().enabled = false;
                 crafteable = select.GetComponent<craft>().compareResources(Inventario.Instance());
                 colorPanelRecursos(crafteable);
+                if (mision != null) mision.updateMision();
             }
             else if (Input.GetKeyDown(changeSelect))
             {
