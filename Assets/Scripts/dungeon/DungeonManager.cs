@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,7 +16,7 @@ public class DungeonManager : ManagerGen
     [SerializeField] GameObject inventario;
     [SerializeField] TMP_Text[] invText;
 
-
+    int[] rec = new int[3];
     public static DungeonManager Instance
     {
         get
@@ -51,14 +52,26 @@ public class DungeonManager : ManagerGen
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
+        if (player.GetComponent<Move>().isDead())
         {
-            inventory.addRecurso("Madera", 2);
-            updateCanvasInventory();
+            this.goDungeon(0);
+            string[] a = inventory.getKeyRecursos();
+            for (int i = 0; i < rec.Length; i++)
+            {
+                inventory.addRecurso(a[i], rec[i]);
+            }
         }
     }
     public void recolectarRecurso(string recurso, int cantidad) {
         inventory.addRecurso(recurso, cantidad);
+        string[] a = inventory.getKeyRecursos();
+        for (int i = 0;i < rec.Length; i++)
+        {
+            if (a[i] == recurso)
+            {
+                rec[i] += cantidad;
+            }
+        }
         updateCanvasInventory();
     }
 
