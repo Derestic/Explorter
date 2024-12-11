@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class miniScriptCraft : MonoBehaviour
 {
-    [SerializeField] GameObject panelMisionA;
-    [SerializeField] Color complete;
-    [SerializeField] Color idle;
-    [SerializeField] KeyCode key;
-    [SerializeField] bool Recolector;
-    [SerializeField] Move Player;
+    [SerializeField] protected GameObject portal;
+    [SerializeField] protected GameObject panelMisionA;
+    [SerializeField] protected Color complete;
+    [SerializeField] protected Color idle;
+    [SerializeField] protected KeyCode key;
+    [SerializeField] protected bool Recolector;
+    [SerializeField] protected Move Player;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +36,7 @@ public class miniScriptCraft : MonoBehaviour
         }
     }
 
-    private IEnumerator wait()
+    protected IEnumerator wait()
     {
         yield return new WaitForSeconds(1f);
         gameObject.SetActive(false);
@@ -46,5 +47,6 @@ public class miniScriptCraft : MonoBehaviour
     {
         gameObject.GetComponent<Image>().color = complete;
         StartCoroutine(wait());
+        if(portal!=null)portal.SetActive(true);
     }
 }

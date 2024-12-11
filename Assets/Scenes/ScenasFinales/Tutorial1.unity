@@ -1894,6 +1894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4343a777ae24f54cb6e9474dc554756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  portal: {fileID: 0}
   panelMisionA: {fileID: 1810480826}
   complete: {r: 0.2901961, g: 0.8117647, b: 0.10980392, a: 0.61960787}
   idle: {r: 0.94509804, g: 0.85882354, b: 0.27058825, a: 0.61960787}
@@ -3971,6 +3972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4343a777ae24f54cb6e9474dc554756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  portal: {fileID: 0}
   panelMisionA: {fileID: 410717629}
   complete: {r: 0.2901961, g: 0.8117647, b: 0.10980392, a: 0.61960787}
   idle: {r: 0.94509804, g: 0.85882354, b: 0.27058825, a: 0.61960787}
@@ -5660,6 +5662,25 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f35265704d5fd145b137e4ee38b1297, type: 3}
+--- !u!1 &1075754964 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1010580638332677001, guid: 28051debbbd972c4b9f2eedf1fd9cd90, type: 3}
+  m_PrefabInstance: {fileID: 1958794771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1075754969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075754964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 375469366467c6043bc536d19ece2009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numDungeon: 0
+  manager: {fileID: 1513405084}
 --- !u!1 &1082511982
 GameObject:
   m_ObjectHideFlags: 0
@@ -5711,6 +5732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4343a777ae24f54cb6e9474dc554756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  portal: {fileID: 0}
   panelMisionA: {fileID: 864825131}
   complete: {r: 0.2901961, g: 0.8117647, b: 0.10980392, a: 0.61960787}
   idle: {r: 0.94509804, g: 0.85882354, b: 0.27058825, a: 0.61960787}
@@ -8466,7 +8488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8bcf46c6bd4144cbb5643ddf3b16ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexMazmorra: 
+  indexMazmorra: 01000000
 --- !u!4 &1513405085
 Transform:
   m_ObjectHideFlags: 0
@@ -9698,6 +9720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4343a777ae24f54cb6e9474dc554756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  portal: {fileID: 0}
   panelMisionA: {fileID: 1698508253}
   complete: {r: 0.2901961, g: 0.8117647, b: 0.10980392, a: 0.61960787}
   idle: {r: 0.94509804, g: 0.85882354, b: 0.27058825, a: 0.61960787}
@@ -9755,6 +9778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4343a777ae24f54cb6e9474dc554756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  portal: {fileID: 0}
   panelMisionA: {fileID: 0}
   complete: {r: 0.2901961, g: 0.8117647, b: 0.10980392, a: 0}
   idle: {r: 0.94509804, g: 0.85882354, b: 0.27058825, a: 0}
@@ -10669,6 +10693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4343a777ae24f54cb6e9474dc554756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  portal: {fileID: 1075754964}
   panelMisionA: {fileID: 1870815178}
   complete: {r: 0.2901961, g: 0.8117647, b: 0.10980392, a: 0.61960787}
   idle: {r: 0.94509804, g: 0.85882354, b: 0.27058825, a: 0.61960787}
@@ -11093,6 +11118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4343a777ae24f54cb6e9474dc554756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  portal: {fileID: 0}
   panelMisionA: {fileID: 0}
   complete: {r: 0.4, g: 1, b: 0.3882353, a: 0.61960787}
   idle: {r: 0.94509804, g: 0.85882354, b: 0.27058825, a: 0.61960787}
@@ -11677,6 +11703,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2735157929450202882, guid: 28051debbbd972c4b9f2eedf1fd9cd90, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1052121210}
+    - targetCorrespondingSourceObject: {fileID: 1010580638332677001, guid: 28051debbbd972c4b9f2eedf1fd9cd90, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1075754969}
   m_SourcePrefab: {fileID: 100100000, guid: 28051debbbd972c4b9f2eedf1fd9cd90, type: 3}
 --- !u!1001 &1965052602
 PrefabInstance:
@@ -12427,6 +12456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4343a777ae24f54cb6e9474dc554756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  portal: {fileID: 0}
   panelMisionA: {fileID: 2002066200}
   complete: {r: 0.2901961, g: 0.8117647, b: 0.10980392, a: 0.61960787}
   idle: {r: 0.94509804, g: 0.85882354, b: 0.27058825, a: 0.61960787}
