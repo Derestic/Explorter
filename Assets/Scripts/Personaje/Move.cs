@@ -35,6 +35,14 @@ public class Move : npc
     bool recoletor;
     bool activeChangeMode = true;
 
+    [Header("Audio")]
+    [SerializeField] AudioClip pasos;
+    [SerializeField] AudioClip swingEspada;
+    [SerializeField] AudioClip golpeHacha;
+    AudioSource audioSourcePasos;
+    [SerializeField] AudioSource audioSourceEspada;
+    [SerializeField] AudioSource audioSourceHacha;
+    //[SerializeField] AudioSource audioSourceMartillo;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +52,10 @@ public class Move : npc
         Cursor.visible = false;
         anim = GetComponent<Animator>();
         if (constructor == null) recoletor = true; else recoletor = false;
+        audioSourcePasos = GetComponent<AudioSource>();
+        audioSourcePasos.clip = pasos;
+        audioSourceEspada.clip = swingEspada;
+        audioSourceHacha.clip = golpeHacha;
     }
     public void SetRecolector(bool b)
     {
@@ -79,7 +91,13 @@ public class Move : npc
             move += Input.GetAxisRaw("Vertical") * speed.z * transform.forward;
             gameObject.GetComponent<Rigidbody>().velocity = move;
             //gameObject.GetComponent<Rigidbody>().(Input.GetAxis("Vertical") * speed.x, 0.0f,Input.GetAxis("Horizontal") * speed.z);
-            
+            if ((move.x != 0f || move.z != 0f) && Mathf.Abs(move.y) <= 0.00001f)
+            {
+                if (!audioSourcePasos.isPlaying) audioSourcePasos.Play();
+            }
+            else {
+                if (audioSourcePasos.isPlaying) audioSourcePasos.Pause();
+            }
         }
     }
 
@@ -145,6 +163,8 @@ public class Move : npc
         if (Input.GetMouseButtonUp((int)MouseButton.Left))
         {
             anim.SetBool("ataque",true);
+            if (mode == Modos.Ataque && !audioSourceEspada.isPlaying) audioSourceEspada.Play();
+            if (mode == Modos.Recoleccion && !audioSourceHacha.isPlaying) audioSourceHacha.Play();
         }
     }
 
