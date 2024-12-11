@@ -37,7 +37,12 @@ public class Move : npc
 
     [Header("Audio")]
     [SerializeField] AudioClip pasos;
+    [SerializeField] AudioClip swingEspada;
+    [SerializeField] AudioClip golpeHacha;
     AudioSource audioSourcePasos;
+    [SerializeField] AudioSource audioSourceEspada;
+    [SerializeField] AudioSource audioSourceHacha;
+    //[SerializeField] AudioSource audioSourceMartillo;
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +54,8 @@ public class Move : npc
         if (constructor == null) recoletor = true; else recoletor = false;
         audioSourcePasos = GetComponent<AudioSource>();
         audioSourcePasos.clip = pasos;
+        audioSourceEspada.clip = swingEspada;
+        audioSourceHacha.clip = golpeHacha;
     }
     public void SetRecolector(bool b)
     {
@@ -145,6 +152,8 @@ public class Move : npc
         if (Input.GetMouseButtonUp((int)MouseButton.Left))
         {
             anim.SetBool("ataque",true);
+            if (mode == Modos.Ataque && !audioSourceEspada.isPlaying) audioSourceEspada.Play();
+            if (mode == Modos.Recoleccion && !audioSourceHacha.isPlaying) audioSourceHacha.Play();
         }
     }
 
@@ -168,7 +177,7 @@ public class Move : npc
     {
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
-        //transform.Rotate(0, mouseX * sens, 0);
+        transform.Rotate(0, mouseX * sens, 0);
         //Debug.Log("Rotation x: " + Mathf.Abs(camara.transform.rotation.x));
         if(Mathf.Abs(camara.transform.rotation.x - Mathf.Sign(mouseY)*0.1f) <0.6f) 
             camara.transform.Rotate(-mouseY * sens, 0, 0);
