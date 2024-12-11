@@ -119,6 +119,17 @@ public class Move : npc
             "\n Atacando: " + anim.GetBool("ataque"));
         //anim = GetComponent<Animator>();
     }
+    public void setAtaque()
+    {
+        weapon.SetActive(false);
+        if (mode != Modos.Ataque)
+        {
+            if (Modos.Contruccion == mode) constructor.changeMode();
+            mode = Modos.Ataque;
+            weapon = arma[0];
+        }
+        weapon.SetActive(true);
+    }
 
     void movement()
     {
@@ -157,7 +168,7 @@ public class Move : npc
     {
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
-        //transform.Rotate(0, mouseX * sens, 0);
+        transform.Rotate(0, mouseX * sens, 0);
         //Debug.Log("Rotation x: " + Mathf.Abs(camara.transform.rotation.x));
         if(Mathf.Abs(camara.transform.rotation.x - Mathf.Sign(mouseY)*0.1f) <0.6f) 
             camara.transform.Rotate(-mouseY * sens, 0, 0);

@@ -16,6 +16,7 @@ public class minScriptPuerta : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Player"))
         {
+            Manager.Instance.player.GetComponent<Move>().setAtaque();
             other.transform.position = spawn.transform.position;
             panelMisionP.SetActive(false);
             panelMisionA.SetActive(true);
