@@ -77,11 +77,13 @@ public class Manager : ManagerGen
                 img++;
             }
         }
-        print("Estoy creado, con estado " + state.ToString());
+        print("Estoy creado, con estado " + WaveControl.Instance().prep);
         nextState();
         updateCanvasInventory();
-        if(state == RoundState.oleada)
+        if(WaveControl.Instance().prep >= maxprep && state == RoundState.oleada)
+        {
             player.GetComponent<Move>().desactivateModes();
+        }
     }
 
     // Update is called once per frame
@@ -100,6 +102,11 @@ public class Manager : ManagerGen
         {
             state = RoundState.oleada;
             player.GetComponent<Move>().desactivateModes();
+        }
+        else
+        {
+            state = RoundState.preparation;
+            player.GetComponent<Move>().activateModes();
         }
         if (state == RoundState.oleada)
         {

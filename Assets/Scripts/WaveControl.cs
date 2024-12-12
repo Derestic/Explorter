@@ -18,6 +18,6 @@ public class WaveControl
         instance = this;
     }
 
-    public int prep = 0;
+    public int prep = 3;
 
 }
