@@ -62,6 +62,7 @@ public class Manager : ManagerGen
     void Start()
     {
         prep = WaveControl.Instance().prep;
+        if(WaveControl.Instance().vidaN < -1) nucleo.GetComponent<Core>().setLife(WaveControl.Instance().vidaN);
         inventory = Inventario.Instance();
         invText = new TMP_Text[3];
         invImage = new Image[3];
@@ -156,6 +157,7 @@ public class Manager : ManagerGen
                 player.GetComponent<Move>().resetLife();
             }
             if (flechita != null) flechita.SetActive(true);
+            WaveControl.Instance().vidaN = nucleo.GetComponent<Core>().getLife();
         }
     }
 

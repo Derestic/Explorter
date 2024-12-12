@@ -19,5 +19,6 @@ public class WaveControl
     }
 
     public int prep = 3;
+    public float vidaN = -10;
 
 }
