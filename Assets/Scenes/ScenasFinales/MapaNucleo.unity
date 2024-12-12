@@ -7977,7 +7977,7 @@ MonoBehaviour:
   indexMazmorra: 01000000
   cheat: 0
   state: 1
-  prep: 0
+  prep: 3
   maxprep: 3
   nucleo: {fileID: 1732714226}
   player: {fileID: 1643933854}
