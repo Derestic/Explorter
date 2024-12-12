@@ -15,8 +15,10 @@ public class Core : npc
     // Update is called once per frame
     void Update()
     {
-        if (dead) Debug.Log("Game Over");
-        Manager.Instance.goDungeon(0);
+        if (dead) { 
+            Debug.Log("Game Over");
+            Manager.Instance.goDungeon(0);
+        }
     }
     public void setLife(float lifeUpdate)
     {
