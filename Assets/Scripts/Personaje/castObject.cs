@@ -111,7 +111,7 @@ public class castObject : MonoBehaviour
             crafteable = select.GetComponent<craft>().compareResources(Inventario.Instance());
             colorPanelRecursos(crafteable);
             activatePanlRecursos(true);
-            updateTableRecursos(select.GetComponent<craft>().getRecursos(), select.name);
+            updateTableRecursos(select.GetComponent<craft>().getRecursos(), defensa[index].name);
         }
     }
     void castCreation()
