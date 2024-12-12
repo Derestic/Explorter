@@ -73,6 +73,7 @@ public class Move : npc
             PAUSE = !PAUSE;
             MenuControl.zSwapPanels(gui1);
             MenuControl.zSwapPanels(gui2);
+            Time.timeScale = (Time.timeScale + 1) % 2;
         }
         if (!dead && !PAUSE)
         {
