@@ -42,6 +42,11 @@ public class Move : npc
     [SerializeField] AudioSource audioSourceEspada;
     [SerializeField] AudioSource audioSourceHacha;
     //[SerializeField] AudioSource audioSourceMartillo;
+    
+    private bool PAUSE = false;
+    [Header("GUIS")]
+    [SerializeField] GameObject gui1;
+    [SerializeField] GameObject gui2;
 
     // Start is called before the first frame update
     void Start()
@@ -63,9 +68,15 @@ public class Move : npc
     // Update is called once per frame
     void Update()
     {
-        if (!dead)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(!anim.GetBool("ataque")) attack();
+            PAUSE = !PAUSE;
+            MenuControl.zSwapPanels(gui1);
+            MenuControl.zSwapPanels(gui2);
+        }
+        if (!dead && !PAUSE)
+        {
+            if (!anim.GetBool("ataque")) attack();
 
             jump();
 
