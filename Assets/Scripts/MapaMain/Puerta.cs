@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Puerta : MonoBehaviour
@@ -15,11 +16,18 @@ public class Puerta : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Colisiono");
-        if (other.gameObject.tag.Equals("Player") && ((
-            manager.GetType().Equals(typeof(Manager))&&((Manager)manager).creationState())|| manager.GetType().Equals(typeof(DungeonManager))))
+        
+        if (other.gameObject.tag.Equals("Player"))
         {
-            Debug.Log("Colisiono2");
-            manager.goDungeon(numDungeon);
+            if (manager.GetType().Equals(typeof(Manager)) && !((Manager)manager).creationState())
+            {
+                Debug.Log("No se puede entrar");
+            }
+            else
+            {
+                Debug.Log("Colisiono2");
+                manager.goDungeon(numDungeon);
+            }
         }
     }
 }
