@@ -19,9 +19,10 @@ public class Core : npc
             Debug.Log("Game Over");
             Manager.Instance.goDungeon(0);
         }
+        WaveControl.Instance().vidaN = life;
     }
     public void setLife(float lifeUpdate)
     {
-        life =lifeUpdate;
+        life = lifeUpdate;
     }
 }

@@ -18,7 +18,7 @@ public class Recurso : MonoBehaviour
     public string getRecurso() {
         if (recursoObtenible == recurso.Madera) return "Madera";
         if (recursoObtenible == recurso.Hierro) return "Hierro";
-        if (recursoObtenible == recurso.PiedraMagica) return "Piedra Magica";
+        if (recursoObtenible == recurso.PiedraMagica) return "Piedra magica";
         return "";
     }
     public int getQuantity() {

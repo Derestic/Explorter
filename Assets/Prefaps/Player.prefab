@@ -1296,6 +1296,8 @@ MonoBehaviour:
   golpeHacha: {fileID: 8300000, guid: c4f1fa9d909651e499ae08db7c93d3e5, type: 3}
   audioSourceEspada: {fileID: 2386227017048044738}
   audioSourceHacha: {fileID: 2549640978131317244}
+  gui1: {fileID: 0}
+  gui2: {fileID: 0}
 --- !u!95 &7799682870179022937
 Animator:
   serializedVersion: 5

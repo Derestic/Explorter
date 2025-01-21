@@ -14,11 +14,19 @@ public class spawn : MonoBehaviour
       [SerializeField] float spawnGap = 1.0f;
       float countGap = 0;
       GameObject inst;
+    [SerializeField] int incrementoPorDia = 3;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(WaveControl.Instance().numSpawns == 0)
+        {
+            WaveControl.Instance().numSpawns = numSpawns;
+        }
+        else
+        {
+            numSpawns = WaveControl.Instance().numSpawns;
+        }
     }
 
     // Update is called once per frame
@@ -40,7 +48,8 @@ public class spawn : MonoBehaviour
             if (countSpawn >= numSpawns) { 
                 spawning = false; 
                 countSpawn = 0;
-                numSpawns+=3;
+                numSpawns+= incrementoPorDia;
+                WaveControl.Instance().numSpawns = numSpawns;
             }
         }
     }
