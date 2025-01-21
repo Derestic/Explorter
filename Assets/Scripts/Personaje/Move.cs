@@ -95,7 +95,7 @@ public class Move : npc
 
     private void FixedUpdate()
     {
-        if (!dead)
+        if (!dead && !PAUSE)
         {
             move.Set(0f, gameObject.GetComponent<Rigidbody>().velocity.y, 0f);
             move += Input.GetAxisRaw("Horizontal") * speed.x * transform.right;
