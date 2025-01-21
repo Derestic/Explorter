@@ -6789,6 +6789,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 175a165932dd5c049bb88dceb2b45774, type: 3}
+--- !u!1 &1121217375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8463529549152205689, guid: 0887ea020f9a32d44b6736f3101e4293, type: 3}
+  m_PrefabInstance: {fileID: 1778615744}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1131969948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7900,6 +7905,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indexMazmorra: 01000000
+  ContadorDias: {fileID: 1121217375}
+  dias:
+  - {fileID: 2069069386, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
+  - {fileID: -706570447, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
+  - {fileID: 2132782632, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
+  - {fileID: -298357261, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
+  - {fileID: 1576366466, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
   cheat: 0
   state: 1
   prep: 3

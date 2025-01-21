@@ -158,7 +158,7 @@ public class Enemy : npc
             agent.isStopped = false;
             if (Objetivo == null)
             {
-                if(Vector3.Distance(transform.position, agent.destination) <= gapObjetivo * 3)
+                if(Vector3.Distance(transform.position, agent.destination) <= gapObjetivo * 2)
                 {
                     moveAleatory.x = Random.Range(-rangeAleatory+1, rangeAleatory-1) + transform.position.x;
                     if (moveAleatory.x < 0) moveAleatory.x -= 1; else moveAleatory.x += 1;
