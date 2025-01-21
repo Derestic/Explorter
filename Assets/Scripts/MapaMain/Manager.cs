@@ -38,7 +38,9 @@ public class Manager : ManagerGen
     [SerializeField] GameObject camaraM;
 
     [Header("Flechita")]
-      [SerializeField] GameObject flechita;
+      [SerializeField] GameObject flechita1;
+      [SerializeField] GameObject flechita2;
+      [SerializeField] GameObject flechita3;
 
     [Header("Luces y Dias")]
     [SerializeField] GameObject dirLigth;
@@ -129,7 +131,9 @@ public class Manager : ManagerGen
         if (state == RoundState.oleada)
         {
             updateDay(4);
-            if (flechita!=null)flechita.SetActive(false);
+            if (flechita1!=null) flechita1.SetActive(false);
+            if (flechita2 != null) flechita2.SetActive(false);
+            if (flechita3 != null) flechita3.SetActive(false);
             prep = 0;
             WaveControl.Instance().prep = 0;
             for (int i = 0; i < spawns.Length;i++) { spawns[i].GetComponent<spawn>().spawning = true; }
@@ -175,7 +179,9 @@ public class Manager : ManagerGen
                 ChangeCamara();
                 player.GetComponent<Move>().resetLife();
             }
-            if (flechita != null) flechita.SetActive(true);
+            if (flechita1 != null) flechita1.SetActive(true);
+            if (flechita2 != null) flechita2.SetActive(true);
+            if (flechita3 != null) flechita3.SetActive(true);
             WaveControl.Instance().vidaN = nucleo.GetComponent<Core>().getLife();
             WaveControl.Instance().days++;
             updateDay(0);
