@@ -167,6 +167,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numDungeon: 0
   manager: {fileID: 1574060838}
+--- !u!114 &562183549 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6128601658060580723, guid: 0887ea020f9a32d44b6736f3101e4293, type: 3}
+  m_PrefabInstance: {fileID: 1684043654}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &566623333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,6 +1080,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indexMazmorra: 02000000
+  ContadorDias: {fileID: 1684043655}
+  showDias: {fileID: 562183549}
+  dias:
+  - {fileID: 2069069386, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
+  - {fileID: -706570447, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
+  - {fileID: 2132782632, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
+  - {fileID: -298357261, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
+  - {fileID: 1576366466, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
   player: {fileID: 90560041}
   inventario: {fileID: 96361574}
   invText: []
@@ -1372,6 +1391,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0887ea020f9a32d44b6736f3101e4293, type: 3}
+--- !u!1 &1684043655 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8463529549152205689, guid: 0887ea020f9a32d44b6736f3101e4293, type: 3}
+  m_PrefabInstance: {fileID: 1684043654}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1691305948 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2409452805567961294, guid: a9acb56075f48404c9c9a9d8a5b97c53, type: 3}

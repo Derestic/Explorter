@@ -260,6 +260,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 320
   AttackColidder: {fileID: 5243910225723511944}
+  rangeAleatory: 4
   angulo: 180
   maxVision: 10
   numRays: 30

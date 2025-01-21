@@ -47,6 +47,8 @@ public class DungeonManager : ManagerGen
             j++;
         }
         updateCanvasInventory();
+
+        updateDay(WaveControl.Instance().prep);
     }
 
     // Update is called once per frame

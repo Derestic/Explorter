@@ -113,9 +113,11 @@ public class Manager : ManagerGen
             player.GetComponent<Move>().activateModes();
         }
         dirLigth.transform.Rotate(0, -360 / (maxprep + 1) * WaveControl.Instance().prep, 0);
+        updateDay(WaveControl.Instance().prep + 1);
         if (state == RoundState.oleada)
         {
-            if(flechita!=null)flechita.SetActive(false);
+            updateDay(4);
+            if (flechita!=null)flechita.SetActive(false);
             prep = 0;
             WaveControl.Instance().prep = 0;
             for (int i = 0; i < spawns.Length;i++) { spawns[i].GetComponent<spawn>().spawning = true; }
@@ -164,6 +166,7 @@ public class Manager : ManagerGen
             if (flechita != null) flechita.SetActive(true);
             WaveControl.Instance().vidaN = nucleo.GetComponent<Core>().getLife();
             WaveControl.Instance().days++;
+            updateDay(0);
         }
     }
 

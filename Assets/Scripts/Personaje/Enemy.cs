@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using Unity.AI.Navigation;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -31,6 +32,8 @@ public class Enemy : npc
       [SerializeField] LayerMask atacklayer;
       public Collider AttackColidder;
       Vector3 rectifObjective;
+      Vector3 moveAleatory = new Vector3();
+      [SerializeField] float rangeAleatory = 10;
 
 
     [Header("Vision")]
@@ -118,6 +121,8 @@ public class Enemy : npc
 
             ini += gap; // Aumenta el ángulo en cada paso
         }
+
+        Gizmos.DrawSphere(moveAleatory,0.5f);
     }
 
     void animationSync()
@@ -137,24 +142,52 @@ public class Enemy : npc
             if (Objetivo != null) {
                 Debug.Log("Objetivo " + Objetivo.name);
                 agent.SetDestination(Objetivo.transform.position);
-                status++;
+                status = state.run;
+            }
+            else
+            {
+                moveAleatory.x = Random.Range(rangeAleatory, rangeAleatory) + transform.position.x;
+                moveAleatory.z = Random.Range(rangeAleatory, rangeAleatory) + transform.position.z;
+                moveAleatory.y = transform.position.y;
+                agent.SetDestination(moveAleatory);
+                status = state.run;
             }
         }
         else if (state.run == status)
         {
             agent.isStopped = false;
-            if (agent.remainingDistance <= agent.stoppingDistance + gapObjetivo)
+            if (Objetivo == null)
             {
-                status++;
+                if(Vector3.Distance(transform.position, agent.destination) <= gapObjetivo * 2)
+                {
+                    moveAleatory.x = Random.Range(-rangeAleatory+1, rangeAleatory-1) + transform.position.x;
+                    if (moveAleatory.x < 0) moveAleatory.x -= 1; else moveAleatory.x += 1;
+                        moveAleatory.z = Random.Range(-rangeAleatory+1, rangeAleatory-1) + transform.position.z;
+                    if (moveAleatory.z < 0) moveAleatory.z -= 1; else moveAleatory.z += 1;
+                    moveAleatory.y = transform.position.y;
+                    agent.destination = moveAleatory;
+                }
+                else
+                {
+                    print(Vector3.Distance(transform.position, agent.destination));
+                }
             }
-            else if (agent.remainingDistance > maxVision && !Objetivo.Equals(ObjetivoF))
+            else
             {
-                status = state.idle;
+                if (agent.remainingDistance <= agent.stoppingDistance + gapObjetivo)
+                {
+                    status = state.attack;
+                }
+                else if (agent.remainingDistance > maxVision && !Objetivo.Equals(ObjetivoF))
+                {
+                    status = state.idle;
+                }
+                else if (Vector3.Distance(agent.destination, Objetivo.transform.position) > gapObjetivo * 2)
+                {
+                    agent.SetDestination(Objetivo.transform.position);
+                }
             }
-            else if (Vector3.Distance(agent.destination, Objetivo.transform.position) > gapObjetivo*2)
-            {
-                agent.SetDestination(Objetivo.transform.position);
-            }
+            
         }
         else if (state.attack == status)
         {
