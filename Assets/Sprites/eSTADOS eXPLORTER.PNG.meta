@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 13b6c053c333f434098a8d28b2319e27
+guid: 4180d248cb70e3244a37ebda7a11e24f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -126,10 +126,10 @@ TextureImporter:
       name: eSTADOS eXPLORTER_0
       rect:
         serializedVersion: 2
-        x: 61
-        y: 1327
-        width: 1198
-        height: 1198
+        x: 95
+        y: 1457
+        width: 1112
+        height: 1115
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 009410d1e1859e04985f287b8528064e
-      internalID: -1637190885
+      spriteID: 709db2e0a9987b44884c64c1b4711987
+      internalID: 2069069386
       vertices: []
       indices: 
       edges: []
@@ -147,10 +147,10 @@ TextureImporter:
       name: eSTADOS eXPLORTER_1
       rect:
         serializedVersion: 2
-        x: 1359
-        y: 1325
-        width: 1198
-        height: 1198
+        x: 1521
+        y: 1447
+        width: 1114
+        height: 1114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d0b2ef5c36be0643af2e8e1dbf28d56
-      internalID: -1828827627
+      spriteID: 6f4015fb29f28d14593520a34e5d0920
+      internalID: -706570447
       vertices: []
       indices: 
       edges: []
@@ -168,10 +168,10 @@ TextureImporter:
       name: eSTADOS eXPLORTER_2
       rect:
         serializedVersion: 2
-        x: 2651
-        y: 1325
-        width: 1198
-        height: 1198
+        x: 2937
+        y: 1435
+        width: 1112
+        height: 1115
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f30d34d260f1b04ca9b67d1474704df
-      internalID: -1757039481
+      spriteID: 0463855b698af354896c362c6a413136
+      internalID: 2132782632
       vertices: []
       indices: 
       edges: []
@@ -189,10 +189,10 @@ TextureImporter:
       name: eSTADOS eXPLORTER_3
       rect:
         serializedVersion: 2
-        x: 47
-        y: 53
-        width: 1198
-        height: 1198
+        x: 765
+        y: 163
+        width: 1112
+        height: 1115
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1f764688fbe3f04f92ce13b3cc28f6c
-      internalID: 441399849
+      spriteID: e74db06eb93e0d745ba904e9f06d9c1f
+      internalID: -298357261
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
       name: eSTADOS eXPLORTER_4
       rect:
         serializedVersion: 2
-        x: 1355
-        y: 53
-        width: 1198
-        height: 1198
+        x: 2309
+        y: 135
+        width: 1112
+        height: 1115
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e352a5e12bc1c34e81447a0135fc492
-      internalID: -730785066
+      spriteID: e75ecfe46eda2af4288526f189bb1eb0
+      internalID: 1576366466
       vertices: []
       indices: 
       edges: []
@@ -230,7 +230,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a2a5e32a56b2cde459c46b30c44420f9
+    spriteID: 5ca54570c28bd914b9e0bfa710c378a1
     internalID: 0
     vertices: []
     indices: 
@@ -238,11 +238,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      eSTADOS eXPLORTER_0: -1637190885
-      eSTADOS eXPLORTER_1: -1828827627
-      eSTADOS eXPLORTER_2: -1757039481
-      eSTADOS eXPLORTER_3: 441399849
-      eSTADOS eXPLORTER_4: -730785066
+      eSTADOS eXPLORTER_0: 2069069386
+      eSTADOS eXPLORTER_1: -706570447
+      eSTADOS eXPLORTER_2: 2132782632
+      eSTADOS eXPLORTER_3: -298357261
+      eSTADOS eXPLORTER_4: 1576366466
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
