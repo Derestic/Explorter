@@ -16,6 +16,11 @@ public class MenuControl : MonoBehaviour
         target.SetActive(!target.activeSelf);
     }
 
+    public static void zPauseTime(){
+        Time.timeScale = (Time.timeScale + 1) % 2;
+    }
+
+
     public static void zEndGame(){
         Application.Quit();
         Debug.Log("Adios!");

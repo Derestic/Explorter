@@ -68,12 +68,12 @@ public class Move : npc
     // Update is called once per frame
     void Update()
     {
+        PAUSE = (int)Time.timeScale == 0;
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            PAUSE = !PAUSE;
             MenuControl.zSwapPanels(gui1);
             MenuControl.zSwapPanels(gui2);
-            Time.timeScale = (Time.timeScale + 1) % 2;
+            MenuControl.zPauseTime();
         }
         if (!dead && !PAUSE)
         {
