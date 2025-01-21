@@ -67,6 +67,11 @@ public class castObject : MonoBehaviour
                 select.GetComponent<craft>().consumeRecursos(Inventario.Instance());
                 select.GetComponent<Collider>().enabled = true;
                 select.GetComponent<NavMeshObstacle>().enabled = true;
+
+                WaveControl.Instance().obj.Add(defensa[index]);
+                WaveControl.Instance().posicion.Add(select.transform.position);
+                WaveControl.Instance().rotation.Add(select.transform.rotation);
+
                 select = Instantiate(defensa[index]);
                 select.GetComponent<Collider>().enabled = false;
                 select.GetComponent<NavMeshObstacle>().enabled = false;

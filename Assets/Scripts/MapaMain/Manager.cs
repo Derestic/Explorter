@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -91,6 +92,13 @@ public class Manager : ManagerGen
         if(WaveControl.Instance().prep >= maxprep && state == RoundState.oleada)
         {
             player.GetComponent<Move>().desactivateModes();
+        }
+        GameObject g;
+        for(int i = 0; i < WaveControl.Instance().obj.Count; i++)
+        {
+            g = Instantiate(WaveControl.Instance().obj[i]);
+            g.transform.position = WaveControl.Instance().posicion[i];
+            g.transform.rotation = WaveControl.Instance().rotation[i];
         }
     }
 

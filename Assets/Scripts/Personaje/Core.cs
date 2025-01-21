@@ -9,7 +9,8 @@ public class Core : npc
     // Start is called before the first frame update
     void Start()
     {
-        life = maxLife;
+        if (WaveControl.Instance().vidaN < 0) life = maxLife;
+        else life = WaveControl.Instance().vidaN;
     }
 
     // Update is called once per frame
