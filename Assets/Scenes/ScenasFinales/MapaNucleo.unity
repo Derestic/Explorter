@@ -3572,6 +3572,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1476093008961687338, guid: 351f84b26ef80a94a9c8594ea51801ec, type: 3}
   m_PrefabInstance: {fileID: 607870321}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &619635292 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6128601658060580723, guid: 0887ea020f9a32d44b6736f3101e4293, type: 3}
+  m_PrefabInstance: {fileID: 1778615744}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &624598391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7906,6 +7917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indexMazmorra: 01000000
   ContadorDias: {fileID: 1121217375}
+  showDias: {fileID: 619635292}
   dias:
   - {fileID: 2069069386, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
   - {fileID: -706570447, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
