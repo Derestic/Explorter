@@ -37,7 +37,10 @@ public class Manager : ManagerGen
     [SerializeField] GameObject camaraM;
 
     [Header("Flechita")]
-    [SerializeField] GameObject flechita;
+      [SerializeField] GameObject flechita;
+
+    [Header("Luces y Dias")]
+    [SerializeField] GameObject dirLigth;
 
     public static Manager Instance
     {
@@ -109,6 +112,7 @@ public class Manager : ManagerGen
             state = RoundState.preparation;
             player.GetComponent<Move>().activateModes();
         }
+        dirLigth.transform.Rotate(0, -360 / (maxprep + 1) * WaveControl.Instance().prep, 0);
         if (state == RoundState.oleada)
         {
             if(flechita!=null)flechita.SetActive(false);
@@ -120,6 +124,7 @@ public class Manager : ManagerGen
         {
             prep++;
             WaveControl.Instance().prep++;
+
         }
     }
 
@@ -158,6 +163,7 @@ public class Manager : ManagerGen
             }
             if (flechita != null) flechita.SetActive(true);
             WaveControl.Instance().vidaN = nucleo.GetComponent<Core>().getLife();
+            WaveControl.Instance().days++;
         }
     }
 
