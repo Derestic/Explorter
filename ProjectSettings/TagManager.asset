@@ -7,6 +7,7 @@ TagManager:
   - Obstacle
   - enemigo
   - ArbolTag
+  - PiedraTag
   layers:
   - Default
   - TransparentFX
