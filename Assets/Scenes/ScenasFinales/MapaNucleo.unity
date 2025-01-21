@@ -7994,6 +7994,7 @@ MonoBehaviour:
   - {fileID: 1996390574, guid: a374ef83185b6aa4797002c004e27eee, type: 3}
   camaraM: {fileID: 487973429}
   flechita: {fileID: 2109153856}
+  dirLigth: {fileID: 512917997}
 --- !u!4 &1321366146
 Transform:
   m_ObjectHideFlags: 0
