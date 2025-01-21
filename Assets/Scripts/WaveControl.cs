@@ -21,5 +21,6 @@ public class WaveControl
     public int prep = 3;
     public float vidaN = -10;
     public float days = 0;
+    public int numSpawns = 0;
 
 }

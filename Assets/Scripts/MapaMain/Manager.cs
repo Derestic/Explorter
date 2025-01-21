@@ -65,7 +65,7 @@ public class Manager : ManagerGen
     void Start()
     {
         prep = WaveControl.Instance().prep;
-        if(WaveControl.Instance().vidaN < -1) nucleo.GetComponent<Core>().setLife(WaveControl.Instance().vidaN);
+        if(WaveControl.Instance().vidaN > 0) nucleo.GetComponent<Core>().setLife(WaveControl.Instance().vidaN);
         inventory = Inventario.Instance();
         invText = new TMP_Text[3];
         invImage = new Image[3];
