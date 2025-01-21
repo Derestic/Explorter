@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class Puntuadorfin : MonoBehaviour
 {
-    [SerializeField] TMP_Text text;
     // Start is called before the first frame update
     void Start()
     {
+        TMP_Text text = transform.GetComponent<TMP_Text>();
         text.text = WaveControl.Instance().days.ToString();
     }
 
