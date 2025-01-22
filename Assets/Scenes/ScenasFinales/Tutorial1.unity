@@ -4258,6 +4258,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 351f84b26ef80a94a9c8594ea51801ec, type: 3}
+--- !u!1 &747644203 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8463529549152205689, guid: 0887ea020f9a32d44b6736f3101e4293, type: 3}
+  m_PrefabInstance: {fileID: 403834369}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &763376725
 GameObject:
   m_ObjectHideFlags: 0
@@ -8655,6 +8660,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1476093008961687338, guid: 351f84b26ef80a94a9c8594ea51801ec, type: 3}
   m_PrefabInstance: {fileID: 712411473}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1335464222 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6128601658060580723, guid: 0887ea020f9a32d44b6736f3101e4293, type: 3}
+  m_PrefabInstance: {fileID: 403834369}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1339754005
 GameObject:
   m_ObjectHideFlags: 0
@@ -9813,14 +9829,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indexMazmorra: 02000000
-  ContadorDias: {fileID: 0}
-  showDias: {fileID: 0}
+  ContadorDias: {fileID: 747644203}
+  showDias: {fileID: 1335464222}
   dias:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2069069386, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
+  - {fileID: -706570447, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
+  - {fileID: 2132782632, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
+  - {fileID: -298357261, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
+  - {fileID: 1576366466, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
 --- !u!4 &1513405085
 Transform:
   m_ObjectHideFlags: 0
@@ -9849,24 +9865,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indexMazmorra: 02000000
-  ContadorDias: {fileID: 0}
-  showDias: {fileID: 0}
+  ContadorDias: {fileID: 747644203}
+  showDias: {fileID: 1335464222}
   dias:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2069069386, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
+  - {fileID: -706570447, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
+  - {fileID: 2132782632, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
+  - {fileID: -298357261, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
+  - {fileID: 1576366466, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
   cheat: 0
   state: 0
   prep: 0
   maxprep: 3
   nucleo: {fileID: 0}
   player: {fileID: 362230121}
-  spawns:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  spawns: []
   inventario: {fileID: 511976262}
   invText: []
   invImage: []
@@ -9875,7 +9888,9 @@ MonoBehaviour:
   - {fileID: -1173055920, guid: a374ef83185b6aa4797002c004e27eee, type: 3}
   - {fileID: 1996390574, guid: a374ef83185b6aa4797002c004e27eee, type: 3}
   camaraM: {fileID: 0}
-  flechita: {fileID: 0}
+  flechita1: {fileID: 0}
+  flechita2: {fileID: 0}
+  flechita3: {fileID: 0}
   dirLigth: {fileID: 0}
 --- !u!114 &1513405087
 MonoBehaviour:
@@ -9890,14 +9905,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indexMazmorra: 02000000
-  ContadorDias: {fileID: 0}
-  showDias: {fileID: 0}
+  ContadorDias: {fileID: 747644203}
+  showDias: {fileID: 1335464222}
   dias:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2069069386, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
+  - {fileID: -706570447, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
+  - {fileID: 2132782632, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
+  - {fileID: -298357261, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
+  - {fileID: 1576366466, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
   player: {fileID: 362230121}
   inventario: {fileID: 511976262}
   invText: []

@@ -169,7 +169,7 @@ public class Enemy : npc
                 }
                 else
                 {
-                    print(Vector3.Distance(transform.position, agent.destination));
+                    //print(Vector3.Distance(transform.position, agent.destination));
                 }
             }
             else

@@ -32,7 +32,7 @@ public class Move : npc
     [SerializeField] GameObject[] arma = new GameObject[3];
     [SerializeField] castObject constructor;
     bool recoletor;
-    bool activeChangeMode = true;
+    [SerializeField]bool activeChangeMode = true;
 
     [Header("Audio")]
     [SerializeField] AudioClip pasos;
