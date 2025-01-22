@@ -119,19 +119,23 @@ public class castObject : MonoBehaviour
             updateTableRecursos(select.GetComponent<craft>().getRecursos(), defensa[index].name);
         }
     }
+    Vector3 punterito;
     void castCreation()
     {
         ray = new Ray(transform.position, transform.forward);
         if (Physics.Raycast(ray, out hit,maxDistancePointer, layerPointer))
         {
-            select.transform.position = hit.point;
+            punterito = hit.point;
+            punterito.y = 0;
+            select.transform.position = punterito;
         }
         else
         {
-            select.transform.position = transform.position;
-            select.transform.position += transform.forward*maxDistancePointer;
-            select.transform.position.Set(select.transform.position.x,0, select.transform.position.z);
+            punterito = transform.position + transform.forward*maxDistancePointer;
+            punterito.y = 0;
+            select.transform.position = punterito;
         }
+        print("Vector pos Craft: " + select.transform.position);
         origen.Set(transform.position.x, select.transform.position.y, transform.position.z);
         select.transform.LookAt(origen);
         select.transform.Rotate(rot);
