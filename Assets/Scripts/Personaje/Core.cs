@@ -18,7 +18,7 @@ public class Core : npc
     {
         if (dead) { 
             Debug.Log("Game Over");
-            Manager.Instance.goDungeon(0);
+            Manager.Instance.goDungeon(4);
         }
         WaveControl.Instance().vidaN = life;
     }
