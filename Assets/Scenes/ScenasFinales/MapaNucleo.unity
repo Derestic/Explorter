@@ -7754,7 +7754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea3ea39d059ebb43b20589f2fb6c1d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexMazmorra: 010000000500000006000000
+  indexMazmorra: 01000000050000000600000004000000
   ContadorDias: {fileID: 1121217375}
   showDias: {fileID: 619635292}
   dias:
