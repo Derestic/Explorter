@@ -10,10 +10,12 @@ public class Recurso : MonoBehaviour
     recurso recursoObtenible;
     private int recolectSpeed;
     private int quantity;
+    public int fixedQuantity = -1;
 
     public void Awake() {
         recolectSpeed = Random.Range(1,3);
-        quantity = Random.Range(4, 7); 
+        quantity = Random.Range(4, 7);
+        if(fixedQuantity > 0) quantity = fixedQuantity;
     }
     public string getRecurso() {
         if (recursoObtenible == recurso.Madera) return "Madera";
