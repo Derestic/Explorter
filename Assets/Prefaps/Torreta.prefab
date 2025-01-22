@@ -119,8 +119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0b9408283e15940b7c7067c52f2eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 0
-  maxLife: 100
+  life: 10
+  maxLife: 10
   damage: 10
   man: {fileID: 0}
   head: {fileID: 4071097686480686827}

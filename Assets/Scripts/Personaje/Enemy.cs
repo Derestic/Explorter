@@ -155,7 +155,7 @@ public class Enemy : npc
         }
         else if (state.run == status)
         {
-            agent.isStopped = false;
+            if(agent.isStopped) agent.isStopped = false;
             if (Objetivo == null)
             {
                 if(Vector3.Distance(transform.position, agent.destination) <= gapObjetivo * 2)
@@ -169,7 +169,7 @@ public class Enemy : npc
                 }
                 else
                 {
-                    print(Vector3.Distance(transform.position, agent.destination));
+                    //print(Vector3.Distance(transform.position, agent.destination));
                 }
             }
             else

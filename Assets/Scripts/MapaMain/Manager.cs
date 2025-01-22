@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -67,7 +66,7 @@ public class Manager : ManagerGen
     // Start is called before the first frame update
     void Start()
     {
-        prep = WaveControl.Instance().prep;
+        if(WaveControl.Instance().prep < 0) prep = WaveControl.Instance().prep;
         if (WaveControl.Instance().vidaN > 0)
         {
             nucleo.GetComponent<Core>().setLife(WaveControl.Instance().vidaN);
@@ -119,6 +118,7 @@ public class Manager : ManagerGen
         if (prep >= maxprep)
         {
             state = RoundState.oleada;
+            Debug.Log("Desactivar 2");
             player.GetComponent<Move>().desactivateModes();
         }
         else
@@ -126,7 +126,7 @@ public class Manager : ManagerGen
             state = RoundState.preparation;
             player.GetComponent<Move>().activateModes();
         }
-        dirLigth.transform.Rotate(0, -360 / (maxprep + 1) * WaveControl.Instance().prep, 0);
+        if(dirLigth != null)dirLigth.transform.Rotate(0, -360 / (maxprep + 1) * WaveControl.Instance().prep, 0);
         updateDay(WaveControl.Instance().prep + 1);
         if (state == RoundState.oleada)
         {

@@ -135,7 +135,7 @@ public class castObject : MonoBehaviour
             punterito.y = 0;
             select.transform.position = punterito;
         }
-        print("Vector pos Craft: " + select.transform.position);
+        //print("Vector pos Craft: " + select.transform.position);
         origen.Set(transform.position.x, select.transform.position.y, transform.position.z);
         select.transform.LookAt(origen);
         select.transform.Rotate(rot);
