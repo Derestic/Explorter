@@ -8,7 +8,7 @@ public class spawn : MonoBehaviour
 {
     [Header("Spawn Control")]
       public bool spawning;
-      [SerializeField] int numSpawns = 5;
+      [SerializeField] int numSpawns = 3;
       int countSpawn = 0;
       public GameObject enemie;
       [SerializeField] float spawnGap = 1.0f;
