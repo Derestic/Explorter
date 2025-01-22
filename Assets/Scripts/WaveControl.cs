@@ -19,7 +19,7 @@ public class WaveControl
         instance = this;
     }
 
-    public int prep = -1;
+    public int prep = 2;
     public float vidaN = -10;
     public int days = 0;
     public int numSpawns = 0;

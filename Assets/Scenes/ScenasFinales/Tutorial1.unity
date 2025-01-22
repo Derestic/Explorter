@@ -9875,7 +9875,7 @@ MonoBehaviour:
   - {fileID: 1576366466, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
   cheat: 0
   state: 0
-  prep: 0
+  prep: 2
   maxprep: 3
   nucleo: {fileID: 0}
   player: {fileID: 362230121}
