@@ -14590,6 +14590,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2144717636}
     - target: {fileID: 8969820973808245378, guid: a9acb56075f48404c9c9a9d8a5b97c53, type: 3}
+      propertyPath: defensa.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8969820973808245378, guid: a9acb56075f48404c9c9a9d8a5b97c53, type: 3}
       propertyPath: layerPointer.m_Bits
       value: 264
       objectReference: {fileID: 0}
@@ -14597,6 +14601,10 @@ PrefabInstance:
       propertyPath: recursos.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8969820973808245378, guid: a9acb56075f48404c9c9a9d8a5b97c53, type: 3}
+      propertyPath: defensa.Array.data[2]
+      value: 
+      objectReference: {fileID: 5620695727233881078, guid: 3d7fb182ef38f91449374c5ab3a4ec8d, type: 3}
     - target: {fileID: 8969820973808245378, guid: a9acb56075f48404c9c9a9d8a5b97c53, type: 3}
       propertyPath: recursos.Array.data[0]
       value: 
