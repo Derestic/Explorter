@@ -28,6 +28,18 @@ public class SettingsSaving : MonoBehaviour
 
 
 
+    //Mirror Variables
+    public List<int>        MWidthList       = new List<int>()   ;
+    public List<int>        MHeightList      = new List<int>()   ;
+    public List<string>     MWXH             = new List<string>();
+    public int              MI               = 0                 ;
+    public bool             MFullscreen      = false             ;
+    public int              MResolutionIndex = 0                 ;
+    public bool             MIsFullscreen    = false             ;
+    public float            MMusicV          = 1                 ;
+    public float            MSfxV            = 1                 ;
+
+
     private void Awake() {
         if(instance == null){
             instance = this;
@@ -49,6 +61,18 @@ public class SettingsSaving : MonoBehaviour
         resolutionIndex = i;
 
         DontDestroyOnLoad(this);
+    }
+    private void Update() {
+        
+    MWidthList = widthList;
+    MHeightList = heightList;
+    MWXH = WxH;
+    MI = i;
+    MFullscreen = fullscreen;
+    MResolutionIndex = resolutionIndex;
+    MIsFullscreen = isFullscreen;
+    MMusicV = musicV;
+    MSfxV = sfxV;
     }
 }
 
