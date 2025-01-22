@@ -22,11 +22,11 @@ public class Recurso : MonoBehaviour
         return "";
     }
     public int getQuantity() {
-        quantity -= recolectSpeed;
-        if (quantity <= 0) {
+        if (quantity - recolectSpeed <= 0) {
             Destroy(gameObject);
-            return quantity + recolectSpeed;
+            return quantity;
         }
+        quantity -= recolectSpeed;
         return recolectSpeed;
     }
 }
