@@ -11,6 +11,7 @@ public class npc : MonoBehaviour
     protected bool dead = false;
     [SerializeField] protected float damage = 1;
 
+    private int index = -10;
 
     // Start is called before the first frame update
     protected void Start()
@@ -28,12 +29,18 @@ public class npc : MonoBehaviour
     public void addLife(float extra)
     {
         life += extra;
-        Debug.Log("Da�o de: " + extra);
+        Debug.Log("Dano de: " + extra);
         if (life <= 0)
         {
             Debug.Log("Dead");
-            dead = true;
+            dead = true; 
+            if (index > -1)
+            {
+                Debug.Log("Muerte2");
+                destroyCraft();
+            }
         }
+        
     }
     public float getLife()
     {
@@ -50,5 +57,18 @@ public class npc : MonoBehaviour
     public float getDamage()
     {
         return damage;
+    }
+
+    public void setIndex(int i)
+    {
+        index = i;
+    } 
+
+    public void destroyCraft()
+    {
+        WaveControl.Instance().posicion.Remove(index);
+        WaveControl.Instance().rotation.Remove(index);
+        WaveControl.Instance().obj.Remove(index);
+        Destroy(gameObject);
     }
 }

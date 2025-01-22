@@ -11,9 +11,6 @@ GameObject:
   - component: {fileID: 3219949395194253601}
   - component: {fileID: 7134084025645891359}
   - component: {fileID: 4819251165203671682}
-  - component: {fileID: 4671832713206137787}
-  - component: {fileID: 784628897315987280}
-  - component: {fileID: 6685122018223631734}
   - component: {fileID: 9139820944895690284}
   m_Layer: 0
   m_Name: Bomba
@@ -88,76 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &4671832713206137787
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1394119752939682129}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 3
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &784628897315987280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1394119752939682129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 403b14d76f6116b408ccc7efcb26d61f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: 10
-  maxLife: 10
-  damage: 5
-  layers:
-    serializedVersion: 2
-    m_Bits: 448
-  radius: 3
-  timer: 2
-  particlesE: {fileID: 6817814183200578643}
-  sonido: {fileID: 9139820944895690284}
---- !u!54 &6685122018223631734
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1394119752939682129}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 14
-  m_CollisionDetection: 0
 --- !u!82 &9139820944895690284
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5094,8 +5021,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2913154628013010873}
   - component: {fileID: 2928635962923298647}
-  - component: {fileID: 3621833332307768177}
   - component: {fileID: 1095358527183637459}
+  - component: {fileID: 1220912776429334892}
+  - component: {fileID: 5852482873238093229}
+  - component: {fileID: 1319561303932879284}
   m_Layer: 0
   m_Name: Bomba
   m_TagString: Untagged
@@ -5135,7 +5064,43 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!135 &3621833332307768177
+--- !u!114 &1095358527183637459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8880621258235724686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e12a9c169549e4ca234a94a9c85f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recursos: 000000000400000004000000
+--- !u!114 &1220912776429334892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8880621258235724686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 403b14d76f6116b408ccc7efcb26d61f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 10
+  maxLife: 10
+  damage: 5
+  index: -1
+  layers:
+    serializedVersion: 2
+    m_Bits: 448
+  radius: 3
+  timer: 2
+  particlesE: {fileID: 6817814183200578643}
+  sonido: {fileID: 9139820944895690284}
+--- !u!135 &5852482873238093229
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5150,22 +5115,36 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.16
-  m_Center: {x: 0, y: -0.34, z: 0}
---- !u!114 &1095358527183637459
-MonoBehaviour:
+  m_Radius: 3
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1319561303932879284
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8880621258235724686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97e12a9c169549e4ca234a94a9c85f1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  recursos: 000000000400000004000000
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 14
+  m_CollisionDetection: 0

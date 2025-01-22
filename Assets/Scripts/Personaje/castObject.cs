@@ -68,9 +68,11 @@ public class castObject : MonoBehaviour
                 select.GetComponent<Collider>().enabled = true;
                 select.GetComponent<NavMeshObstacle>().enabled = true;
 
-                WaveControl.Instance().obj.Add(defensa[index]);
-                WaveControl.Instance().posicion.Add(select.transform.position);
-                WaveControl.Instance().rotation.Add(select.transform.rotation);
+                WaveControl.Instance().obj.Add(WaveControl.Instance().count,defensa[index]);
+                WaveControl.Instance().posicion.Add(WaveControl.Instance().count,select.transform.position);
+                WaveControl.Instance().rotation.Add(WaveControl.Instance().count,select.transform.rotation);
+                select.GetComponent<npc>().setIndex(WaveControl.Instance().count);
+                WaveControl.Instance().count++;
 
                 select = Instantiate(defensa[index]);
                 select.GetComponent<Collider>().enabled = false;

@@ -52,7 +52,7 @@ public class bomba : npc
             o[i].gameObject.GetComponent<npc>().addLife(-damage);
         }
         yield return new WaitForSeconds(0.3f);
-        Destroy(gameObject);
+        destroyCraft();
     }
 
     private void OnDrawGizmos()

@@ -7763,7 +7763,7 @@ MonoBehaviour:
   - {fileID: 2132782632, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
   - {fileID: -298357261, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
   - {fileID: 1576366466, guid: 4180d248cb70e3244a37ebda7a11e24f, type: 3}
-  cheat: 0
+  cheat: 1
   state: 1
   prep: 3
   maxprep: 3
@@ -12556,6 +12556,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1095358527183637459, guid: 3d7fb182ef38f91449374c5ab3a4ec8d, type: 3}
+      propertyPath: me
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2913154628013010873, guid: 3d7fb182ef38f91449374c5ab3a4ec8d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 987.4252
@@ -12661,6 +12665,7 @@ MonoBehaviour:
   life: 10
   maxLife: 10
   damage: 5
+  index: 0
   layers:
     serializedVersion: 2
     m_Bits: 448

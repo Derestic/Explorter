@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -17,7 +18,7 @@ public class Manager : ManagerGen
       [SerializeField] int prep = 0;
       [SerializeField] int maxprep = 3;
       [SerializeField] GameObject nucleo;
-      int countEnemies = 0;
+      [SerializeField] int countEnemies = 0;
 
     [Header("Control juador")]
       public GameObject player = null;
@@ -95,11 +96,14 @@ public class Manager : ManagerGen
             player.GetComponent<Move>().desactivateModes();
         }
         GameObject g;
-        for(int i = 0; i < WaveControl.Instance().obj.Count; i++)
+
+        int[] k = WaveControl.Instance().obj.Keys.ToArray();
+        foreach (int i in k)
         {
             g = Instantiate(WaveControl.Instance().obj[i]);
             g.transform.position = WaveControl.Instance().posicion[i];
             g.transform.rotation = WaveControl.Instance().rotation[i];
+            g.GetComponent<npc>().setIndex(i);
         }
     }
 
@@ -109,6 +113,8 @@ public class Manager : ManagerGen
         if (cheat && Input.GetKeyDown(KeyCode.M))
         {
             inventory.addRecurso("Madera", 2);
+            inventory.addRecurso("Hierro", 2);
+            inventory.addRecurso("Piedra magica", 2);
         }
         updateCanvasInventory();
     }
