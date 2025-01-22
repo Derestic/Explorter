@@ -7279,6 +7279,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuertaMagica
       objectReference: {fileID: 0}
+    - target: {fileID: 3062294738955809828, guid: 28051debbbd972c4b9f2eedf1fd9cd90, type: 3}
+      propertyPath: m_Size.x
+      value: 2.98
+      objectReference: {fileID: 0}
     - target: {fileID: 4141445504663971406, guid: 28051debbbd972c4b9f2eedf1fd9cd90, type: 3}
       propertyPath: m_LocalPosition.x
       value: 75.91
