@@ -29,7 +29,7 @@ public class miniScriptCraft : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Tecla: " + key.ToString());
+        //Debug.Log("Tecla: " + key.ToString());
         if (key!=KeyCode.None && Input.GetKeyDown(key))
         {
             updateMision();
