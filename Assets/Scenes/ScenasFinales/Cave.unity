@@ -1723,7 +1723,7 @@ PrefabInstance:
     - target: {fileID: 8964859575593507662, guid: 03eee531cf6c08c4295eecb9d788330d, type: 3}
       propertyPath: spawnerPrefab
       value: 
-      objectReference: {fileID: 7465402823000306843, guid: 42fc519a6132ade42b9c15eaf1988cd0, type: 3}
+      objectReference: {fileID: 7465402823000306843, guid: 4211bb17ffc6fbc4f829368bbaf4c427, type: 3}
     - target: {fileID: 8964859575593507662, guid: 03eee531cf6c08c4295eecb9d788330d, type: 3}
       propertyPath: containerObject
       value: 
