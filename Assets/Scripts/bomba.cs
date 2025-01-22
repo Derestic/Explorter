@@ -5,11 +5,15 @@ using UnityEngine;
 
 public class bomba : npc
 {
-
+    private void Awake()
+    {
+        sonido.Stop();
+    }
     // Start is called before the first frame update
     new void Start()
     {
         base.Start();
+        sonido.Pause();
         particlesE.Pause();
     }
 
@@ -36,16 +40,18 @@ public class bomba : npc
     [SerializeField] float radius = 1.0f;
     [SerializeField] float timer = 1.0f;
     [SerializeField] ParticleSystem particlesE;
+    [SerializeField] AudioSource sonido;
     private IEnumerator explosion()
     {
         yield return new WaitForSeconds(timer);
         particlesE.Play();
+        sonido.Play();
         Collider[] o = Physics.OverlapSphere(transform.position, radius, layers);
         for (int i = 0; i < o.Length; i++)
         {
             o[i].gameObject.GetComponent<npc>().addLife(-damage);
         }
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.3f);
         Destroy(gameObject);
     }
 
