@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScenasFinales/GameOver.unity
     guid: 5edebbcf511419e4a8fd9fa9a70920ea
+  - enabled: 1
+    path: Assets/Scenes/ScenasFinales/Cave.unity
+    guid: 3856450b705d8944dacd3f0e14d2c924
+  - enabled: 1
+    path: Assets/Scenes/ScenasFinales/Dessert.unity
+    guid: 2ca186df568079b42b4a781029f98231
   m_configObjects: {}
