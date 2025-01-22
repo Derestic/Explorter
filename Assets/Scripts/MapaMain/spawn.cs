@@ -25,7 +25,7 @@ public class spawn : MonoBehaviour
         }
         else
         {
-            numSpawns = WaveControl.Instance().numSpawns;
+            numSpawns = WaveControl.Instance().numSpawns + incrementoPorDia * WaveControl.Instance().days;
         }
     }
 
@@ -48,7 +48,6 @@ public class spawn : MonoBehaviour
             if (countSpawn >= numSpawns) { 
                 spawning = false; 
                 countSpawn = 0;
-                numSpawns+= incrementoPorDia;
                 WaveControl.Instance().numSpawns = numSpawns;
             }
         }

@@ -21,7 +21,7 @@ public class WaveControl
 
     public int prep = -1;
     public float vidaN = -10;
-    public float days = 0;
+    public int days = 0;
     public int numSpawns = 0;
 
     public List<Vector3> posicion = new List<Vector3>();
