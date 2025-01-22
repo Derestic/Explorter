@@ -14720,7 +14720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4141445504663971406, guid: 28051debbbd972c4b9f2eedf1fd9cd90, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -60.06
+      value: -59.56
       objectReference: {fileID: 0}
     - target: {fileID: 4141445504663971406, guid: 28051debbbd972c4b9f2eedf1fd9cd90, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18454,7 +18454,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 74.05
+  m_fontSize: 66.25
   m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 1
