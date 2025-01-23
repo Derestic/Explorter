@@ -14,7 +14,7 @@ public class attack : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("Layer: " + (1 << other.gameObject.layer) + " to " + atacklayer.value + " is " + (atacklayer.value & (1 << other.gameObject.layer)));
+        //Debug.Log("Layer: " + (1 << other.gameObject.layer) + " to " + atacklayer.value + " is " + (atacklayer.value & (1 << other.gameObject.layer)));
 
         if ((atacklayer.value & (1 << other.gameObject.layer)) != 0)
         {

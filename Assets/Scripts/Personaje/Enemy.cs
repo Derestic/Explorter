@@ -140,7 +140,7 @@ public class Enemy : npc
             if (!agent.isStopped) agent.isStopped = true;
             Objetivo = ObjetivoF;
             if (Objetivo != null) {
-                Debug.Log("Objetivo " + Objetivo.name);
+                //Debug.Log("Objetivo " + Objetivo.name);
                 agent.SetDestination(Objetivo.transform.position);
                 status = state.run;
             }
@@ -210,9 +210,9 @@ public class Enemy : npc
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("And binario" + ((1 << other.gameObject.layer) & atacklayer.value)+
-            "\nbinario" + (1 << other.gameObject.layer) + 
-            "\nLayer binario" + (atacklayer.value));
+        //Debug.Log("And binario" + ((1 << other.gameObject.layer) & atacklayer.value)+
+            //"\nbinario" + (1 << other.gameObject.layer) + 
+            //"\nLayer binario" + (atacklayer.value));
         if (((1 << other.gameObject.layer) & atacklayer.value) != 0)
         {
             Debug.Log("Enemigo atacado");

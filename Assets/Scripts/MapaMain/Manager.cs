@@ -173,7 +173,7 @@ public class Manager : ManagerGen
     public void remouveEnemy()
     {
         countEnemies--;
-        Debug.Log("Hay: " + countEnemies + "Enemigos");
+        //Debug.Log("Hay: " + countEnemies + "Enemigos");
         if(countEnemies <= 0)
         {
             player.GetComponent<Move>().activateModes();
@@ -182,7 +182,7 @@ public class Manager : ManagerGen
             // Resucitar jugador
             if (player != null && player.GetComponent<Move>().isDead())
             {
-
+                Debug.Log("Debug Activation respawn");
                 player.SetActive(true);
                 camaraM.SetActive(false);
                 player.GetComponent<Move>().resetLife();
