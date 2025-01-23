@@ -10,6 +10,7 @@ public class Puntuadorfin : MonoBehaviour
     {
         TMP_Text text = transform.GetComponent<TMP_Text>();
         text.text = WaveControl.Instance().days.ToString();
+        WaveControl.Instance().reset();
     }
 
 }

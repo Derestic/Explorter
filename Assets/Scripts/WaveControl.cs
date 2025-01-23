@@ -34,11 +34,17 @@ public class WaveControl
     public Dictionary<int, Quaternion> rotation = new Dictionary<int, Quaternion>();
     public Dictionary<int, GameObject> obj = new Dictionary<int, GameObject>();
 
-    public void deleteList()
+    public void reset()
     {
+        prep = 2;
+        vidaN = -10;
+        days = 0;
+        numSpawns = 0;
+        count = 0;
         Dictionary<int, Vector3> posicion = new Dictionary<int, Vector3>();
         Dictionary<int, Quaternion> rotation = new Dictionary<int, Quaternion>();
         Dictionary<int, GameObject> obj = new Dictionary<int, GameObject>();
+        Inventario.Instance().resetRecursos();
     }
 
 }

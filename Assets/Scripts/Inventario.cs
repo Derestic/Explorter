@@ -40,4 +40,8 @@ public class Inventario
     {
         recursos[recurso] += v;
     }
+    public void resetRecursos()
+    {
+        recursos = new Dictionary<string, int>();
+    }
 }

@@ -67,7 +67,6 @@ public class Manager : ManagerGen
     // Start is called before the first frame update
     void Start()
     {
-        if (WaveControl.Instance().days == 0) WaveControl.Instance().deleteList();
         if(WaveControl.Instance().prep >= 0) prep = WaveControl.Instance().prep;
         if (WaveControl.Instance().vidaN > 0)
         {
