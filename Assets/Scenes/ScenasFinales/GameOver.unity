@@ -252,7 +252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8295955117783865824, guid: 732fc50cb302ca64e81a26b73746fcba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Tutorial1
+      value: MapaNucleo
       objectReference: {fileID: 0}
     - target: {fileID: 8295955117783865824, guid: 732fc50cb302ca64e81a26b73746fcba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

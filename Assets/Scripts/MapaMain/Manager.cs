@@ -68,7 +68,7 @@ public class Manager : ManagerGen
     void Start()
     {
         if(WaveControl.Instance().prep >= 0) prep = WaveControl.Instance().prep;
-        if (WaveControl.Instance().vidaN > 0)
+        if (nucleo != null && WaveControl.Instance().vidaN > 0)
         {
             nucleo.GetComponent<Core>().setLife(WaveControl.Instance().vidaN);
             print("Core vida de " + WaveControl.Instance().vidaN.ToString()+ " y " + nucleo.GetComponent<Core>().getLife());
@@ -189,7 +189,7 @@ public class Manager : ManagerGen
             if (flechita1 != null) flechita1.SetActive(true);
             if (flechita2 != null) flechita2.SetActive(true);
             if (flechita3 != null) flechita3.SetActive(true);
-            WaveControl.Instance().vidaN = nucleo.GetComponent<Core>().getLife();
+            if(nucleo != null)WaveControl.Instance().vidaN = nucleo.GetComponent<Core>().getLife();
             WaveControl.Instance().days++;
             updateDay(0);
         }
@@ -197,14 +197,17 @@ public class Manager : ManagerGen
 
     public void updateCanvasInventory()
     {
-        string[] k = inventory.getKeyRecursos();
-        for (int i = 0; i < invText.Length; i++)
+        if(inventory != null)
         {
-            invText[i].text = ": " + inventory.getRecurso(k[i]);
-        }
-        for (int i = 0; i < invImage.Length; i++)
-        {
-            invImage[i].sprite = invSprites[i];
+            string[] k = inventory.getKeyRecursos();
+            for (int i = 0; i < invText.Length; i++)
+            {
+                invText[i].text = ": " + inventory.getRecurso(k[i]);
+            }
+            for (int i = 0; i < invImage.Length; i++)
+            {
+                invImage[i].sprite = invSprites[i];
+            }
         }
     }
 
