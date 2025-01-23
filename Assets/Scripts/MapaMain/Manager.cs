@@ -69,6 +69,7 @@ public class Manager : ManagerGen
     {
 
         Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1;
         if (WaveControl.Instance().prep >= 0) prep = WaveControl.Instance().prep;
         if (nucleo != null && WaveControl.Instance().vidaN > 0)
         {
