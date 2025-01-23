@@ -34,4 +34,11 @@ public class WaveControl
     public Dictionary<int, Quaternion> rotation = new Dictionary<int, Quaternion>();
     public Dictionary<int, GameObject> obj = new Dictionary<int, GameObject>();
 
+    public void deleteList()
+    {
+        Dictionary<int, Vector3> posicion = new Dictionary<int, Vector3>();
+        Dictionary<int, Quaternion> rotation = new Dictionary<int, Quaternion>();
+        Dictionary<int, GameObject> obj = new Dictionary<int, GameObject>();
+    }
+
 }
