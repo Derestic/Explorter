@@ -228,7 +228,11 @@ public class Move : npc
         {
             Debug.Log("new Dead");
             dead = true;
-            if (man.GetType().Equals(typeof(Manager))) ((Manager)man).ChangeCamara();
+            if (man.GetType().Equals(typeof(Manager)))
+            {
+                Debug.Log("Personaje Dead");
+                ((Manager)man).ChangeCamara();
+            }
             else man.goDungeon(0);
         }
     }

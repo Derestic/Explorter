@@ -182,7 +182,9 @@ public class Manager : ManagerGen
             // Resucitar jugador
             if (player != null && player.GetComponent<Move>().isDead())
             {
-                ChangeCamara();
+
+                player.SetActive(true);
+                camaraM.SetActive(false);
                 player.GetComponent<Move>().resetLife();
             }
             if (flechita1 != null) flechita1.SetActive(true);
