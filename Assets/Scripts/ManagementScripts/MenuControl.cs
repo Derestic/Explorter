@@ -18,9 +18,20 @@ public class MenuControl : MonoBehaviour
 
     public static void zPauseTime(){
         Time.timeScale = (Time.timeScale + 1) % 2;
+        visibilityRaton();
     }
 
-
+    public static void visibilityRaton()
+    {
+        if (Cursor.visible)
+        {
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.visible = false;
+        }
+    } 
     public static void zEndGame(){
         Application.Quit();
         Debug.Log("Adios!");
