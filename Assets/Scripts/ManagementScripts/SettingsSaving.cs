@@ -47,7 +47,6 @@ public class SettingsSaving : MonoBehaviour
             Destroy(transform.parent.gameObject);
             Destroy(this);
         }
-        WaveControl.Instance().prep = 2;
         //Data Recopilation
         Resolution[] resolutions = Screen.resolutions;
         foreach (var res in resolutions){

@@ -12,6 +12,7 @@ public class SplashNav : MonoBehaviour
     {
         splash = this.gameObject;
         StartCoroutine("AutoOpen");
+        WaveControl.Instance().prep = 2;
     }
 
     IEnumerator AutoOpen(){
