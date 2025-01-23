@@ -116,6 +116,10 @@ public class Manager : ManagerGen
             inventory.addRecurso("Hierro", 2);
             inventory.addRecurso("Piedra magica", 2);
         }
+        if (cheat && Input.GetKeyDown(KeyCode.N))
+        {
+            nucleo.GetComponent<Core>().addLife(-20);
+        }
         updateCanvasInventory();
     }
 

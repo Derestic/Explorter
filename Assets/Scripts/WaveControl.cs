@@ -36,8 +36,9 @@ public class WaveControl
 
     public void reset()
     {
-        prep = 2;
-        vidaN = -10;
+        prep = 3;
+        vidaN = 100;
+        Debug.Log("Vida " + vidaN);
         days = 0;
         numSpawns = 0;
         count = 0;
