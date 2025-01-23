@@ -25,11 +25,11 @@ public class MenuControl : MonoBehaviour
     {
         if (Cursor.visible)
         {
-            Cursor.visible = true;
+            Cursor.visible = false;
         }
         else
         {
-            Cursor.visible = false;
+            Cursor.visible = true;
         }
     } 
     public static void zEndGame(){
