@@ -42,9 +42,9 @@ public class WaveControl
         days = 0;
         numSpawns = 0;
         count = 0;
-        Dictionary<int, Vector3> posicion = new Dictionary<int, Vector3>();
-        Dictionary<int, Quaternion> rotation = new Dictionary<int, Quaternion>();
-        Dictionary<int, GameObject> obj = new Dictionary<int, GameObject>();
+        posicion = new Dictionary<int, Vector3>();
+        rotation = new Dictionary<int, Quaternion>();
+        obj = new Dictionary<int, GameObject>();
         Inventario.Instance().resetRecursos();
     }
 
