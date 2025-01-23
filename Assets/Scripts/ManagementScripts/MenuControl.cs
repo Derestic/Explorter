@@ -7,6 +7,7 @@ public class MenuControl : MonoBehaviour
 {
     public void zSceneChange(int i){
         SceneManager.LoadScene(i);
+        if(i == 0) WaveControl.Instance().reset();
     }
     public void zSceneChange(string s){
         SceneManager.LoadScene(s);
