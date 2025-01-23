@@ -43,5 +43,9 @@ public class Inventario
     public void resetRecursos()
     {
         recursos = new Dictionary<string, int>();
+        for (int i = 0; i < nombreRecursos.Length; i++)
+        {
+            recursos.Add(nombreRecursos[i], 0);
+        }
     }
 }
