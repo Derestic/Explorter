@@ -48,7 +48,6 @@ public class SettingsSaving : MonoBehaviour
             Destroy(this);
         }
 
-        Cursor.lockState = CursorLockMode.Locked;
         //Data Recopilation
         Resolution[] resolutions = Screen.resolutions;
         foreach (var res in resolutions){

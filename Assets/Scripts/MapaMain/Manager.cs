@@ -67,7 +67,9 @@ public class Manager : ManagerGen
     // Start is called before the first frame update
     void Start()
     {
-        if(WaveControl.Instance().prep >= 0) prep = WaveControl.Instance().prep;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        if (WaveControl.Instance().prep >= 0) prep = WaveControl.Instance().prep;
         if (nucleo != null && WaveControl.Instance().vidaN > 0)
         {
             nucleo.GetComponent<Core>().setLife(WaveControl.Instance().vidaN);
