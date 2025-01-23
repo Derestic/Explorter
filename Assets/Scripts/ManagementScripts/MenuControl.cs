@@ -26,10 +26,12 @@ public class MenuControl : MonoBehaviour
         if (Cursor.visible)
         {
             Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
         else
         {
             Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     } 
     public static void zEndGame(){
