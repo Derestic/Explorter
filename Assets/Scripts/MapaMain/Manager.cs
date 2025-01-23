@@ -178,15 +178,14 @@ public class Manager : ManagerGen
         {
             player.GetComponent<Move>().activateModes();
             state = RoundState.preparation;
-            player.GetComponent<Move>().resetLife();
             // Resucitar jugador
             if (player != null && player.GetComponent<Move>().isDead())
             {
                 Debug.Log("Debug Activation respawn");
                 player.SetActive(true);
                 camaraM.SetActive(false);
-                player.GetComponent<Move>().resetLife();
             }
+            player.GetComponent<Move>().resetLife();
             if (flechita1 != null) flechita1.SetActive(true);
             if (flechita2 != null) flechita2.SetActive(true);
             if (flechita3 != null) flechita3.SetActive(true);
