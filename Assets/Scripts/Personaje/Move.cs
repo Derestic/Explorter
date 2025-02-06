@@ -103,7 +103,7 @@ public class Move : npc
     {
         if (!dead && !PAUSE)
         {
-            move.Set(0f, 0.0f, 0f);
+            move.Set(0f, gameObject.GetComponent<Rigidbody>().velocity.y, 0f);
             float Sx = 1;
             float Sz = 1;
             if (Input.GetKey(KeyCode.LeftShift))

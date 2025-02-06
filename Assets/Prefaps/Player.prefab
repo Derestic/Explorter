@@ -1291,6 +1291,7 @@ MonoBehaviour:
   - {fileID: 5356784570488932743}
   - {fileID: 2458108343463377882}
   constructor: {fileID: 8969820973808245378}
+  activeChangeMode: 1
   pasos: {fileID: 8300000, guid: 41f4a74c050e7ab43b155de7bc30b78a, type: 3}
   swingEspada: {fileID: 8300000, guid: b2fa89be6f08a5c4cb8636a1a9f0bbae, type: 3}
   golpeHacha: {fileID: 8300000, guid: c4f1fa9d909651e499ae08db7c93d3e5, type: 3}
@@ -1298,6 +1299,7 @@ MonoBehaviour:
   audioSourceHacha: {fileID: 2549640978131317244}
   gui1: {fileID: 0}
   gui2: {fileID: 0}
+  run: 2
 --- !u!95 &7799682870179022937
 Animator:
   serializedVersion: 5
