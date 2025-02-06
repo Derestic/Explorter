@@ -92,7 +92,7 @@ public class Move : npc
         }
         //if (anim.GetBool("ataque")) { anim.SetBool("ataque", false); }
     }
-    [SerializeField] float run = 10;
+    [SerializeField] float run = 7;
     private void FixedUpdate()
     {
         if (!dead && !PAUSE)

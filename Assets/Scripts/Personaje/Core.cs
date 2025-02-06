@@ -13,11 +13,17 @@ public class Core : npc
         {
             Debug.Log("Se seteo la vida");
             life = maxLife;
+            WaveControl.Instance().vidaN = maxLife;
         }
         else
         {
             life = WaveControl.Instance().vidaN;
         }
+    }
+
+    protected new void Start()
+    {
+        life = WaveControl.Instance().vidaN;
     }
 
     // Update is called once per frame
@@ -36,6 +42,6 @@ public class Core : npc
     public new void addLife(float extra)
     {
         base.addLife(extra);
-        WaveControl.Instance().vidaN = life;
+        WaveControl.Instance().vidaN += extra;
     }
 }
