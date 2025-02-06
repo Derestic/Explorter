@@ -6777,6 +6777,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuertaMina
       objectReference: {fileID: 0}
+    - target: {fileID: 3062294738955809828, guid: 28051debbbd972c4b9f2eedf1fd9cd90, type: 3}
+      propertyPath: m_Center.x
+      value: -0.98
+      objectReference: {fileID: 0}
     - target: {fileID: 4141445504663971406, guid: 28051debbbd972c4b9f2eedf1fd9cd90, type: 3}
       propertyPath: m_LocalPosition.x
       value: -74.55
@@ -7283,6 +7287,10 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 2.98
       objectReference: {fileID: 0}
+    - target: {fileID: 3062294738955809828, guid: 28051debbbd972c4b9f2eedf1fd9cd90, type: 3}
+      propertyPath: m_Center.x
+      value: -1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4141445504663971406, guid: 28051debbbd972c4b9f2eedf1fd9cd90, type: 3}
       propertyPath: m_LocalPosition.x
       value: 75.91
@@ -7768,6 +7776,7 @@ MonoBehaviour:
   prep: 3
   maxprep: 3
   nucleo: {fileID: 1732714226}
+  countEnemies: 0
   player: {fileID: 1643933854}
   spawns:
   - {fileID: 1243713893}
@@ -12665,7 +12674,6 @@ MonoBehaviour:
   life: 10
   maxLife: 10
   damage: 5
-  index: 0
   layers:
     serializedVersion: 2
     m_Bits: 448
