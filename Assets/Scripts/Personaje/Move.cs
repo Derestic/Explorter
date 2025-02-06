@@ -92,7 +92,7 @@ public class Move : npc
         }
         //if (anim.GetBool("ataque")) { anim.SetBool("ataque", false); }
     }
-
+    [SerializeField] float run = 10;
     private void FixedUpdate()
     {
         if (!dead && !PAUSE)
@@ -100,6 +100,7 @@ public class Move : npc
             move.Set(0f, gameObject.GetComponent<Rigidbody>().velocity.y, 0f);
             move += Input.GetAxisRaw("Horizontal") * speed.x * transform.right;
             move += Input.GetAxisRaw("Vertical") * speed.z * transform.forward;
+            if (Input.GetKey(KeyCode.LeftShift)) move *= run;
             gameObject.GetComponent<Rigidbody>().velocity = move;
             //gameObject.GetComponent<Rigidbody>().(Input.GetAxis("Vertical") * speed.x, 0.0f,Input.GetAxis("Horizontal") * speed.z);
             if ((move.x != 0f || move.z != 0f) && Mathf.Abs(move.y) <= 0.00001f)

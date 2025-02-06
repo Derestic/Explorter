@@ -9,8 +9,15 @@ public class Core : npc
     // Start is called before the first frame update
     void Awake()
     {
-        if (WaveControl.Instance().vidaN < 0) life = maxLife;
-        else life = WaveControl.Instance().vidaN;
+        if (WaveControl.Instance().vidaN < 0)
+        {
+            Debug.Log("Se seteo la vida");
+            life = maxLife;
+        }
+        else
+        {
+            life = WaveControl.Instance().vidaN;
+        }
     }
 
     // Update is called once per frame
@@ -20,10 +27,15 @@ public class Core : npc
             Debug.Log("Game Over");
             Manager.Instance.goDungeon(3);
         }
-        WaveControl.Instance().vidaN = life;
+        Debug.Log("vida" + life);
     }
     public void setLife(float lifeUpdate)
     {
         life = lifeUpdate;
+    }
+    public new void addLife(float extra)
+    {
+        base.addLife(extra);
+        WaveControl.Instance().vidaN = life;
     }
 }
