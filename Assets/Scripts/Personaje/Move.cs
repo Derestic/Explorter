@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Move : npc
 {
@@ -68,6 +70,10 @@ public class Move : npc
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.O))
+        {
+            SceneManager.LoadScene(0);
+        }
         PAUSE = (int)Time.timeScale == 0;
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -97,10 +103,16 @@ public class Move : npc
     {
         if (!dead && !PAUSE)
         {
-            move.Set(0f, gameObject.GetComponent<Rigidbody>().velocity.y, 0f);
-            move += Input.GetAxisRaw("Horizontal") * speed.x * transform.right;
-            move += Input.GetAxisRaw("Vertical") * speed.z * transform.forward;
-            if (Input.GetKey(KeyCode.LeftShift)) move *= run;
+            move.Set(0f, 0.0f, 0f);
+            float Sx = 1;
+            float Sz = 1;
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                Sx = run;
+                Sz = run;
+            }
+            move += Input.GetAxisRaw("Horizontal") * speed.x * Sx * transform.right;
+            move += Input.GetAxisRaw("Vertical") * speed.z * Sz * transform.forward;
             gameObject.GetComponent<Rigidbody>().velocity = move;
             //gameObject.GetComponent<Rigidbody>().(Input.GetAxis("Vertical") * speed.x, 0.0f,Input.GetAxis("Horizontal") * speed.z);
             if ((move.x != 0f || move.z != 0f) && Mathf.Abs(move.y) <= 0.00001f)

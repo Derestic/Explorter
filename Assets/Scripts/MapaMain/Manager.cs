@@ -123,6 +123,10 @@ public class Manager : ManagerGen
         {
             nucleo.GetComponent<Core>().addLife(-20);
         }
+        if (cheat && Input.GetKeyDown(KeyCode.B))
+        {
+           nextState();
+        }
         updateCanvasInventory();
     }
 
