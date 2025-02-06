@@ -73,6 +73,7 @@ public class Move : npc
         if(Input.GetKeyDown(KeyCode.O))
         {
             SceneManager.LoadScene(0);
+            WaveControl.Instance().reset();
         }
         PAUSE = (int)Time.timeScale == 0;
         if (Input.GetKeyDown(KeyCode.Escape))
